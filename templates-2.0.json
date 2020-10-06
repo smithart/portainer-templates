@@ -2076,6 +2076,211 @@
                 "8080/tcp"
             ],
             "restart_policy": "on-failure"
+        },
+        {
+            "type": 3,
+            "title": "Download Server",
+            "description": "Includes Sonarr, Radarr, Lidarr, NZBHydra2, Ombi and Nzbget",
+            "note": "Deploys Sonarr, Radarr, Lidarr and NZBHydra2 connected to Nzbget and Ombi.",
+            "categories": [
+                "Ebrithil"
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/download_server.png",
+            "repository": {
+                "url": "https://github.com/ebrithiljonas/PortainerTemplates",
+                "stackfile": "stacks/download_server.yaml"
+            },
+            "env": [
+                {
+                    "name": "USER_ID",
+                    "label": "User ID",
+                    "default": "1000",
+                    "description": "Defines the User who will run the Program ."
+                },
+                {
+                    "name": "GROUP_ID",
+                    "label": "Group ID",
+                    "default": "1000",
+                    "description": "Defines the Group who will run the Program."
+                },
+                {
+                    "name": "CONFIG_PATH",
+                    "label": "Path of the Configuration (end with /)",
+                    "default": "/home/docker/config/",
+                    "description": "Path where all the config files will be stored, in a separate folder for each Program."
+                },
+                {
+                    "name": "MEDIA_PATH",
+                    "label": "Path for the media files (end with /)",
+                    "default": "/media/nas/",
+                    "description": "Path where the downloaded media files will be stored."
+                },
+                {
+                    "name": "DOWNLOAD_PATH",
+                    "label": "Path for the temporary download files (end with /)",
+                    "default": "/media/data/nzbget/",
+                    "description": "Path where all the files will be downloaded to from nzbget."
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "NGINX Certbot",
+            "description": "NGINX and Certbot",
+            "note": "Deploys nginx with Certbot for Letsencrypt",
+            "categories": [
+                "Ebrithil"
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/nginx.png",
+            "repository": {
+                "url": "https://github.com/ebrithiljonas/PortainerTemplates",
+                "stackfile": "stacks/nginx.yaml"
+            },
+            "env": [
+                {
+                    "name": "CONFIG_PATH",
+                    "label": "Path of the Configuration (end with /)",
+                    "default": "/home/docker/config/",
+                    "description": "Path where all the config files will be stored, in a separate folder for each Program."
+                }
+            ]
+        },
+        {
+            "type": 3,
+            "title": "Nextcloud",
+            "description": "Nextcloud with MariaDB",
+            "categories": [
+                "Ebrithil"
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/nextcloud.png",
+            "repository": {
+                "url": "https://github.com/ebrithiljonas/PortainerTemplates",
+                "stackfile": "stacks/nextcloud.yaml"
+            },
+            "env": [
+                {
+                    "name": "USER_ID",
+                    "label": "User ID",
+                    "default": "1000",
+                    "description": "Defines the User who will run the Program ."
+                },
+                {
+                    "name": "GROUP_ID",
+                    "label": "Group ID",
+                    "default": "1000",
+                    "description": "Defines the Group who will run the Program."
+                },
+                {
+                    "name": "CONFIG_PATH",
+                    "label": "Path of the Configuration (end with /)",
+                    "default": "/home/docker/config/",
+                    "description": "Path where all the config files will be stored, in a separate folder for each Program."
+                },
+                {
+                    "name": "DATA_PATH",
+                    "label": "Path for all the Data (end with /)",
+                    "default": "/media/nas/",
+                    "description": "Path where all Files on the cloud will be saved."
+                },
+                {
+                    "name": "ROOT_PASSWORD",
+                    "label": "Root Password of the MariaDB"
+                },
+                {
+                    "name": "PASSWORD",
+                    "label": "Password of Nextcloud User on DB"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "Caddy",
+            "description": "Webserver and Reverse Proxy",
+            "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/caddy.jpg",
+            "restart_policy": "unless-stopped",
+            "image": "caddy:latest",
+            "ports": [
+                "80:80/tcp",
+                "443:443/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/data",
+                    "bind": "${CONFIG_PATH}caddy/data"
+                },
+                {
+                    "container": "/config",
+                    "bind": "${CONFIG_PATH}caddy/config"
+                }
+            ],
+            "env": [
+                {
+                    "name": "CONFIG_PATH",
+                    "label": "Change the Path under 'Advanced Options' (end with /)",
+                    "default": "This field is only for Info. Change the Path under Advanced Options",
+                    "description": "Path where all the config files will be stored."
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "Teamspeak",
+            "description": "Teamspeak Server",
+            "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/ts.png",
+            "restart_policy": "unless-stopped",
+            "image": "teamspeak:latest",
+            "ports": [
+                "30033:30033/tcp",
+                "9987:9987/udp"
+            ],
+            "volumes": [
+                {
+                    "container": "/var/ts3server",
+                    "bind": "${CONFIG_PATH}teamspeak/"
+                }
+            ],
+            "env": [
+                {
+                    "name": "CONFIG_PATH",
+                    "label": "Change the Path under 'Advanced Options' (end with /)",
+                    "default": "This field is only for Info. Change the Path under Advanced Options",
+                    "description": "Path where all the config files will be stored."
+                },
+                {
+                    "name": "TS3SERVER_LICENSE",
+                    "default": "accept",
+                    "preset": true
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "Nginx",
+            "description": "Nginx Server",
+            "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/nginx.png",
+            "restart_policy": "unless-stopped",
+            "image": "nginx",
+            "ports": [
+                "80:80/tcp",
+                "443:443/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/etc/nginx",
+                    "bind": "${CONFIG_PATH}nginx/"
+                }
+            ],
+            "env": [
+                {
+                    "name": "CONFIG_PATH",
+                    "label": "Change the Path under 'Advanced Options' (end with /)",
+                    "default": "This field is only for Info. Change the Path under Advanced Options",
+                    "description": "Path where all the config files will be stored."
+                }
+            ]
         }
     ]
 }
