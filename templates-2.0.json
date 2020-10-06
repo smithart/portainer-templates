@@ -1158,6 +1158,190 @@
             "description": "CockroachDB cluster",
             "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
             "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
-        }
+        },
+		{
+			"description": "HTPC/Homelab Services Organizer - Written in PHP",
+			"env": [
+				{
+					"label": "Docker UserID",
+					"name": "PUID"
+				},
+				{
+					"label": "Docker GroupID",
+					"name": "PGID"
+				}
+			],
+			"image": "lsiocommunity/organizr:latest",
+			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/organizr-icon.png",
+			"name": "organizr",
+			"network": "bridge",
+			"platform": "linux",
+			"ports": [
+				"80/tcp",
+				"443/tcp"
+			],
+			"restart": "always",
+			"title": "Organizr",
+			"type": "container",
+			"volumes": [
+				"/config",
+				"/ssl"
+			]
+		},
+		{
+			"description": "Official Plex Media Server Docker Repo",
+			"env": [
+				{
+					"label": "ENV : HOME",
+					"name": "HOME",
+					"value": "/config"
+				}
+			],
+			"image": "plexinc/pms-docker:plexpass",
+			"logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
+			"name": "plexmediaserver-plexpass",
+			"network": "bridge",
+			"platform": "linux",
+			"ports": [
+				"32400/tcp"
+			],
+			"restart": "always",
+			"title": "Plex Media Server - Plex Pass",
+			"type": "container",
+			"volumes": [
+				"/data",
+				"/config",
+				"/transcode",
+				"/config/Library/Application Support/Plex Media Server/Logs"
+			]
+		},
+		{
+			"description": "Web Frond-end manager for Plex Media Server",
+			"image": "tautulli/tautulli:latest",
+			"logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
+			"name": "tautulli",
+			"network": "bridge",
+			"platform": "linux",
+			"ports": [
+				"8181/tcp"
+			],
+			"restart": "always",
+			"title": "Tautulli",
+			"type": "container",
+			"volumes": [
+				"/config",
+				"/logs",
+				"/ssl"
+			]
+		},
+		{
+			"categories": [
+				"database"
+			],
+			"description": "Performance beyond MySQL",
+			"env": [
+				{
+					"label": "MYSQL_ROOT_PASSWORD",
+					"name": "MYSQL_ROOT_PASSWORD"
+				}
+			],
+			"image": "mariadb:latest",
+			"logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
+			"name": "mariadb",
+			"network": "host",
+			"platform": "linux",
+			"ports": [
+				"3306/tcp"
+			],
+			"restart": "always",
+			"title": "MariaDB",
+			"type": "container",
+			"volumes": [
+				"/var/lib/mysql"
+			]
+		},
+		{
+			"description": "A safe home for all your data",
+			"image": "nextcloud:latest",
+			"logo": "https://nextcloud.com/wp-content/themes/next/assets/img/common/nextcloud-square-logo.png",
+			"name": "nextcloud",
+			"network": "bridge",
+			"platform": "linux",
+			"ports": [
+				"80/tcp",
+				"443/tcp"
+			],
+			"title": "NextCloud",
+			"type": "container",
+			"volumes": [
+				"/var/www/nextcloud",
+				"/var/www/nextcloud/custom_apps",
+				"/var/www/nextcloud/config",
+				"/var/www/nextcloud/data",
+				"/ssl"
+			]
+		},
+		{
+			"description": "pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster.",
+			"env": [
+				{
+					"label": "Docker UserID",
+					"name": "PUID"
+				},
+				{
+					"label": "Docker GroupID",
+					"name": "PGID"
+				}
+			],
+			"image": "cobraeti/pyload:latest",
+			"logo": "https://www.babeuloula.fr/images/pyload.png",
+			"name": "pyLoad",
+			"network": "bridge",
+			"platform": "linux",
+			"ports": [
+				"8000/tcp"
+			],
+			"restart": "always",
+			"title": "PyLoad",
+			"type": "container",
+			"volumes": [
+				"/config",
+				"/downloads",
+				"/ssl"
+			]
+		},
+		{
+			"description": "A Docker container for running FileBot, a media file organizer. It supports UI and a watch folder.",
+			"image": "rednoah/filebot:latest",
+			"logo": "https://a.thumbs.redditmedia.com/BULbmpuLUgGz229Kf_7lYJQvRJjwIdvkJ8lWcXmQSY0.jpg",
+			"name": "FileBot",
+			"network": "bridge",
+			"platform": "linux",
+			"ports": [
+				"5452/tcp"
+			],
+			"title": "FileBot",
+			"type": "container",
+			"volumes": [
+				"/downloads",
+				"/media"
+			]
+		},
+		{
+			"description": "This is a Docker container for ps3netsrv",
+			"image": "shawly/ps3netsrv:latest",
+			"logo": "http://www.psx-place.com/attachments/t5q3zmc-520x245-png.4405/",
+			"name": "ps3netsrv",
+			"network": "bridge",
+			"platform": "linux",
+			"ports": [
+				"38008/tcp"
+			],
+			"title": "PS3Netsrv",
+			"type": "container",
+			"volumes": [
+				"/games"
+			]
+		}
     ]
 }
