@@ -1159,189 +1159,923 @@
             "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
             "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
         },
-		{
-			"description": "HTPC/Homelab Services Organizer - Written in PHP",
-			"env": [
-				{
-					"label": "Docker UserID",
-					"name": "PUID"
-				},
-				{
-					"label": "Docker GroupID",
-					"name": "PGID"
-				}
-			],
-			"image": "lsiocommunity/organizr:latest",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/organizr-icon.png",
-			"name": "organizr",
-			"network": "bridge",
-			"platform": "linux",
-			"ports": [
-				"80/tcp",
-				"443/tcp"
-			],
-			"restart": "always",
-			"title": "Organizr",
-			"type": "container",
-			"volumes": [
-				"/config",
-				"/ssl"
-			]
-		},
-		{
-			"description": "Official Plex Media Server Docker Repo",
-			"env": [
-				{
-					"label": "ENV : HOME",
-					"name": "HOME",
-					"value": "/config"
-				}
-			],
-			"image": "plexinc/pms-docker:plexpass",
-			"logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
-			"name": "plexmediaserver-plexpass",
-			"network": "bridge",
-			"platform": "linux",
-			"ports": [
-				"32400/tcp"
-			],
-			"restart": "always",
-			"title": "Plex Media Server - Plex Pass",
-			"type": "container",
-			"volumes": [
-				"/data",
-				"/config",
-				"/transcode",
-				"/config/Library/Application Support/Plex Media Server/Logs"
-			]
-		},
-		{
-			"description": "Web Frond-end manager for Plex Media Server",
-			"image": "tautulli/tautulli:latest",
-			"logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
-			"name": "tautulli",
-			"network": "bridge",
-			"platform": "linux",
-			"ports": [
-				"8181/tcp"
-			],
-			"restart": "always",
-			"title": "Tautulli",
-			"type": "container",
-			"volumes": [
-				"/config",
-				"/logs",
-				"/ssl"
-			]
-		},
-		{
-			"categories": [
-				"database"
-			],
-			"description": "Performance beyond MySQL",
-			"env": [
-				{
-					"label": "MYSQL_ROOT_PASSWORD",
-					"name": "MYSQL_ROOT_PASSWORD"
-				}
-			],
-			"image": "mariadb:latest",
-			"logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
-			"name": "mariadb",
-			"network": "host",
-			"platform": "linux",
-			"ports": [
-				"3306/tcp"
-			],
-			"restart": "always",
-			"title": "MariaDB",
-			"type": "container",
-			"volumes": [
-				"/var/lib/mysql"
-			]
-		},
-		{
-			"description": "A safe home for all your data",
-			"image": "nextcloud:latest",
-			"logo": "https://nextcloud.com/wp-content/themes/next/assets/img/common/nextcloud-square-logo.png",
-			"name": "nextcloud",
-			"network": "bridge",
-			"platform": "linux",
-			"ports": [
-				"80/tcp",
-				"443/tcp"
-			],
-			"title": "NextCloud",
-			"type": "container",
-			"volumes": [
-				"/var/www/nextcloud",
-				"/var/www/nextcloud/custom_apps",
-				"/var/www/nextcloud/config",
-				"/var/www/nextcloud/data",
-				"/ssl"
-			]
-		},
-		{
-			"description": "pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster.",
-			"env": [
-				{
-					"label": "Docker UserID",
-					"name": "PUID"
-				},
-				{
-					"label": "Docker GroupID",
-					"name": "PGID"
-				}
-			],
-			"image": "cobraeti/pyload:latest",
-			"logo": "https://www.babeuloula.fr/images/pyload.png",
-			"name": "pyLoad",
-			"network": "bridge",
-			"platform": "linux",
-			"ports": [
-				"8000/tcp"
-			],
-			"restart": "always",
-			"title": "PyLoad",
-			"type": "container",
-			"volumes": [
-				"/config",
-				"/downloads",
-				"/ssl"
-			]
-		},
-		{
-			"description": "A Docker container for running FileBot, a media file organizer. It supports UI and a watch folder.",
-			"image": "rednoah/filebot:latest",
-			"logo": "https://a.thumbs.redditmedia.com/BULbmpuLUgGz229Kf_7lYJQvRJjwIdvkJ8lWcXmQSY0.jpg",
-			"name": "FileBot",
-			"network": "bridge",
-			"platform": "linux",
-			"ports": [
-				"5452/tcp"
-			],
-			"title": "FileBot",
-			"type": "container",
-			"volumes": [
-				"/downloads",
-				"/media"
-			]
-		},
-		{
-			"description": "This is a Docker container for ps3netsrv",
-			"image": "shawly/ps3netsrv:latest",
-			"logo": "http://www.psx-place.com/attachments/t5q3zmc-520x245-png.4405/",
-			"name": "ps3netsrv",
-			"network": "bridge",
-			"platform": "linux",
-			"ports": [
-				"38008/tcp"
-			],
-			"title": "PS3Netsrv",
-			"type": "container",
-			"volumes": [
-				"/games"
-			]
-		}
+        {
+            "description": "HTPC/Homelab Services Organizer - Written in PHP",
+            "env": [
+                {
+                    "label": "Docker UserID",
+                    "name": "PUID"
+                },
+                {
+                    "label": "Docker GroupID",
+                    "name": "PGID"
+                }
+            ],
+            "image": "lsiocommunity/organizr:latest",
+            "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/organizr-icon.png",
+            "name": "organizr",
+            "network": "bridge",
+            "platform": "linux",
+            "ports": [
+                "80/tcp",
+                "443/tcp"
+            ],
+            "restart": "always",
+            "title": "Organizr",
+            "type": "container",
+            "volumes": [
+                "/config",
+                "/ssl"
+            ]
+        },
+        {
+            "description": "Official Plex Media Server Docker Repo",
+            "env": [
+                {
+                    "label": "ENV : HOME",
+                    "name": "HOME",
+                    "value": "/config"
+                }
+            ],
+            "image": "plexinc/pms-docker:plexpass",
+            "logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
+            "name": "plexmediaserver-plexpass",
+            "network": "bridge",
+            "platform": "linux",
+            "ports": [
+                "32400/tcp"
+            ],
+            "restart": "always",
+            "title": "Plex Media Server - Plex Pass",
+            "type": "container",
+            "volumes": [
+                "/data",
+                "/config",
+                "/transcode",
+                "/config/Library/Application Support/Plex Media Server/Logs"
+            ]
+        },
+        {
+            "description": "Web Frond-end manager for Plex Media Server",
+            "image": "tautulli/tautulli:latest",
+            "logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
+            "name": "tautulli",
+            "network": "bridge",
+            "platform": "linux",
+            "ports": [
+                "8181/tcp"
+            ],
+            "restart": "always",
+            "title": "Tautulli",
+            "type": "container",
+            "volumes": [
+                "/config",
+                "/logs",
+                "/ssl"
+            ]
+        },
+        {
+            "categories": [
+                "database"
+            ],
+            "description": "Performance beyond MySQL",
+            "env": [
+                {
+                    "label": "MYSQL_ROOT_PASSWORD",
+                    "name": "MYSQL_ROOT_PASSWORD"
+                }
+            ],
+            "image": "mariadb:latest",
+            "logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
+            "name": "mariadb",
+            "network": "host",
+            "platform": "linux",
+            "ports": [
+                "3306/tcp"
+            ],
+            "restart": "always",
+            "title": "MariaDB",
+            "type": "container",
+            "volumes": [
+                "/var/lib/mysql"
+            ]
+        },
+        {
+            "description": "A safe home for all your data",
+            "image": "nextcloud:latest",
+            "logo": "https://nextcloud.com/wp-content/themes/next/assets/img/common/nextcloud-square-logo.png",
+            "name": "nextcloud",
+            "network": "bridge",
+            "platform": "linux",
+            "ports": [
+                "80/tcp",
+                "443/tcp"
+            ],
+            "title": "NextCloud",
+            "type": "container",
+            "volumes": [
+                "/var/www/nextcloud",
+                "/var/www/nextcloud/custom_apps",
+                "/var/www/nextcloud/config",
+                "/var/www/nextcloud/data",
+                "/ssl"
+            ]
+        },
+        {
+            "description": "pyLoad is a fast, lightweight and full featured download manager for many One-Click-Hoster.",
+            "env": [
+                {
+                    "label": "Docker UserID",
+                    "name": "PUID"
+                },
+                {
+                    "label": "Docker GroupID",
+                    "name": "PGID"
+                }
+            ],
+            "image": "cobraeti/pyload:latest",
+            "logo": "https://www.babeuloula.fr/images/pyload.png",
+            "name": "pyLoad",
+            "network": "bridge",
+            "platform": "linux",
+            "ports": [
+                "8000/tcp"
+            ],
+            "restart": "always",
+            "title": "PyLoad",
+            "type": "container",
+            "volumes": [
+                "/config",
+                "/downloads",
+                "/ssl"
+            ]
+        },
+        {
+            "description": "A Docker container for running FileBot, a media file organizer. It supports UI and a watch folder.",
+            "image": "rednoah/filebot:latest",
+            "logo": "https://a.thumbs.redditmedia.com/BULbmpuLUgGz229Kf_7lYJQvRJjwIdvkJ8lWcXmQSY0.jpg",
+            "name": "FileBot",
+            "network": "bridge",
+            "platform": "linux",
+            "ports": [
+                "5452/tcp"
+            ],
+            "title": "FileBot",
+            "type": "container",
+            "volumes": [
+                "/downloads",
+                "/media"
+            ]
+        },
+        {
+            "description": "This is a Docker container for ps3netsrv",
+            "image": "shawly/ps3netsrv:latest",
+            "logo": "http://www.psx-place.com/attachments/t5q3zmc-520x245-png.4405/",
+            "name": "ps3netsrv",
+            "network": "bridge",
+            "platform": "linux",
+            "ports": [
+                "38008/tcp"
+            ],
+            "title": "PS3Netsrv",
+            "type": "container",
+            "volumes": [
+                "/games"
+            ]
+        },
+        {
+            "type": 1,
+            "title": "DB2 v9.7",
+            "description": "IBM DB2 v9.7 LUW",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-db2:9.7",
+            "ports": [
+                "50000/tcp",
+                "22/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "DB2 v10.1",
+            "description": "IBM DB2 v10.1 LUW",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-db2:10.1",
+            "ports": [
+                "50000/tcp",
+                "22/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "DB2 v10.5",
+            "description": "IBM DB2 v10.5 LUW",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-db2:10.5",
+            "ports": [
+                "50000/tcp",
+                "22/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "DB2 v11.1",
+            "description": "IBM DB2 v11.1 LUW",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-db2:11.1",
+            "ports": [
+                "50000/tcp",
+                "22/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "MariaDB v10.0",
+            "description": "MariaDB v10.0",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
+            "image": "camunda-ci-mariadb:10.0",
+            "ports": [
+                "3306/tcp",
+                "22/tcp"
+            ],
+            "env": [
+                {
+                    "name": "TRANSACTION_ISOLATION_LEVEL",
+                    "label": "READ-COMMITTED"
+                }
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "MariaDB Galera v10.1",
+            "description": "MariaDB Galera Cluster v10.1",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
+            "image": "camunda-ci-mariadb:galera",
+            "ports": [
+                "3306/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "MySQL v5.7",
+            "description": "MySQL v5.7",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
+            "image": "camunda-ci-mysql:5.7",
+            "ports": [
+                "3306/tcp",
+                "22/tcp"
+            ],
+            "env": [
+                {
+                    "name": "TRANSACTION_ISOLATION_LEVEL",
+                    "label": "READ-COMMITTED"
+                }
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "MySQL v5.6",
+            "description": "MySQL v5.6",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
+            "image": "camunda-ci-mysql:5.6",
+            "ports": [
+                "3306/tcp",
+                "22/tcp"
+            ],
+            "env": [
+                {
+                    "name": "TRANSACTION_ISOLATION_LEVEL",
+                    "label": "READ-COMMITTED"
+                }
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "MySQL v5.5",
+            "description": "MySQL v5.5",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
+            "image": "camunda-ci-mysql:5.5",
+            "ports": [
+                "3306/tcp",
+                "22/tcp"
+            ],
+            "env": [
+                {
+                    "name": "TRANSACTION_ISOLATION_LEVEL",
+                    "label": "READ-COMMITTED"
+                }
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Oracle 18c",
+            "description": "Oracle v18c Enterprise Edition",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-oracle:18",
+            "ports": [
+                "1521/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Oracle 12c",
+            "description": "Oracle v12c Enterprise Edition",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-oracle:12",
+            "ports": [
+                "1521/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Oracle 11g",
+            "description": "Oracle v11g Express Edition",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-oracle:11",
+            "ports": [
+                "1521/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Oracle 10g",
+            "description": "Oracle v10g Express Edition",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-oracle:10",
+            "ports": [
+                "1521/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "PostgreSQL v9.6",
+            "description": "PostgreSQL v9.6",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+            "image": "camunda-ci-postgresql:9.6",
+            "ports": [
+                "5432/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "PostgreSQL v9.4",
+            "description": "PostgreSQL v9.4",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+            "image": "camunda-ci-postgresql:9.4",
+            "ports": [
+                "5432/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "PostgreSQL v9.3",
+            "description": "PostgreSQL v9.3",
+            "categories": [
+                "database"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+            "image": "camunda-ci-postgresql:9.3",
+            "ports": [
+                "5432/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "SqlServer Express 2008",
+            "description": "Microsoft SqlServer Express 2008 for Windows running Qemu in Docker",
+            "categories": [
+                "database"
+            ],
+            "platform": "windows",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+            "image": "camunda-ci-sqlserver:2008",
+            "ports": [
+                "1433/tcp",
+                "5900/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-qemu.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "SqlServer Express 2012",
+            "description": "Microsoft SqlServer Express 2012 for Windows running Qemu in Docker",
+            "categories": [
+                "database"
+            ],
+            "platform": "windows",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+            "image": "camunda-ci-sqlserver:2012",
+            "ports": [
+                "1433/tcp",
+                "5900/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-qemu.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "SqlServer Express 2014",
+            "description": "Microsoft SqlServer Express 2014 for Windows running Qemu in Docker",
+            "categories": [
+                "database"
+            ],
+            "platform": "windows",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+            "image": "camunda-ci-sqlserver:2014",
+            "ports": [
+                "1433/tcp",
+                "5900/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-qemu.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "WebLogic 12R2",
+            "description": "Oracle WebLogic Application Server 12R2",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-weblogic:12R2",
+            "ports": [
+                "7001/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "WebLogic 12R2 + PostgreSQL 9.4",
+            "description": "Oracle WebLogic Application Server 12R2 + PostgreSQL 9.4",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-weblogic:12R2-postgresql-9.4",
+            "ports": [
+                "7001/tcp",
+                "5432/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure",
+            "env": [
+                {
+                    "name": "profiles",
+                    "label": "Maven profiles",
+                    "set": "wls,wls12-docker,postgresql"
+                },
+                {
+                    "name": "version",
+                    "label": "Camunda version"
+                },
+                {
+                    "name": "nexus_pass",
+                    "label": "Nexus password"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "WebLogic 12R2 + Oracle 12",
+            "description": "Oracle WebLogic Application Server 12R2 + Oracle 12",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-weblogic:12R2-oracle-12",
+            "ports": [
+                "7001/tcp",
+                "1521/tcp",
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure",
+            "env": [
+                {
+                    "name": "profiles",
+                    "label": "Maven profiles",
+                    "set": "wls,wls12-docker,oracle,oracle-12"
+                },
+                {
+                    "name": "version",
+                    "label": "Camunda version"
+                },
+                {
+                    "name": "nexus_pass",
+                    "label": "Nexus password"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "WebSphere 9.0",
+            "description": "IBM WebSphere Application Server 9.0 with PostgreSQL 9.1",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-websphere:9.0-postgresql-9.1",
+            "ports": [
+                "5432/tcp",
+                "9060/tcp",
+                "9080/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "WebSphere 9.0 + db2 10.5",
+            "description": "IBM WebSphere Application Server 9.0 + db2 10.5",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-websphere:9.0-db2-10.5",
+            "ports": [
+                "50000/tcp",
+                "9060/tcp",
+                "9080/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure",
+            "env": [
+                {
+                    "name": "profiles",
+                    "label": "Maven profiles",
+                    "set": "was90,db2,db2-10.5"
+                },
+                {
+                    "name": "version",
+                    "label": "Camunda version"
+                },
+                {
+                    "name": "nexus_pass",
+                    "label": "Nexus password"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "WebSphere 8.5",
+            "description": "IBM WebSphere Application Server 8.5 with PostgreSQL 9.1",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-websphere:8.5-postgresql-9.1",
+            "ports": [
+                "5432/tcp",
+                "9060/tcp",
+                "9080/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "WebSphere 8.5 - JDK 7",
+            "description": "Run /usr/local/bin/switch-2-jdk7.sh before starting WebSphere.",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "websphere:8.5v0.1.0",
+            "ports": [
+                "5432/tcp",
+                "9060/tcp",
+                "9080/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "WebSphere 8.5 + db2 9.7",
+            "description": "IBM WebSphere Application Server 8.5 with db2 9.7",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-websphere:8.5-db2-9.7",
+            "ports": [
+                "50000/tcp",
+                "9060/tcp",
+                "9080/tcp"
+            ],
+            "privileged": true,
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure",
+            "env": [
+                {
+                    "name": "profiles",
+                    "label": "Maven profiles",
+                    "set": "was85,db2,db2-97"
+                },
+                {
+                    "name": "version",
+                    "label": "Camunda version"
+                },
+                {
+                    "name": "nexus_pass",
+                    "label": "Nexus password"
+                }
+            ]
+        },
+        {
+            "type": 1,
+            "title": "WebSphere 8.0",
+            "description": "IBM WebSphere Application Server 8.0 with PostgreSQL 9.1",
+            "categories": [
+                "server"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-websphere:8.0-postgresql-9.1",
+            "ports": [
+                "5432/tcp",
+                "9060/tcp",
+                "9080/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "CentOS 7.3",
+            "description": "Camunda CI CentOS base image",
+            "categories": [
+                "os"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-base-centos:latest",
+            "ports": [
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Ubuntu",
+            "description": "Camunda CI Ubuntu base image",
+            "categories": [
+                "os"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda-ci-base-ubuntu:latest",
+            "ports": [
+                "22/tcp"
+            ],
+            "registry": "anonymousproxy:8081",
+            "command": "/usr/local/bin/start-container.sh",
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Camunda BPM SNAPSHOT Tomcat",
+            "description": "Camunda BPM platform latest snapshot running on Tomcat",
+            "categories": [
+                "camunda",
+                "camunda tomcat"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda/camunda-bpm-platform:tomcat-SNAPSHOT",
+            "ports": [
+                "8080/tcp"
+            ],
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Camunda BPM LATEST Tomcat",
+            "description": "Camunda BPM platform latest official release running on Tomcat",
+            "categories": [
+                "camunda",
+                "camunda tomcat"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda/camunda-bpm-platform:tomcat-latest",
+            "ports": [
+                "8080/tcp"
+            ],
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Camunda BPM 7.8.0 Tomcat",
+            "description": "Camunda BPM platform 7.8.0 running on Tomcat",
+            "categories": [
+                "camunda",
+                "camunda tomcat"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda/camunda-bpm-platform:tomcat-7.8.0",
+            "ports": [
+                "8080/tcp"
+            ],
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Camunda BPM 7.7.0 Tomcat",
+            "description": "Camunda BPM platform 7.7.0 running on Tomcat",
+            "categories": [
+                "camunda",
+                "camunda tomcat"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda/camunda-bpm-platform:tomcat-7.7.0",
+            "ports": [
+                "8080/tcp"
+            ],
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Camunda BPM 7.6.0 Tomcat",
+            "description": "Camunda BPM platform 7.6.0 running on Tomcat",
+            "categories": [
+                "camunda",
+                "camunda tomcat"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda/camunda-bpm-platform:tomcat-7.6.0",
+            "ports": [
+                "8080/tcp"
+            ],
+            "restart_policy": "on-failure"
+        },
+        {
+            "type": 1,
+            "title": "Camunda BPM 7.5.0 Tomcat",
+            "description": "Camunda BPM platform 7.5.0 running on Tomcat",
+            "categories": [
+                "camunda",
+                "camunda tomcat"
+            ],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "image": "camunda/camunda-bpm-platform:tomcat-7.5.0",
+            "ports": [
+                "8080/tcp"
+            ],
+            "restart_policy": "on-failure"
+        }
     ]
 }
