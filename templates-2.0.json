@@ -644,7 +644,7 @@
         },
         {
             "type": 1,
-            "title": "COPS",
+            "title": "COPS - SelfhostedPro",
             "name": "cops",
             "description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/cops-icon.png",
@@ -4046,7 +4046,7 @@
         },
         {
             "type": 1,
-            "title": "LibreSpeed",
+            "title": "LibreSpeed - SelfhostedPro",
             "name": "librespeed",
             "description": "A Free and Open Source Speedtest for HTML5 and more.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/speedtest.png",
@@ -4092,7 +4092,7 @@
         },
         {
             "type": 1,
-            "title": "Lychee",
+            "title": "Lychee - SelfhostedPro",
             "name": "lychee",
             "description": "Lychee is a free photo-management tool, which runs on your server or web-space. Installing is a matter of seconds. Upload, manage and share photos like from a native application. Lychee comes with everything you need and all your photos are stored securely.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lychee-icon.png",
@@ -4246,7 +4246,7 @@
         },
         {
             "type": 1,
-            "title": "MariaDB",
+            "title": "MariaDB - SelfhostedPro",
             "name": "mariadb",
             "description": "An Enhanced drop in replacement for Mysql",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mariadb-icon.png",
@@ -4398,7 +4398,7 @@
         },
         {
             "type": 1,
-            "title": "McMyAdmin 2",
+            "title": "McMyAdmin 2 - SelfhostedPro",
             "name": "mcmyadmin2",
             "description": "McMyAdmin 2 is the leading web control panel and administration console for Minecraft servers.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mcmyadmin-icon.png",
@@ -4466,7 +4466,7 @@
         },
         {
             "type": 1,
-            "title": "Medusa",
+            "title": "Medusa - SelfhostedPro",
             "name": "medusa",
             "description": "Medusa, automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/medusa-icon.png",
@@ -4677,7 +4677,7 @@
         },
         {
             "type": 1,
-            "title": "Minisatip",
+            "title": "Minisatip - SelfhostedPro",
             "name": "minisatip",
             "description": "Minisatip is a multi-threaded satip server version 1.2 that runs under Linux and it was tested with DVB-S, DVB-S2, DVB-T, DVB-T2, DVB-C, DVB-C2, ATSC and ISDB-T cards.\n\n  The application is designed to stream the requested data to multiple clients (even with one dvb card) at the same time while opening different pids.\n  ",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/minisatip-icon.png",
@@ -4760,7 +4760,7 @@
         },
         {
             "type": 1,
-            "title": "Mstream",
+            "title": "Mstream - SelfhostedPro",
             "name": "mstream",
             "description": "Mstream is a personal music streaming server. You can use mStream to stream your music from your home computer to any device, anywhere. There are mobile apps available for both Android and iPhone..",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mstream.png",
@@ -4814,7 +4814,7 @@
         },
         {
             "type": 1,
-            "title": "Murmur",
+            "title": "Murmur - SelfhostedPro",
             "name": "murmur",
             "description": "Mumble is a voicechat program for gamers written on top of Qt and Opus. Murmur is the server backend for Mumble.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/Mumble-logo.png",
@@ -4920,7 +4920,7 @@
         },
         {
             "type": 1,
-            "title": "MusicBrainz",
+            "title": "MusicBrainz - SelfhostedPro",
             "name": "musicbrainz",
             "description": " MusicBrainz is an open music encyclopedia that collects music metadata and makes it available to the public.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/musicbrainz-icon.png",
@@ -5010,7 +5010,7 @@
         },
         {
             "type": 1,
-            "title": "Muximux",
+            "title": "Muximux - SelfhostedPro",
             "name": "muximux",
             "description": "A lightweight portal to view, manage your HTPC apps without having to run anything more than a PHP enabled webserver. With Muximux you don't need to keep multiple tabs open, or bookmark the URL to all of your apps.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/muximux-icon.png",
@@ -5181,7 +5181,7 @@
         },
         {
             "type": 1,
-            "title": "Mylar",
+            "title": "Mylar - SelfhostedPro",
             "name": "mylar",
             "description": "An automated Comic Book downloader (cbr/cbz) for use with SABnzbd, NZBGet and torrents.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mylar-icon.png",
@@ -5290,7 +5290,7 @@
         },
         {
             "type": 1,
-            "title": "NZBGet",
+            "title": "NZBGet - SelfhostedPro",
             "name": "nzbget",
             "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nzbget-icon.png",
@@ -5366,7 +5366,7 @@
         },
         {
             "type": 1,
-            "title": "NZBHydra 2",
+            "title": "NZBHydra 2 - SelfhostedPro",
             "name": "nzbhydra2",
             "description": "NZBHydra is a meta search for NZB indexers and the \"spiritual successor\" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/hydra-icon.png",
@@ -5515,7 +5515,7 @@
         },
         {
             "type": 3,
-            "title": "Nextcloud",
+            "title": "Nextcloud - SelfhostedPro",
             "name": "nextcloud",
             "description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nextcloud-icon.png",
@@ -5660,7 +5660,7 @@
         },
         {
             "type": 1,
-            "title": "Nginx",
+            "title": "Nginx - SelfhostedPro",
             "name": "nginx",
             "description": "Nginx is a web server with a strong focus on high concurrency, performance and low memory usage. It can also act as a reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer and an HTTP cache.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nginx-icon.png",
@@ -5732,7 +5732,7 @@
         },
         {
             "type": 1,
-            "title": "Nginx Proxy Manager",
+            "title": "Nginx Proxy Manager - SelfhostedPro",
             "name": "nginx-proxy-manager",
             "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/proxy_mgr.png",
@@ -5889,7 +5889,7 @@
         },
         {
             "type": 1,
-            "title": "Ombi",
+            "title": "Ombi - SelfhostedPro",
             "name": "ombi",
             "description": "Ombi allows you to host your own Plex Request and user management system. ",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ombi.png",
@@ -5979,7 +5979,7 @@
         },
         {
             "type": 1,
-            "title": "OpenVPN Access Server",
+            "title": "OpenVPN Access Server - SelfhostedPro",
             "name": "openvpn-as",
             "description": "OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/openvpn-as-icon.png",
@@ -6234,7 +6234,7 @@
         },
         {
             "type": 1,
-            "title": "Organizr v2",
+            "title": "Organizr v2 - SelfhostedPro",
             "name": "organizr-v2",
             "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/organizr-icon.png",
@@ -6285,7 +6285,7 @@
         },
         {
             "type": 1,
-            "title": "PhotoShow",
+            "title": "PhotoShow - SelfhostedPro",
             "name": "photoshow",
             "description": "A simple, easy way to turn a photo album into a webgallery",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/photoshow-icon.png",
@@ -6369,7 +6369,7 @@
         },
         {
             "type": 1,
-            "title": "Pi-Hole",
+            "title": "Pi-Hole - SelfhostedPro",
             "name": "pihole",
             "description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/pihole.png",
@@ -6433,7 +6433,7 @@
         },
         {
             "type": 1,
-            "title": "Piwigo",
+            "title": "Piwigo - SelfhostedPro",
             "name": "piwigo",
             "description": "Piwigo is photo gallery software for the web, built by an active community of users and developers.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/piwigo-icon.png",
@@ -6521,7 +6521,7 @@
         },
         {
             "type": 1,
-            "title": "Plex",
+            "title": "Plex - SelfhostedPro",
             "name": "plex",
             "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/plex-icon.png",
@@ -6843,7 +6843,7 @@
         },
         {
             "type": 3,
-            "title": "Pritunl",
+            "title": "Pritunl - SelfhostedPro",
             "name": "pritunl",
             "description": "Pritunl container built on Alpine Linux. Supports IPv6 and running behind a reverse proxy. This container requires an external Mongo DB and should be run via Docker Compose or other orchestration.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/pritunl/Images/pritunl.png",
@@ -6883,7 +6883,7 @@
         },
         {
             "type": 1,
-            "title": "ProjectSend",
+            "title": "ProjectSend - SelfhostedPro",
             "name": "projectsend",
             "description": "ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself! Secure, private and easy. No more depending on external services or e-mail to send those files!\n  ",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/projectsend-logo.png",
@@ -7048,7 +7048,7 @@
         },
         {
             "type": 1,
-            "title": "Pydio",
+            "title": "Pydio - SelfhostedPro",
             "name": "pydio",
             "description": "Pydio (formerly AjaXplorer) is a mature open source software solution for file sharing and synchronization. With intuitive user interfaces (web / mobile / desktop), Pydio provides enterprise-grade features to gain back control and privacy of your data: user directory connectors, legacy filesystems drivers, comprehensive admin interface, and much more.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/pydio-icon.png",
@@ -7126,7 +7126,7 @@
         },
         {
             "type": 1,
-            "title": "Quassel IRC",
+            "title": "Quassel IRC - SelfhostedPro",
             "name": "quassel-core",
             "description": "Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core -- much like the popular combination of screen and a text-based IRC client such as WeeChat, but graphical. Blowfish support and optional web-ui included.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/quassel-core-icon.png",
@@ -7214,7 +7214,7 @@
         },
         {
             "type": 1,
-            "title": "Radarr",
+            "title": "Radarr - SelfhostedPro",
             "name": "radarr",
             "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/radarr.png",
@@ -7300,7 +7300,7 @@
         },
         {
             "type": 1,
-            "title": "Reactive-Resume",
+            "title": "Reactive-Resume - SelfhostedPro",
             "name": "reactive-resume",
             "description": "A one-of-a-kind resume builder that's not out to get your data. Completely secure, customizable, portable, open-source and free forever.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/reactiveresume.png",
@@ -7403,7 +7403,7 @@
         },
         {
             "type": 1,
-            "title": "Resilio Sync",
+            "title": "Resilio Sync - SelfhostedPro",
             "name": "resilio-sync",
             "description": "Resilio Sync (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/resilio.png",
@@ -7485,7 +7485,7 @@
         },
         {
             "type": 1,
-            "title": "SABnzbd",
+            "title": "SABnzbd - SelfhostedPro",
             "name": "sabnzbd",
             "description": "SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sabnzbd-icon.png",
@@ -7688,7 +7688,7 @@
         },
         {
             "type": 3,
-            "title": "Seafile",
+            "title": "Seafile - SelfhostedPro",
             "name": "seafile",
             "description": "Seafile is an open-source, cross-platform file-hosting software system. Files are stored on a central server and can be synchronized with personal computers and mobile devices through apps. Files on the Seafile server can also be accessed directly via the server's web interface.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/seafile.png",
@@ -7847,7 +7847,7 @@
         },
         {
             "type": 1,
-            "title": "SickChill",
+            "title": "SickChill - SelfhostedPro",
             "name": "sickchill",
             "description": "Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickchill-icon.png",
@@ -7933,7 +7933,7 @@
         },
         {
             "type": 1,
-            "title": "SickGear",
+            "title": "SickGear - SelfhostedPro",
             "name": "sickgear",
             "description": "SickGear provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickgear-icon.png",
@@ -8019,7 +8019,7 @@
         },
         {
             "type": 1,
-            "title": "SmokePing",
+            "title": "SmokePing - SelfhostedPro",
             "name": "smokeping",
             "description": null,
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/smokeping-icon.png",
@@ -8095,7 +8095,7 @@
         },
         {
             "type": 1,
-            "title": "Snibox",
+            "title": "Snibox - SelfhostedPro",
             "name": "snibox",
             "description": "Self-hosted snippet manager.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
@@ -8162,7 +8162,7 @@
         },
         {
             "type": 1,
-            "title": "Sonarr",
+            "title": "Sonarr - SelfhostedPro",
             "name": "sonarr",
             "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sonarr-icon.png",
@@ -8313,7 +8313,7 @@
         },
         {
             "type": 1,
-            "title": "SyncThing",
+            "title": "SyncThing - SelfhostedPro",
             "name": "syncthing",
             "description": null,
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/syncthing-icon.png",
@@ -8416,7 +8416,7 @@
         },
         {
             "type": 1,
-            "title": "Tautulli",
+            "title": "Tautulli - SelfhostedPro",
             "name": "tautulli",
             "description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.[br][br]\r\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\n  [b]8181[/b] The webui for Tautulli's webui [br]\r\n  [b]/config[/b] Storing Configuration and the Tautulli database[br]\r\n[b]/logs[/b] Map to you plex logs (required for IP logging)[br]\r\n\r\n",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tautulli-icon.png",
@@ -8593,7 +8593,7 @@
         },
         {
             "type": 1,
-            "title": "TiddlyWiki",
+            "title": "TiddlyWiki - SelfhostedPro",
             "name": "tiddlywiki",
             "description": "A unique, non-linear notebook wiki.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tiddlywiki.png",
@@ -8639,7 +8639,7 @@
         },
         {
             "type": 1,
-            "title": "Tiny Tiny RSS",
+            "title": "Tiny Tiny RSS - SelfhostedPro",
             "name": "tt-rss",
             "description": "Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader and aggregator, designed to allow you to read news from any location, while feeling as close to a real desktop application as possible.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tt-rss-icon.png",
@@ -8707,7 +8707,7 @@
         },
         {
             "type": 1,
-            "title": "Transmission",
+            "title": "Transmission - SelfhostedPro",
             "name": "transmission",
             "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
@@ -8791,7 +8791,7 @@
         },
         {
             "type": 1,
-            "title": "Transmission-OpenVPN",
+            "title": "Transmission-OpenVPN - SelfhostedPro",
             "name": "transmission-openvpn",
             "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
@@ -8993,7 +8993,7 @@
         },
         {
             "type": 1,
-            "title": "Ubooquity",
+            "title": "Ubooquity - SelfhostedPro",
             "name": "ubooquity",
             "description": "Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ubooquity-icon.png",
@@ -9102,7 +9102,7 @@
         },
         {
             "type": 1,
-            "title": "UniFi Controller",
+            "title": "UniFi Controller - SelfhostedPro",
             "name": "unifi-controller",
             "description": null,
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/unifi-icon.png",
@@ -9186,7 +9186,7 @@
         },
         {
             "type": 1,
-            "title": "UniFi Video",
+            "title": "UniFi Video - SelfhostedPro",
             "name": "UniFi Video",
             "description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti’s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature‑packed user interface with advanced features such as motion detection, auto‑discovery, user‑level security, storage management, reporting, and mobile device support.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/UniFiVideo-logo.png",
@@ -9265,7 +9265,7 @@
         },
         {
             "type": 1,
-            "title": "Watchtower",
+            "title": "Watchtower - SelfhostedPro",
             "name": "watchtower",
             "description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/watchtower.png",
@@ -9309,7 +9309,7 @@
         },
         {
             "type": 1,
-            "title": "WebGrab+Plus",
+            "title": "WebGrab+Plus - SelfhostedPro",
             "name": "webgrabplus",
             "description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.[br]\r\n\t\tOptional postprocessors to add IMDb data or to customize your xmltv listing.[br]\r\n\t\thttp://www.webgrabplus.com/[br]\r\n\t\t[b][span style='color: #E80000;']Directions:[/span][/b][br]\r\n\t\t[b]/config[/b] : This is where WebGrab+Plus will store it's configuration.[br][br]\r\n\t\t[b]/data[/b] : This is where tv_grab_wg script in the Tvheadend container looks for the guide.xml file.[br][br]",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/webgrabplus.png",
@@ -9610,7 +9610,7 @@
         },
         {
             "type": 1,
-            "title": "Whoogle",
+            "title": "Whoogle - SelfhostedPro",
             "name": "whoogle",
             "description": "Self-hosted, ad-free, privacy-respecting Google metasearch engine.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/whoogle.png",
@@ -9656,7 +9656,7 @@
         },
         {
             "type": 1,
-            "title": "Wikijs",
+            "title": "Wikijs - SelfhostedPro",
             "name": "wikijs",
             "description": "Wikijs A modern, lightweight and powerful wiki app built on NodeJS.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/wikijs.png",
@@ -9794,7 +9794,7 @@
         },
         {
             "type": 1,
-            "title": "Yacht",
+            "title": "Yacht - SelfhostedPro",
             "name": "yacht",
             "description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png",
@@ -9821,7 +9821,7 @@
         },
         {
             "type": 1,
-            "title": "YouTubeDL-Material",
+            "title": "YouTubeDL-Material - SelfhostedPro",
             "name": "youtubedl-material",
             "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png",
@@ -9899,7 +9899,7 @@
         },
         {
             "type": 1,
-            "title": "ZNC",
+            "title": "ZNC - SelfhostedPro",
             "name": "znc",
             "description": "ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/znc-icon.png",
@@ -10999,7 +10999,7 @@
         },
         {
             "type": 1,
-            "title": "lidarr",
+            "title": "lidarr - SelfhostedPro",
             "name": "lidarr",
             "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lidarr.png",
@@ -11898,7 +11898,7 @@
         },
         {
             "type": 1,
-            "title": "qBittorrent",
+            "title": "qBittorrent - SelfhostedPro",
             "name": "qbittorrent",
             "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
