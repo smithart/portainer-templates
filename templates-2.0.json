@@ -236,7 +236,7 @@
         },
         {
             "type": 1,
-            "title": "Bazarr",
+            "title": "Bazarr - SelfhostedPro",
             "name": "bazarr",
             "description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bazarr.png",
@@ -330,7 +330,7 @@
         },
         {
             "type": 1,
-            "title": "Beets",
+            "title": "Beets - SelfhostedPro",
             "name": "beets",
             "description": "The purpose of beets is to get your music collection right once and for all. It catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/beets-icon.png",
@@ -414,7 +414,7 @@
         },
         {
             "type": 1,
-            "title": "Bitwarden RS",
+            "title": "Bitwarden RS - SelfhostedPro",
             "name": "bitwardenrs",
             "description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal..",
             "note": "This project is not associated with the Bitwarden project nor 8bit Solutions LLC.",
@@ -462,7 +462,7 @@
         },
         {
             "type": 1,
-            "title": "Booksonic",
+            "title": "Booksonic - SelfhostedPro",
             "name": "booksonic",
             "description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/booksonic.png",
@@ -558,7 +558,7 @@
         },
         {
             "type": 3,
-            "title": "Bookstack",
+            "title": "Bookstack - SelfhostedPro",
             "description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Feautring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bookstack2.png",
             "categories": [
@@ -773,7 +773,7 @@
         },
         {
             "type": 1,
-            "title": "Calibre Web",
+            "title": "Calibre Web - SelfhostedPro",
             "name": "calibre-web",
             "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/calibre-web-icon.png",
@@ -947,7 +947,7 @@
         },
         {
             "type": 1,
-            "title": "Cardigann",
+            "title": "Cardigann - SelfhostedPro",
             "name": "cardigann",
             "description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/cardigann.png",
@@ -998,7 +998,7 @@
         },
         {
             "type": 1,
-            "title": "Chevereto",
+            "title": "Chevereto - SelfhostedPro",
             "name": "Chevereto",
             "description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version..",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/Chevereto.png",
@@ -1181,7 +1181,7 @@
         },
         {
             "type": 1,
-            "title": "Chowdown",
+            "title": "Chowdown - SelfhostedPro",
             "name": "Chowdown",
             "description": "Save recipes in seconds with plain text formatting and create beatiful recipe pages with automated ease.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/chowdown.png",
@@ -1270,7 +1270,7 @@
         },
         {
             "type": 1,
-            "title": "Code Server",
+            "title": "Code Server - SelfhostedPro",
             "name": "code-server",
             "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/code-server.png",
@@ -1374,7 +1374,7 @@
         },
         {
             "type": 1,
-            "title": "Codiad",
+            "title": "Codiad - SelfhostedPro",
             "name": "codiad",
             "description": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.\n  ",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/codiad-icon.png",
@@ -1500,7 +1500,7 @@
         },
         {
             "type": 1,
-            "title": "CouchPotato",
+            "title": "CouchPotato - SelfhostedPro",
             "name": "couchpotato",
             "description": "CouchPotato (CP) is an automatic NZB and torrent downloader. You can keep a \"movies I want\"-list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/couchpotato-icon.png",
@@ -1752,7 +1752,7 @@
         },
         {
             "type": 1,
-            "title": "DashMachine",
+            "title": "DashMachine - SelfhostedPro",
             "name": "dashmachine",
             "description": "Another application bookmark dashboard, with fun features.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/dashmachine_logo.png",
@@ -1852,7 +1852,7 @@
         },
         {
             "type": 1,
-            "title": "Davos",
+            "title": "Davos - SelfhostedPro",
             "name": "davos",
             "description": "davos is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.\r\n\r\n/config : AppData Location\r\n/download : File Download Location",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/davos.png",
@@ -1932,7 +1932,7 @@
         },
         {
             "type": 1,
-            "title": "DeeMix",
+            "title": "DeeMix - SelfhostedPro",
             "name": "deemix",
             "description": "Deemix is a deezer downloader built from the ashes of Deezloader Remix.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deemix.png",
@@ -1988,7 +1988,7 @@
         },
         {
             "type": 1,
-            "title": "Deluge",
+            "title": "Deluge - SelfhostedPro",
             "namme": "deluge",
             "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deluge-icon.png",
@@ -2189,7 +2189,7 @@
         },
         {
             "type": 1,
-            "title": "Dozzle",
+            "title": "Dozzle - SelfhostedPro",
             "name": "dozzle",
             "description": "Dozzle is a simple, lightweight application that provides you with a web based interface to monitor your Docker container logs live. It doesn’t store log information, it is for live monitoring of your container logs only.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/dozzle.png",
@@ -2232,7 +2232,7 @@
         },
         {
             "type": 1,
-            "title": "Duck DNS",
+            "title": "Duck DNS - SelfhostedPro",
             "name": "duckdns",
             "description": "Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.\r\n\r\nFirst, go to duckdns site, register your subdomain and retrieve your token\r\nThen run the docker create command above with your subdomain(s) and token\r\nIt will update your IP with the DuckDNS service every 5 minutes\r\n\r\n",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/duckdns.png",
@@ -2418,7 +2418,7 @@
         },
         {
             "type": 1,
-            "title": "Emby",
+            "title": "Emby - SelfhostedPro",
             "name": "emby",
             "description": "Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/emby.png",
@@ -2516,7 +2516,7 @@
         },
         {
             "type": 1,
-            "title": "EmbyStat",
+            "title": "EmbyStat - SelfhostedPro",
             "name": "embystat",
             "description": "Embystat is a personal web server that can calculate all kinds of statistics from your (local) Emby server. Just install this on your server and let him calculate all kinds of fun stuff.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/embystat.png",
@@ -2606,7 +2606,7 @@
         },
         {
             "type": 1,
-            "title": "FileBrowser",
+            "title": "FileBrowser - SelfhostedPro",
             "name": "filebrowser",
             "description": "Web File Browser which can be used as a middleware or standalone app.",
             "note": "The default user and password is admin/admin.",
@@ -2662,7 +2662,7 @@
         },
         {
             "type": 1,
-            "title": "FreshRSS",
+            "title": "FreshRSS - SelfhostedPro",
             "name": "freshrss",
             "description": "A free, self-hostable rss aggregator…",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/freshrss-icon.png",
@@ -2730,7 +2730,7 @@
         },
         {
             "type": 1,
-            "title": "GOPHISH",
+            "title": "GOPHISH - SelfhostedPro",
             "name": "gophish",
             "description": "NOTE: Once you deploy your GoPhish instance, please navigate to the logs section in Portainer and acquire your 'admin' credentials for login. Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/gophish.png",
@@ -2759,7 +2759,7 @@
         },
         {
             "type": 1,
-            "title": "Gazee",
+            "title": "Gazee - SelfhostedPro",
             "name": "gazee",
             "description": "A WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/gazee-logo.png",
@@ -2890,7 +2890,7 @@
         },
         {
             "type": 1,
-            "title": "Grocy",
+            "title": "Grocy - SelfhostedPro",
             "name": "grocy",
             "description": "Grocy is an ERP system for your kitchen! Cut down on food waste, and manage your chores with this brilliant utulity.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/grocy_logo.png",
@@ -2970,7 +2970,7 @@
         },
         {
             "type": 1,
-            "title": "Guacamole",
+            "title": "Guacamole - SelfhostedPro",
             "name": "guacamole",
             "description": "A clientless remote desktop gateway.",
             "note": "The default login will be guacadmin/guacadmin. It is common practice to add a new admin user and remove the default user for Guacamole.",
@@ -3018,7 +3018,7 @@
         },
         {
             "type": 1,
-            "title": "HTPC Manager",
+            "title": "HTPC Manager - SelfhostedPro",
             "name": "htpcmanager",
             "description": "HTPC Manaager, a front end for many htpc related applications. Hellowlol version.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/htpcmanager-icon.png",
@@ -3090,7 +3090,7 @@
         },
         {
             "type": 1,
-            "title": "Headphones",
+            "title": "Headphones - SelfhostedPro",
             "name": "headphones",
             "description": null,
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/headphones-icon.png",
@@ -3174,7 +3174,7 @@
         },
         {
             "type": 1,
-            "title": "Heimdall",
+            "title": "Heimdall - SelfhostedPro",
             "name": "heimdall",
             "description": "Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/heimdall-icon.png",
@@ -3248,7 +3248,7 @@
         },
         {
             "type": 1,
-            "title": "Homer",
+            "title": "Homer - SelfhostedPro",
             "name": "homer",
             "description": "A dead simple static HOMepage for your servER to keep your s ervices on hand, from a simple yaml configuration file.",
             "note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
@@ -3323,7 +3323,7 @@
         },
         {
             "type": 1,
-            "title": "Huginn",
+            "title": "Huginn - SelfhostedPro",
             "name": "huginn",
             "description": "Create agents that monitor and act on your behalf.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/huginn.png",
@@ -3369,7 +3369,7 @@
         },
         {
             "type": 3,
-            "title": "Invoice Ninja",
+            "title": "Invoice Ninja - SelfhostedPro",
             "name": "invoice_ninja",
             "description": "Invoices, Expenses and Tasks built with Laravel and Flutter.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/invoice_ninja.png",
@@ -3524,7 +3524,7 @@
         },
         {
             "type": 1,
-            "title": "Jackett",
+            "title": "Jackett - SelfhostedPro",
             "name": "jackett",
             "description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.[",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jacket-icon.png",
@@ -3602,7 +3602,7 @@
         },
         {
             "type": 1,
-            "title": "Jellyfin",
+            "title": "Jellyfin - SelfhostedPro",
             "name": "jellyfin",
             "description": "Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jellyfin.png",
@@ -3756,7 +3756,7 @@
         },
         {
             "type": 1,
-            "title": "Kodi Headless",
+            "title": "Kodi Headless - SelfhostedPro",
             "name": "kodi-headless",
             "description": "Headless installation of Kodi™ (formerly known as XBMC™), to enable library updates.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/kodi-icon.png",
@@ -3826,7 +3826,7 @@
         },
         {
             "type": 1,
-            "title": "LazyLibrarian",
+            "title": "LazyLibrarian - SelfhostedPro",
             "name": "lazylibrarian",
             "description": "LazyLibrarian is a program to follow authors and grab metadata for all your digital reading needs.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lazylibrarian-icon.png",
@@ -3904,7 +3904,7 @@
         },
         {
             "type": 1,
-            "title": "Let's Encrypt",
+            "title": "Let's Encrypt - SelfhostedPro",
             "name": "letsencrypt",
             "description": "This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.\r\n  \r\n  Before running this container, make sure that the url and subdomains are properly forwarded to this container's host.\r\n  \r\n  - Port 443 on the internet side of the router should be forwarded to this container's port 443.\r\n  - If you need a dynamic dns provider, you can use the free provider duckdns.org where the url will be yoursubdomain.duckdns.org and the subdomains    can be www,ftp,cloud\r\n  - The container detects changes to url and subdomains, revokes existing certs and generates new ones during start. \r\n  - It also detects changes to the DHLEVEL parameter and replaces the dhparams file.\r\n  \r\n  - If you'd like to password protect your sites, you can use htpasswd. Run the following command on your host to generate the htpasswd file docker exec -it letsencrypt htpasswd -c /config/nginx/.htpasswd &lt;username&gt;",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/letsencrypt.png",
