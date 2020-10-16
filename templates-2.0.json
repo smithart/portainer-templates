@@ -3,7 +3,7 @@
     "templates": [
         {
             "categories": [
-                "Other"
+                "Other", "Qballjos"
             ],
             "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it’ll cover ALL your home devices, and you don’t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.",
             "env": [
@@ -60,7 +60,7 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/airsonic-logo.png",
             "image": "linuxserver/airsonic:latest",
             "categories": [
-                "Music"
+                "Music", "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -183,7 +183,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "Authentication"
+                "Authentication",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -243,7 +244,8 @@
             "image": "linuxserver/bazarr:latest",
             "categories": [
                 "Video",
-                "Music"
+                "Music",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -422,7 +424,8 @@
             "image": "bitwardenrs/server:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -562,7 +565,8 @@
             "description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Feautring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bookstack2.png",
             "categories": [
-                "Wiki"
+                "Wiki",
+                "SelfhostedPro"
             ],
             "note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
             "platform": "linux",
@@ -651,7 +655,8 @@
             "image": "linuxserver/cops:latest",
             "categories": [
                 "Cloud",
-                "Books"
+                "Books",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -780,7 +785,8 @@
             "image": "linuxserver/calibre-web:latest",
             "categories": [
                 "Cloud",
-                "Books"
+                "Books",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -953,7 +959,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/cardigann.png",
             "image": "linuxserver/cardigann:latest",
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -984,7 +991,7 @@
             "title": "CentOS 7.3 - Camunda",
             "description": "Camunda CI CentOS base image",
             "categories": [
-                "os"
+                "OS"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -7444,7 +7451,7 @@
         },
         {
             "categories": [
-                "Backup:",
+                "Backup",
                 "Cloud",
                 "Other",
                 "Tools"
@@ -8355,7 +8362,7 @@
         },
         {
             "categories": [
-                "Backup:",
+                "Backup",
                 "Cloud",
                 "Other",
                 "Tools"
@@ -9245,7 +9252,7 @@
             "title": "Urbackup",
             "description": "Open-source network backup",
             "categories": [
-                "backup"
+                "Backup"
             ],
             "platform": "linux",
             "note": "This application web interface is exposed on the port 55414 inside the container.",
@@ -10475,7 +10482,7 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/duplicati-icon.png",
             "image": "linuxserver/duplicati:latest",
             "category": [
-                "Backup:",
+                "Backup",
                 "Cloud",
                 "Other",
                 "Productivity",
@@ -12103,7 +12110,7 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/resilio.png",
             "image": "linuxserver/resilio-sync:latest",
             "category": [
-                "Backup:",
+                "Backup",
                 "Cloud",
                 "Other",
                 "Tools"
@@ -12441,7 +12448,7 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/syncthing-icon.png",
             "image": "linuxserver/syncthing:latest",
             "category": [
-                "Backup:",
+                "Backup",
                 "Cloud",
                 "Other",
                 "Tools"
