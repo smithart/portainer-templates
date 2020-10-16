@@ -39,7 +39,7 @@
                 "3000:3000/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Adguard",
+            "title": "Adguard - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -722,7 +722,7 @@
         },
         {
             "type": 1,
-            "title": "Caddy",
+            "title": "Caddy - ebrithiljonas",
             "description": "HTTP/2 web server with automatic HTTPS",
             "categories": [
                 "webserver"
@@ -836,7 +836,7 @@
                 "8083:8083/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Calibre Web",
+            "title": "Calibre Web - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -981,7 +981,7 @@
         },
         {
             "type": 1,
-            "title": "CentOS 7.3",
+            "title": "CentOS 7.3 - Camunda",
             "description": "Camunda CI CentOS base image",
             "categories": [
                 "os"
@@ -1108,7 +1108,7 @@
                 "80/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Chevereto",
+            "title": "Chevereto - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -1216,7 +1216,7 @@
                 "4000:4000/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Chowdown",
+            "title": "Chowdown - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -1248,7 +1248,7 @@
         },
         {
             "type": 2,
-            "title": "CockroachDB",
+            "title": "CockroachDB (stack) - Portainer",
             "description": "CockroachDB cluster",
             "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
             "categories": [
@@ -1263,7 +1263,7 @@
         },
         {
             "type": 4,
-            "title": "CockroachDB",
+            "title": "CockroachDB (cluster) - Portainer",
             "description": "CockroachDB cluster",
             "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
             "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
@@ -1363,7 +1363,7 @@
                 "8443:8443/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Code Server",
+            "title": "Code Server - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -1431,7 +1431,7 @@
                 "80/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Codiad",
+            "title": "Codiad - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -1567,7 +1567,7 @@
                 "5050:5050/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "CouchPotato",
+            "title": "CouchPotato - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -1682,7 +1682,7 @@
         },
         {
             "type": 1,
-            "title": "Daapd",
+            "title": "Daapd - linuxserver",
             "name": "daapd",
             "description": "DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.",
             "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/daapd-icon.png",
@@ -1737,7 +1737,7 @@
             "name": "daapd",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "title": "Daapd",
+            "title": "Daapd - linuxserver",
             "type": 1,
             "volumes": [
                 {
@@ -1831,7 +1831,7 @@
             ]
         },
         {
-            "title": "Datadog agent",
+            "title": "Datadog agent (stack)",
             "type": 2,
             "categories": [
                 "Monitoring"
@@ -1917,7 +1917,7 @@
                 "8080/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Davos",
+            "title": "Davos - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -1973,7 +1973,7 @@
                 "9666:9666/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "DeeMix",
+            "title": "DeeMix - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -2053,7 +2053,7 @@
             "namme": "deluge",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "title": "Deluge",
+            "title": "Deluge - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -2299,7 +2299,7 @@
             "name": "duckdns",
             "platform": "linux",
             "restart_policy": "unless-stopped",
-            "title": "Duck DNS",
+            "title": "Duck DNS - Qballjos",
             "type": 1
         },
         {
@@ -2378,7 +2378,7 @@
                 "8200:8200/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Duplicati",
+            "title": "Duplicati - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -2497,7 +2497,7 @@
                 "8920:8920/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Emby",
+            "title": "Emby - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -2553,7 +2553,7 @@
                 "6555:6555/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "EmbyStat",
+            "title": "EmbyStat - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -2647,7 +2647,7 @@
                 "8082:8082/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "FileBrowser",
+            "title": "FileBrowser - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -2719,7 +2719,7 @@
                 "80/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "FreshRSS",
+            "title": "FreshRSS - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -2959,7 +2959,7 @@
                 "80/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Grocy",
+            "title": "Grocy - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3007,7 +3007,7 @@
                 "8080:8080/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Guacamole",
+            "title": "Guacamole - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3079,7 +3079,7 @@
                 "8085:8085/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "HTPC Manager",
+            "title": "HTPC Manager - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3155,7 +3155,7 @@
                 "8181:8181/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Headphones",
+            "title": "Headphones - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3237,7 +3237,7 @@
                 "443/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Heimdall",
+            "title": "Heimdall - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3289,7 +3289,7 @@
                 "8902:8080/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Homer",
+            "title": "Homer - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3358,7 +3358,7 @@
                 "3000:3000/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Huginn",
+            "title": "Huginn - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3458,7 +3458,7 @@
                 "stackfile": "Template/Stack/invoice-ninja.yml",
                 "url": "https://github.com/Qballjos/portainer_templates"
             },
-            "title": "Invoice Ninja",
+            "title": "Invoice Ninja - Qballjos",
             "type": 3
         },
         {
@@ -3587,7 +3587,7 @@
                 "9117:9117/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Jackett",
+            "title": "Jackett - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3681,7 +3681,7 @@
                 "8920:8920/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Jellyfin",
+            "title": "Jellyfin - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3815,7 +3815,7 @@
                 "9777/udp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Kodi Headless",
+            "title": "Kodi Headless - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -3888,7 +3888,7 @@
                 "5299:5299/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "LazyLibrarian",
+            "title": "LazyLibrarian - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -4035,7 +4035,7 @@
                 "443/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Let's Encrypt / SWAG",
+            "title": "Let's Encrypt / SWAG - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -4081,7 +4081,7 @@
                 "80/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "LibreSpeed",
+            "title": "LibreSpeed - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -4159,7 +4159,7 @@
                 "80/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Lychee",
+            "title": "Lychee - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -4315,7 +4315,7 @@
                 "3306:3306/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "MariaDB",
+            "title": "MariaDB - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -4326,7 +4326,7 @@
         },
         {
             "type": 1,
-            "title": "MariaDB Galera v10.1",
+            "title": "MariaDB Galera v10.1 - camunda",
             "description": "MariaDB Galera Cluster v10.1",
             "categories": [
                 "database"
@@ -4344,7 +4344,7 @@
         },
         {
             "type": 1,
-            "title": "MariaDB v10.0",
+            "title": "MariaDB v10.0 - camunda",
             "description": "MariaDB v10.0",
             "categories": [
                 "database"
@@ -4456,7 +4456,7 @@
                 "25565:25565/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "McMyAdmin 2",
+            "title": "McMyAdmin 2 - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -4533,7 +4533,7 @@
                 "8081:8081/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Medusa",
+            "title": "Medusa - Qballjos",
             "type": 1,
             "volumes": [
                 {
@@ -4578,7 +4578,7 @@
         },
         {
             "type": 1,
-            "title": "Minetest",
+            "title": "Minetest - linuxserver",
             "name": "minetest",
             "description": "Server version of minetest, a free, open source alternative to minecraft.",
             "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/minetest-icon.png",
@@ -4634,7 +4634,7 @@
                 "30000:30000/udp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Minetest",
+            "title": "Minetest - linuxserver",
             "type": 1,
             "volumes": [
                 {
@@ -4736,7 +4736,7 @@
                 "1900:1900/udp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Minisatip",
+            "title": "Minisatip - Qballjos",
             "type": 1
         },
         {
@@ -4799,7 +4799,7 @@
                 "3000:3000/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Mstream",
+            "title": "Mstream - Qballjos",
             "type": 1,
             "volumes": [
                 {
