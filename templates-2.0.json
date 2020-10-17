@@ -1284,7 +1284,8 @@
             "image": "linuxserver/code-server:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1387,7 +1388,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/codiad-icon.png",
             "image": "linuxserver/codiad:latest",
             "categories": [
-                "Productivity"
+                "Productivity",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1514,7 +1516,8 @@
             "image": "linuxserver/couchpotato:latest",
             "categories": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1766,7 +1769,8 @@
             "image": "rmountjoy/dashmachine:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
