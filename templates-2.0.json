@@ -8112,7 +8112,8 @@
         },
         {
             "categories": [
-                "Management"
+                "Management",
+                "Qballjos"
             ],
             "description": null,
             "env": [
@@ -8157,7 +8158,8 @@
             "image": "snowmean/snibox-sqlite:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8224,7 +8226,8 @@
             "image": "linuxserver/sonarr:latest",
             "categories": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8265,7 +8268,8 @@
         {
             "categories": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "Qballjos"
             ],
             "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
             "env": [
@@ -8314,7 +8318,8 @@
             "title": "SqlServer Express 2008",
             "description": "Microsoft SqlServer Express 2008 for Windows running Qemu in Docker",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "windows",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
@@ -8333,7 +8338,8 @@
             "title": "SqlServer Express 2012",
             "description": "Microsoft SqlServer Express 2012 for Windows running Qemu in Docker",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "windows",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
@@ -8352,7 +8358,8 @@
             "title": "SqlServer Express 2014",
             "description": "Microsoft SqlServer Express 2014 for Windows running Qemu in Docker",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "windows",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
@@ -8377,7 +8384,8 @@
                 "Backup",
                 "Cloud",
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8413,7 +8421,8 @@
                 "Backup",
                 "Cloud",
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": null,
             "env": [
@@ -8478,7 +8487,8 @@
             "image": "linuxserver/tautulli:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8511,7 +8521,8 @@
         {
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.[br][br]\r\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\n  [b]8181[/b] The webui for Tautulli's webui [br]\r\n  [b]/config[/b] Storing Configuration and the Tautulli database[br]\r\n[b]/logs[/b] Map to you plex logs (required for IP logging)[br]\r\n\r\n",
             "env": [
@@ -8554,6 +8565,9 @@
             "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/ts.png",
             "restart_policy": "unless-stopped",
             "image": "teamspeak:latest",
+            "categories": [
+                "ebrithiljonas"
+            ],
             "ports": [
                 "30033:30033/tcp",
                 "9987:9987/udp"
@@ -8655,7 +8669,8 @@
             "image": "mazzolino/tiddlywiki:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8672,7 +8687,8 @@
         {
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "A unique, non-linear notebook wiki.",
             "image": "mazzolino/tiddlywiki:latest",
@@ -8700,7 +8716,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tt-rss-icon.png",
             "image": "lunik1/tt-rss:latest",
             "categories": [
-                "Other"
+                "Other",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8728,7 +8745,8 @@
         },
         {
             "categories": [
-                "Other"
+                "Other",
+                "Qballjos"
             ],
             "description": "Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader and aggregator, designed to allow you to read news from any location, while feeling as close to a real desktop application as possible.",
             "env": [
@@ -8768,7 +8786,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
             "image": "linuxserver/transmission:latest",
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8804,7 +8823,8 @@
         },
         {
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "Qballjos"
             ],
             "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
             "env": [
@@ -8855,7 +8875,8 @@
             "categories": [
                 "Other",
                 "VPN",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8910,7 +8931,8 @@
             "categories": [
                 "Other",
                 "VPN",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
             "env": [
@@ -9055,7 +9077,8 @@
             "image": "linuxserver/ubooquity:latest",
             "categories": [
                 "Cloud",
-                "Books"
+                "Books",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9095,7 +9118,8 @@
         {
             "categories": [
                 "Cloud",
-                "Books"
+                "Books",
+                "Qballjos"
             ],
             "description": "Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.",
             "env": [
@@ -9143,7 +9167,8 @@
             "title": "Ubuntu",
             "description": "Camunda CI Ubuntu base image",
             "categories": [
-                "os"
+                "os",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9164,7 +9189,8 @@
             "image": "linuxserver/unifi-controller:latest",
             "categories": [
                 "Management",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9200,7 +9226,8 @@
         {
             "categories": [
                 "Management",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": null,
             "env": [
@@ -9247,7 +9274,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/UniFiVideo-logo.png",
             "image": "pducharme/unifi-video-controller:latest",
             "categories": [
-                "CCTV"
+                "CCTV",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9329,7 +9357,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "Maintenance"
+                "Maintenance",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9344,7 +9373,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "Maintenance"
+                "Maintenance",
+                "Qballjos"
             ],
             "description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
             "image": "containrrr/watchtower:latest",
@@ -9370,7 +9400,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/webgrabplus.png",
             "image": "linuxserver/webgrabplus:latest",
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9399,7 +9430,8 @@
         },
         {
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "Qballjos"
             ],
             "description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.[br]\r\n\t\tOptional postprocessors to add IMDb data or to customize your xmltv listing.[br]\r\n\t\thttp://www.webgrabplus.com/[br]\r\n\t\t[b][span style='color: #E80000;']Directions:[/span][/b][br]\r\n\t\t[b]/config[/b] : This is where WebGrab+Plus will store it's configuration.[br][br]\r\n\t\t[b]/data[/b] : This is where tv_grab_wg script in the Tvheadend container looks for the guide.xml file.[br][br]",
             "env": [
@@ -9437,7 +9469,8 @@
             "title": "WebLogic 12R2",
             "description": "Oracle WebLogic Application Server 12R2",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9455,7 +9488,8 @@
             "title": "WebLogic 12R2 + Oracle 12",
             "description": "Oracle WebLogic Application Server 12R2 + Oracle 12",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9489,7 +9523,8 @@
             "title": "WebLogic 12R2 + PostgreSQL 9.4",
             "description": "Oracle WebLogic Application Server 12R2 + PostgreSQL 9.4",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9523,7 +9558,8 @@
             "title": "WebSphere 8.0",
             "description": "IBM WebSphere Application Server 8.0 with PostgreSQL 9.1",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9542,7 +9578,8 @@
             "title": "WebSphere 8.5",
             "description": "IBM WebSphere Application Server 8.5 with PostgreSQL 9.1",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9561,7 +9598,8 @@
             "title": "WebSphere 8.5 + db2 9.7",
             "description": "IBM WebSphere Application Server 8.5 with db2 9.7",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9614,7 +9652,8 @@
             "title": "WebSphere 9.0",
             "description": "IBM WebSphere Application Server 9.0 with PostgreSQL 9.1",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9633,7 +9672,8 @@
             "title": "WebSphere 9.0 + db2 10.5",
             "description": "IBM WebSphere Application Server 9.0 + db2 10.5",
             "categories": [
-                "server"
+                "server",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -9672,7 +9712,8 @@
             "image": "benbusby/whoogle-search:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9689,7 +9730,8 @@
         {
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "Self-hosted, ad-free, privacy-respecting Google metasearch engine.",
             "image": "benbusby/whoogle-search:latest",
@@ -9718,7 +9760,8 @@
             "image": "linuxserver/wikijs:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9739,7 +9782,8 @@
         {
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "Wikijs A modern, lightweight and powerful wiki app built on NodeJS.",
             "image": "linuxserver/wikijs:latest",
@@ -9856,7 +9900,8 @@
             "image": "selfhostedpro/yacht:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9883,7 +9928,8 @@
             "image": "tzahi12345/youtubedl-material:latest",
             "categories": [
                 "Other",
-                "Downloaders"
+                "Downloaders",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9916,7 +9962,8 @@
         {
             "categories": [
                 "Other",
-                "Downloaders"
+                "Downloaders",
+                "Qballjos"
             ],
             "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
             "image": "tzahi12345/youtubedl-material:latest",
@@ -9960,7 +10007,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/znc-icon.png",
             "image": "linuxserver/znc:latest",
             "categories": [
-                "Messenger"
+                "Messenger",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -9988,7 +10036,8 @@
         },
         {
             "categories": [
-                "Messenger"
+                "Messenger",
+                "Qballjos"
             ],
             "description": "ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
             "env": [
@@ -10027,7 +10076,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/airsonic-logo.png",
             "image": "linuxserver/airsonic:latest",
             "category": [
-                "Music"
+                "Music",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10085,7 +10135,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/beets-icon.png",
             "image": "linuxserver/beets:latest",
             "category": [
-                "Music"
+                "Music",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10128,7 +10179,8 @@
             "image": "linuxserver/booksonic:latest",
             "category": [
                 "Books",
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10176,7 +10228,8 @@
             "image": "linuxserver/calibre-web:latest",
             "category": [
                 "Cloud",
-                "Books"
+                "Books",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10215,7 +10268,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/codiad-icon.png",
             "image": "linuxserver/codiad:latest",
             "category": [
-                "Productivity"
+                "Productivity",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10252,7 +10306,8 @@
             "image": "linuxserver/cops:latest",
             "category": [
                 "Cloud",
-                "Books"
+                "Books",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10292,7 +10347,8 @@
             "image": "linuxserver/couchpotato:latest",
             "category": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10372,7 +10428,8 @@
             "category": [
                 "FTP",
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10406,7 +10463,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/deluge-icon.png",
             "image": "linuxserver/deluge:latest",
             "category": [
-                "Downloaders"
+                "Downloaders",
+                "thesugarat"
             ],
             "platform": "linux",
             "volumes": [
@@ -10448,7 +10506,8 @@
             "image": "linuxserver/domoticz:latest",
             "category": [
                 "HomeAutomation:",
-                "Management"
+                "Management",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10492,7 +10551,8 @@
             "image": "linuxserver/duckdns:latest",
             "category": [
                 "DNS",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "env": [
@@ -10534,7 +10594,8 @@
                 "Cloud",
                 "Other",
                 "Productivity",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10579,7 +10640,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/freshrss-icon.png",
             "image": "linuxserver/freshrss:latest",
             "category": [
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10617,7 +10679,8 @@
             "category": [
                 "Web",
                 "Books",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10654,7 +10717,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/headphones-icon.png",
             "image": "linuxserver/headphones:latest",
             "category": [
-                "Music"
+                "Music",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10698,7 +10762,8 @@
             "category": [
                 "Tools",
                 "Web",
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10737,7 +10802,8 @@
             "category": [
                 "Video",
                 "Music",
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10775,7 +10841,8 @@
             "category": [
                 "Downloaders",
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10815,7 +10882,8 @@
             "image": "linuxserver/jackett:latest",
             "category": [
                 "Downloaders",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10854,7 +10922,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/kodi-icon.png",
             "image": "linuxserver/kodi-headless:latest",
             "category": [
-                "Video"
+                "Video",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10891,7 +10960,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/lazylibrarian-icon.png",
             "image": "linuxserver/lazylibrarian:latest",
             "category": [
-                "Books"
+                "Books",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -10934,7 +11004,8 @@
             "image": "linuxserver/letsencrypt:latest",
             "category": [
                 "Tools",
-                "Web"
+                "Web",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11006,7 +11077,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/libresonic.png",
             "image": "linuxserver/libresonic:latest",
             "category": [
-                "Music"
+                "Music",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11061,7 +11133,8 @@
             "image": "linuxserver/lidarr:latest",
             "categories": [
                 "Downloaders",
-                "Music"
+                "Music",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -11098,7 +11171,8 @@
         {
             "categories": [
                 "Downloaders",
-                "Music"
+                "Music",
+                "Qballjos"
             ],
             "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
             "env": [
@@ -11146,7 +11220,8 @@
             "image": "linuxserver/lidarr:latest",
             "category": [
                 "Downloaders",
-                "Music"
+                "Music",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11191,7 +11266,8 @@
                 "Cloud",
                 "Web",
                 "Management",
-                "Photos"
+                "Photos",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11231,7 +11307,8 @@
             "image": "linuxserver/mariadb:latest",
             "category": [
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11273,7 +11350,8 @@
             "image": "linuxserver/medusa:latest",
             "category": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11353,7 +11431,8 @@
             "category": [
                 "Video",
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11388,7 +11467,8 @@
             "category": [
                 "Music",
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11440,7 +11520,8 @@
                 "Web",
                 "Proxy",
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11477,7 +11558,8 @@
             "image": "linuxserver/mylar:latest",
             "category": [
                 "Downloaders",
-                "Books"
+                "Books",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11523,7 +11605,8 @@
                 "Productivity",
                 "Tools",
                 "Other",
-                "Web"
+                "Web",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11563,7 +11646,8 @@
             "image": "linuxserver/nginx:latest",
             "category": [
                 "Web",
-                "Proxy"
+                "Proxy",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11600,7 +11684,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/nzbget-icon.png",
             "image": "linuxserver/nzbget:latest",
             "category": [
-                "Downloaders"
+                "Downloaders",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11642,7 +11727,8 @@
                 "Downloaders",
                 "Other",
                 "Video",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11678,7 +11764,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/openvpn-as-icon.png",
             "image": "linuxserver/openvpn-as:latest",
             "category": [
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11721,7 +11808,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/oscam.png",
             "image": "linuxserver/oscam:latest",
             "category": [
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11758,7 +11846,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/photoshow-icon.png",
             "image": "linuxserver/photoshow:latest",
             "category": [
-                "Photos"
+                "Photos",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11800,7 +11889,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/piwigo-icon.png",
             "image": "linuxserver/piwigo:latest",
             "category": [
-                "Photos"
+                "Photos",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11838,7 +11928,8 @@
             "category": [
                 "Video",
                 "Music",
-                "Photos"
+                "Photos",
+                "thesugarat"
             ],
             "platform": "linux",
             "volumes": [
@@ -11879,7 +11970,8 @@
                 "Cloud",
                 "Productivity",
                 "Tools",
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11919,7 +12011,8 @@
             "image": "linuxserver/pydio:latest",
             "category": [
                 "Cloud",
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -11959,7 +12052,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
             "image": "linuxserver/qbittorrent:latest",
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -12038,7 +12132,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/qbittorrent-icon.png",
             "image": "linuxserver/qbittorrent:latest",
             "category": [
-                "Downloaders"
+                "Downloaders",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12079,7 +12174,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/quassel-core-icon.png",
             "image": "linuxserver/quassel-core:latest",
             "category": [
-                "Messenger"
+                "Messenger",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12116,7 +12212,8 @@
             "image": "linuxserver/radarr:latest",
             "category": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12161,7 +12258,8 @@
                 "Backup",
                 "Cloud",
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12325,7 +12423,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/sabnzbd-icon.png",
             "image": "linuxserver/sabnzbd:latest",
             "category": [
-                "Downloaders"
+                "Downloaders",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12369,7 +12468,8 @@
             "image": "linuxserver/sickchill:latest",
             "category": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12411,7 +12511,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/smokeping-icon.png",
             "image": "linuxserver/smokeping:latest",
             "category": [
-                "Management"
+                "Management",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12451,7 +12552,8 @@
             "image": "linuxserver/sonarr:latest",
             "category": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12499,7 +12601,8 @@
                 "Backup",
                 "Cloud",
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12541,7 +12644,8 @@
             "image": "linuxserver/tautulli:latest",
             "category": [
                 "Other",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12616,7 +12720,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/transmission-icon.png",
             "image": "linuxserver/transmission:latest",
             "category": [
-                "Downloaders"
+                "Downloaders",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12661,7 +12766,8 @@
             "image": "linuxserver/tvheadend:latest",
             "category": [
                 "Video",
-                "Other"
+                "Other",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12702,7 +12808,8 @@
             "image": "linuxserver/ubooquity:latest",
             "category": [
                 "Cloud",
-                "Books"
+                "Books",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12751,7 +12858,8 @@
             "image": "linuxserver/unifi-controller:latest",
             "category": [
                 "Management",
-                "Tools"
+                "Tools",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
@@ -12794,7 +12902,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/webgrabplus.png",
             "image": "linuxserver/webgrabplus:latest",
             "category": [
-                "Downloaders"
+                "Downloaders",
+                "thesugarat"
             ],
             "platform": "linux",
             "volumes": [
@@ -12830,7 +12939,8 @@
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/znc-icon.png",
             "image": "linuxserver/znc:latest",
             "category": [
-                "Messenger"
+                "Messenger",
+                "thesugarat"
             ],
             "platform": "linux",
             "ports": [
