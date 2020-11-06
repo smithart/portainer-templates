@@ -5383,7 +5383,8 @@
         },
         {
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "Qballjos"
             ],
             "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players",
             "env": [
@@ -5429,7 +5430,8 @@
             "categories": [
                 "Downloaders",
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5463,7 +5465,8 @@
             "categories": [
                 "Downloaders",
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "NZBHydra is a meta search for NZB indexers and the \"spiritual successor\" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.",
             "env": [
@@ -5525,7 +5528,8 @@
             "title": "Nextcloud - ebrithiljonas",
             "description": "Nextcloud with MariaDB",
             "categories": [
-                "Ebrithil"
+                "Ebrithil",
+                "ebrithiljonas"
             ],
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/nextcloud.png",
@@ -5622,7 +5626,8 @@
                 "Productivity",
                 "Tools",
                 "Other",
-                "Web"
+                "Web",
+                "Qballjos"
             ],
             "description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
             "env": [
@@ -5694,6 +5699,10 @@
             "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/nginx.png",
             "restart_policy": "unless-stopped",
             "image": "nginx",
+            "categories": [
+                "webserver",
+                "ebrithiljonas"
+            ],
             "ports": [
                 "80:80/tcp",
                 "443:443/tcp"
@@ -5722,7 +5731,8 @@
             "image": "linuxserver/nginx:latest",
             "categories": [
                 "Web",
-                "Proxy"
+                "Proxy",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5752,7 +5762,8 @@
         {
             "categories": [
                 "Web",
-                "Proxy"
+                "Proxy",
+                "Qballjos"
             ],
             "description": "Nginx is a web server with a strong focus on high concurrency, performance and low memory usage. It can also act as a reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer and an HTTP cache.",
             "env": [
@@ -5794,7 +5805,8 @@
             "image": "jlesage/nginx-proxy-manager",
             "categories": [
                 "Proxy",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5813,7 +5825,8 @@
         {
             "categories": [
                 "Proxy",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
             "image": "jlesage/nginx-proxy-manager",
@@ -5953,7 +5966,8 @@
                 "Downloaders",
                 "Other",
                 "Video",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5984,7 +5998,8 @@
                 "Downloaders",
                 "Other",
                 "Video",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "Ombi allows you to host your own Plex Request and user management system. ",
             "env": [
@@ -6040,7 +6055,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/openvpn-as-icon.png",
             "image": "linuxserver/openvpn-as:latest",
             "categories": [
-                "Other"
+                "Other",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6075,7 +6091,8 @@
         },
         {
             "categories": [
-                "Other"
+                "Other",
+                "Qballjos"
             ],
             "description": "OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments.",
             "env": [
@@ -6119,7 +6136,8 @@
             "title": "Oracle 10g",
             "description": "Oracle v10g Express Edition",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -6137,7 +6155,8 @@
             "title": "Oracle 11g",
             "description": "Oracle v11g Express Edition",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -6155,7 +6174,8 @@
             "title": "Oracle 12c",
             "description": "Oracle v12c Enterprise Edition",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -6173,7 +6193,8 @@
             "title": "Oracle 18c",
             "description": "Oracle v18c Enterprise Edition",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -6218,7 +6239,8 @@
         {
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
             "env": [
@@ -6296,7 +6318,8 @@
             "image": "organizrtools/organizr-v2:php-fpm",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6346,7 +6369,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/photoshow-icon.png",
             "image": "linuxserver/photoshow:latest",
             "categories": [
-                "Photos"
+                "Photos",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6382,7 +6406,8 @@
         },
         {
             "categories": [
-                "Photos"
+                "Photos",
+                "Qballjos"
             ],
             "description": "A simple, easy way to turn a photo album into a webgallery",
             "env": [
@@ -6431,7 +6456,8 @@
             "image": "pihole/pihole:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6457,7 +6483,8 @@
         {
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "Qballjos"
             ],
             "description": "A Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole.",
             "image": "pihole/pihole:latest",
@@ -6494,7 +6521,8 @@
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/piwigo-icon.png",
             "image": "linuxserver/piwigo:latest",
             "categories": [
-                "Photos"
+                "Photos",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6522,7 +6550,8 @@
         },
         {
             "categories": [
-                "Photos"
+                "Photos",
+                "Qballjos"
             ],
             "description": "Piwigo is photo gallery software for the web, built by an active community of users and developers.",
             "env": [
@@ -6584,7 +6613,8 @@
             "categories": [
                 "Video",
                 "Music",
-                "Photos"
+                "Photos",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6625,7 +6655,8 @@
             "categories": [
                 "Video",
                 "Music",
-                "Photos"
+                "Photos",
+                "Qballjos"
             ],
             "description": "Your favorite movies, TV, music, web shows, podcasts, and more, all streamed to your favorite screens.",
             "env": [
@@ -6847,7 +6878,8 @@
             "title": "PostgreSQL v9.3",
             "description": "PostgreSQL v9.3",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
@@ -6883,7 +6915,8 @@
             "title": "PostgreSQL v9.6",
             "description": "PostgreSQL v9.6",
             "categories": [
-                "database"
+                "database",
+                "camunda"
             ],
             "platform": "linux",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
@@ -6906,7 +6939,8 @@
                 "VPN",
                 "Tools",
                 "Other",
-                "Web"
+                "Web",
+                "SelfhostedPro"
             ],
             "note": "Documentation on this containier can be found here: <a href=https://hub.docker.com/r/goofball222/pritunl>https://hub.docker.com/r/goofball222/pritunl</a>;;;;",
             "platform": "linux",
@@ -6947,7 +6981,8 @@
                 "Cloud",
                 "Productivity",
                 "Tools",
-                "Other"
+                "Other",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
