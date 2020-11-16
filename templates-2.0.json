@@ -1992,7 +1992,7 @@
             "type": 3,
             "title": "DomainMOD",
             "description": "DomainMOD is an open source application used to manage your domains and other internet assets in a central location",
-            "logo": "https://github.com/smithart/portainer-templates/stacks/domainmod/domainmod.png",
+            "logo": "https://raw.githubusercontent.com/smithart/portainer-templates/master/stacks/domainmod/domainmod.png",
             "categories": [
                 "Other",
                 "ViviCode"
