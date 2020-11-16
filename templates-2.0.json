@@ -3,7 +3,8 @@
     "templates": [
         {
             "categories": [
-                "Other", "Qballjos"
+                "Other",
+                "Qballjos"
             ],
             "description": "AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it’ll cover ALL your home devices, and you don’t need any client-side software for that. With the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.",
             "env": [
@@ -149,7 +150,7 @@
         },
         {
             "type": 1,
-            "title": "Bazarr - SelfhostedPro",
+            "title": "Bazarr",
             "name": "bazarr",
             "description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bazarr.png",
@@ -157,7 +158,8 @@
             "categories": [
                 "Video",
                 "Music",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -196,62 +198,16 @@
             ]
         },
         {
-            "categories": [
-                "Video",
-                "Music",
-                "Qballjos"
-            ],
-            "description": "Bazarr is a companion application to Sonarr and Radarr. It can manage and download subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "label": "TZ",
-                    "name": "TZ"
-                }
-            ],
-            "image": "linuxserver/bazarr:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/bazarr.png",
-            "name": "Bazarr",
-            "platform": "linux",
-            "ports": [
-                "6767:6767/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Bazarr - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Bazarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/TV",
-                    "container": "/tv"
-                },
-                {
-                    "bind": "/portainer/Movies",
-                    "container": "/movies"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Beets - SelfhostedPro",
+            "title": "Beets",
             "name": "beets",
             "description": "The purpose of beets is to get your music collection right once and for all. It catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/beets-icon.png",
             "image": "linuxserver/beets:latest",
             "categories": [
-                "Music", "SelfhostedPro"
+                "Music",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -286,51 +242,8 @@
             ]
         },
         {
-            "categories": [
-                "Music",
-                "Qballjos"
-            ],
-            "description": "The purpose of beets is to get your music collection right once and for all. It catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. Then it provides a bouquet of tools for manipulating and accessing your music.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/beets:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/beets-icon.png",
-            "name": "beets",
-            "platform": "linux",
-            "ports": [
-                "8337:8337/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Beets - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Beets",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/Music",
-                    "container": "/music"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Bitwarden RS - SelfhostedPro",
+            "title": "Bitwarden RS",
             "name": "bitwardenrs",
             "description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal..",
             "note": "This project is not associated with the Bitwarden project nor 8bit Solutions LLC.",
@@ -356,7 +269,7 @@
         },
         {
             "type": 1,
-            "title": "Booksonic - SelfhostedPro",
+            "title": "Booksonic",
             "name": "booksonic",
             "description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/booksonic.png",
@@ -364,7 +277,8 @@
             "categories": [
                 "Books",
                 "Other",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -404,62 +318,14 @@
             ]
         },
         {
-            "categories": [
-                "Books",
-                "Other",
-                "Qballjos"
-            ],
-            "description": "Booksonic is a server and an app for streaming your audiobooks to any pc or android phone. Most of the functionality is also availiable on other platforms that have apps for subsonic",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "default": "booksonic",
-                    "label": "CONTEXT_PATH",
-                    "name": "CONTEXT_PATH"
-                }
-            ],
-            "image": "linuxserver/booksonic:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/booksonic.png",
-            "name": "booksonic",
-            "platform": "linux",
-            "ports": [
-                "4040:4040/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Booksonic - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Books",
-                    "container": "/books"
-                },
-                {
-                    "bind": "/portainer/Files/Podcasts",
-                    "container": "/podcast"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Config/Booksonic",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
             "type": 3,
-            "title": "Bookstack - SelfhostedPro",
+            "title": "Bookstack",
             "description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Feautring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bookstack2.png",
             "categories": [
                 "Wiki",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
             "platform": "linux",
@@ -495,50 +361,6 @@
                     "label": "PORT"
                 }
             ]
-        },
-        {
-            "categories": [
-                "Wiki",
-                "Qballjos"
-            ],
-            "description": "Bookstack is a free and open source Wiki designed for creating beautiful documentation. Feautring a simple, but powerful WYSIWYG editor it allows for teams to create detailed and useful documentation with ease.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "label": "TZ",
-                    "name": "TZ"
-                },
-                {
-                    "label": "DATABASE_PASSWORD",
-                    "name": "DATABASE_PASSWORD"
-                },
-                {
-                    "label": "MYSQL_ROOT_PASSWORD",
-                    "name": "MYSQL_ROOT_PASSWORD"
-                },
-                {
-                    "label": "PORT",
-                    "name": "PORT"
-                }
-            ],
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/bookstack2.png",
-            "note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
-            "platform": "linux",
-            "repository": {
-                "stackfile": "Template/Stack/bookstack.yml",
-                "url": "https://github.com/Qballjos/portainer_templates"
-            },
-            "title": "Bookstack - Qballjos",
-            "type": 3
         },
         {
             "type": 1,
