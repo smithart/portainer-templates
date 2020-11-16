@@ -1989,6 +1989,47 @@
             ]
         },
         {
+            "type": 3,
+            "title": "DomainMOD",
+            "description": "DomainMOD is an open source application used to manage your domains and other internet assets in a central location",
+            "logo": "https://github.com/smithart/portainer-templates/stacks/domainmod/domainmod.png",
+            "categories": [
+                "Other",
+                "ViviCode"
+            ],
+            "note": "The compose file builds ",
+            "platform": "linux",
+            "repository": {
+                "url": "https://github.com/smithart/portainer-templates",
+                "stackfile": "stacks/domainmmod/docker_stack.yml"
+            },
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "TZ",
+                    "default": "America/Chicago"
+                },
+                {
+                    "name": "MYSQL_DATABASE",
+                    "label": "MYSQL_DATABASE",
+                    "default": "domainmod"
+                },
+                {
+                    "name": "MYSQL_USER",
+                    "label": "MYSQL_USER",
+                    "default": "domainmod"
+                },
+                {
+                    "name": "MYSQL_PASSWORD",
+                    "label": "MYSQL_PASSWORD"
+                },
+                {
+                    "name": "MYSQL_ROOT_PASSWORD",
+                    "label": "MYSQL_ROOT_PASSWORD"
+                }
+            ]
+        },
+        {
             "type": 1,
             "title": "Domoticz",
             "name": "domoticz",
