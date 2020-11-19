@@ -40,7 +40,7 @@
                 "3000:3000/tcp"
             ],
             "restart_policy": "unless-stopped",
-            "title": "Adguard - Qballjos",
+            "title": "Adguard",
             "type": 1,
             "volumes": [
                 {
@@ -566,7 +566,7 @@
         },
         {
             "type": 1,
-            "title": "Cardigann - SelfhostedPro",
+            "title": "Cardigann",
             "name": "cardigann",
             "description": "Cardigann, a server for adding extra indexers to Sonarr, SickRage and CouchPotato via Torznab and TorrentPotato proxies. Behind the scenes Cardigann logs in and runs searches and then transforms the results into a compatible format.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/cardigann.png",
@@ -663,7 +663,7 @@
         },
         {
             "type": 1,
-            "title": "Chevereto - thesugarat",
+            "title": "Chevereto",
             "description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version..",
             "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/Chevereto.png",
             "image": "nmtan/chevereto:latest",
@@ -1164,7 +1164,7 @@
         },
         {
             "type": 1,
-            "title": "Davos - SelfhostedPro",
+            "title": "Davos",
             "name": "davos",
             "description": "davos is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.\r\n\r\n/config : AppData Location\r\n/download : File Download Location",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/davos.png",
@@ -1441,7 +1441,7 @@
         },
         {
             "type": 1,
-            "title": "Dozzle - SelfhostedPro",
+            "title": "Dozzle",
             "name": "dozzle",
             "description": "Dozzle is a simple, lightweight application that provides you with a web based interface to monitor your Docker container logs live. It doesn’t store log information, it is for live monitoring of your container logs only.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/dozzle.png",
@@ -1594,7 +1594,7 @@
         },
         {
             "type": 1,
-            "title": "Emby - SelfhostedPro",
+            "title": "Emby",
             "name": "emby",
             "description": "Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/emby.png",
@@ -2281,7 +2281,7 @@
         },
         {
             "type": 1,
-            "title": "Jackett - SelfhostedPro",
+            "title": "Jackett",
             "name": "jackett",
             "description": "Jackett works as a proxy server it translates queries from apps like Sonarr etc into tracker-site-specific http queries and parses the html response sending results back to the requesting software.[",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jacket-icon.png",
@@ -2431,7 +2431,7 @@
         },
         {
             "type": 1,
-            "title": "Kodi Headless - SelfhostedPro",
+            "title": "Kodi Headless",
             "name": "kodi-headless",
             "description": "Headless installation of Kodi™ (formerly known as XBMC™), to enable library updates.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/kodi-icon.png",
@@ -4616,14 +4616,16 @@
         },
         {
             "type": 1,
-            "title": "Reactive-Resume - SelfhostedPro",
+            "title": "Reactive-Resume",
             "name": "reactive-resume",
             "description": "A one-of-a-kind resume builder that's not out to get your data. Completely secure, customizable, portable, open-source and free forever.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/reactiveresume.png",
             "image": "amruthpillai/reactive-resume:latest",
             "categories": [
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -4634,29 +4636,6 @@
                 {
                     "container": "/usr/src/app",
                     "bind": "/portainer/Files/AppData/Config/ReactiveResume"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools"
-            ],
-            "description": "A one-of-a-kind resume builder that's not out to get your data. Completely secure, customizable, portable, open-source and free forever.",
-            "image": "amruthpillai/reactive-resume:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/reactiveresume.png",
-            "name": "reactive-resume",
-            "platform": "linux",
-            "ports": [
-                "80/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Reactive-Resume",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/ReactiveResume",
-                    "container": "/usr/src/app"
                 }
             ]
         },
