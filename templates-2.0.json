@@ -1277,6 +1277,43 @@
             ]
         },
         {
+            "title": "Docker Remote API with TLS",
+            "description": "Docker Remote API with TLS client authentication via container",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+            "categories": [
+                "Other",
+                "ViviCode"
+            ],
+            "note": "This template is currently untested.",
+            "platform": "linux",
+            "image": "kekru/docker-remote-api-tls:latest",
+            "ports": [
+                "2376:443/tcp"
+            ],
+            "env": [
+                {
+                    "name": "CREATE_CERTS_WITH_PW",
+                    "label": "CREATE_CERTS_WITH_PW",
+                    "default": "EnterSecurePassword"
+                },
+                {
+                    "name": "CERT_HOSTNAME",
+                    "label": "CERT_HOSTNAME",
+                    "default": "remote-api.example.com"
+                },
+            "volumes": [
+                {
+                    "container": "/var/run/docker.sock",
+                    "bind": "/var/run/docker.sock",
+                    "readonly": true
+                },
+                {
+                    "bind": "$LOCAL_CERT_DIR",
+                    "container": "/data/certs"
+                }
+            ]
+        },
+        {
             "type": 3,
             "title": "DomainMOD",
             "description": "DomainMOD is an open source application used to manage your domains and other internet assets in a central location",
