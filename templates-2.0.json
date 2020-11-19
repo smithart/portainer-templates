@@ -4571,14 +4571,16 @@
         },
         {
             "type": 1,
-            "title": "Radarr - SelfhostedPro",
+            "title": "Radarr",
             "name": "radarr",
             "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/radarr.png",
             "image": "linuxserver/radarr:latest",
             "categories": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -4609,50 +4611,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Downloaders",
-                "Video",
-                "Qballjos"
-            ],
-            "description": "Radarr - A fork of Sonarr to work with movies à la Couchpotato.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/radarr:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/radarr.png",
-            "name": "radarr",
-            "platform": "linux",
-            "ports": [
-                "7878:7878/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Radarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Radarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/Movies",
-                    "container": "/movies"
                 }
             ]
         },
@@ -4764,7 +4722,7 @@
         },
         {
             "type": 1,
-            "title": "Resilio Sync - SelfhostedPro",
+            "title": "Resilio Sync",
             "name": "resilio-sync",
             "description": "Resilio Sync (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/resilio.png",
@@ -4773,7 +4731,9 @@
                 "Backup",
                 "Cloud",
                 "Other",
-                "Tools"
+                "Tools",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -4804,55 +4764,16 @@
             ]
         },
         {
-            "categories": [
-                "Backup",
-                "Cloud",
-                "Other",
-                "Tools"
-            ],
-            "description": "Resilio Sync (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/resilio-sync:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/resilio.png",
-            "name": "resilio-sync",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "title": "Resilio Sync",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Resilio-Sync",
-                    "container": "/config"
-                },
-                {
-                    "container": "/sync"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "SABnzbd - SelfhostedPro",
+            "title": "SABnzbd",
             "name": "sabnzbd",
             "description": "SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sabnzbd-icon.png",
             "image": "linuxserver/sabnzbd:latest",
             "categories": [
-                "Downloaders"
+                "Downloaders",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -4884,49 +4805,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Downloaders"
-            ],
-            "description": "SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/sabnzbd:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/sabnzbd-icon.png",
-            "name": "sabnzbd",
-            "platform": "linux",
-            "ports": [
-                "8080:8080/tcp",
-                "9090:9090/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "SABnzbd",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Sabnzbd",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/Downloads/incomplete",
-                    "container": "/incomplete-downloads"
                 }
             ]
         },
@@ -5052,13 +4930,14 @@
         },
         {
             "type": 3,
-            "title": "Seafile - SelfhostedPro",
+            "title": "Seafile",
             "name": "seafile",
             "description": "Seafile is an open-source, cross-platform file-hosting software system. Files are stored on a central server and can be synchronized with personal computers and mobile devices through apps. Files on the Seafile server can also be accessed directly via the server's web interface.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/seafile.png",
             "categories": [
                 "Cloud",
-                "Other"
+                "Other",
+                "SelfhostedPro"
             ],
             "platform": "linux",
             "repository": {
@@ -5213,14 +5092,16 @@
         },
         {
             "type": 1,
-            "title": "SickChill - SelfhostedPro",
+            "title": "SickChill",
             "name": "sickchill",
             "description": "Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickchill-icon.png",
             "image": "linuxserver/sickchill:latest",
             "categories": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5255,58 +5136,17 @@
             ]
         },
         {
-            "categories": [
-                "Downloaders",
-                "Video"
-            ],
-            "description": "Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/sickchill:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/sickchill-icon.png",
-            "name": "sickchill",
-            "platform": "linux",
-            "ports": [
-                "8081:8081/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "SickChill",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/SickChill",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/TV",
-                    "container": "/tv"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "SickGear - SelfhostedPro",
+            "title": "SickGear",
             "name": "sickgear",
             "description": "SickGear provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickgear-icon.png",
             "image": "linuxserver/sickgear:latest",
             "categories": [
                 "Downloaders",
-                "Video"
+                "Video",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5341,57 +5181,16 @@
             ]
         },
         {
-            "categories": [
-                "Downloaders",
-                "Video"
-            ],
-            "description": "SickGear provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/sickgear:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/sickgear-icon.png",
-            "name": "sickgear",
-            "platform": "linux",
-            "ports": [
-                "8081:8081/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "SickGear",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/SickGear",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/TV",
-                    "container": "/tv"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "SmokePing - SelfhostedPro",
+            "title": "SmokePing",
             "name": "smokeping",
             "description": null,
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/smokeping-icon.png",
             "image": "linuxserver/smokeping:latest",
             "categories": [
-                "Management"
+                "Management",
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5422,47 +5221,8 @@
             ]
         },
         {
-            "categories": [
-                "Management",
-                "Qballjos"
-            ],
-            "description": null,
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/smokeping:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/smokeping-icon.png",
-            "name": "smokeping",
-            "platform": "linux",
-            "ports": [
-                "80/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "SmokePing",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Smokeping",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Smokeping",
-                    "container": "/data"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Snibox - SelfhostedPro",
+            "title": "Snibox",
             "name": "snibox",
             "description": "Self-hosted snippet manager.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
@@ -5470,7 +5230,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5484,31 +5245,6 @@
                 }
             ],
             "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text."
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Self-hosted snippet manager.",
-            "image": "snowmean/snibox-sqlite:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/snibox.png",
-            "name": "Snibox",
-            "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text.",
-            "platform": "linux",
-            "ports": [
-                "3010:3000/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Snibox",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Snibox",
-                    "container": "/app/db/database"
-                }
-            ]
         },
         {
             "type": 1,
@@ -5532,7 +5268,7 @@
         },
         {
             "type": 1,
-            "title": "Sonarr - SelfhostedPro",
+            "title": "Sonarr",
             "name": "sonarr",
             "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sonarr-icon.png",
@@ -5540,7 +5276,8 @@
             "categories": [
                 "Downloaders",
                 "Video",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5579,56 +5316,8 @@
             ]
         },
         {
-            "categories": [
-                "Downloaders",
-                "Video",
-                "Qballjos"
-            ],
-            "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/sonarr:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/sonarr-icon.png",
-            "name": "sonarr",
-            "platform": "linux",
-            "ports": [
-                "8989:8989/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Sonarr",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Sonarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/dev/rtc",
-                    "container": "/dev/rtc"
-                },
-                {
-                    "bind": "/portainer/TV",
-                    "container": "/tv"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "SyncThing - SelfhostedPro",
+            "title": "SyncThing",
             "name": "syncthing",
             "description": null,
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/syncthing-icon.png",
@@ -5638,7 +5327,8 @@
                 "Cloud",
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5666,49 +5356,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Backup",
-                "Cloud",
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": null,
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/syncthing:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/syncthing-icon.png",
-            "name": "syncthing",
-            "platform": "linux",
-            "ports": [
-                "8384:8384/tcp",
-                "21027:21027/udp",
-                "22000:22000/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "SyncThing",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Syncthing",
-                    "container": "/config"
-                },
-                {
-                    "container": "/sync"
                 }
             ]
         },
