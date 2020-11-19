@@ -1300,7 +1300,7 @@
                     "name": "CERT_HOSTNAME",
                     "label": "CERT_HOSTNAME",
                     "default": "remote-api.example.com"
-                },
+                }
             ],
             "volumes": [
                 {
