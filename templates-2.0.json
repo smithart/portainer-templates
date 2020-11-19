@@ -727,7 +727,7 @@
         },
         {
             "type": 1,
-            "title": "Chowdown - SelfhostedPro",
+            "title": "Chowdown",
             "name": "Chowdown",
             "description": "Save recipes in seconds with plain text formatting and create beatiful recipe pages with automated ease.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/chowdown.png",
@@ -5380,7 +5380,7 @@
         },
         {
             "type": 1,
-            "title": "Tautulli - SelfhostedPro",
+            "title": "Tautulli",
             "name": "tautulli",
             "description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.[br][br]\r\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\n  [b]8181[/b] The webui for Tautulli's webui [br]\r\n  [b]/config[/b] Storing Configuration and the Tautulli database[br]\r\n[b]/logs[/b] Map to you plex logs (required for IP logging)[br]\r\n\r\n",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tautulli-icon.png",
@@ -5388,7 +5388,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5415,46 +5416,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.[br][br]\r\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\n  [b]8181[/b] The webui for Tautulli's webui [br]\r\n  [b]/config[/b] Storing Configuration and the Tautulli database[br]\r\n[b]/logs[/b] Map to you plex logs (required for IP logging)[br]\r\n\r\n",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/tautulli:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/tautulli-icon.png",
-            "name": "tautulli",
-            "platform": "linux",
-            "ports": [
-                "8181:8181/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Tautulli",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Logs",
-                    "container": "/logs"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Config/Tautulli",
-                    "container": "/config"
                 }
             ]
         },
@@ -5527,42 +5488,8 @@
             ]
         },
         {
-            "categories": [
-                "Messenger"
-            ],
-            "description": "A self-hosted web IRC client",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/thelounge:latest",
-            "logo": "https://raw.githubusercontent.com/linuxserver/community-templates/master/lsiocommunity/img/shout-icon.png",
-            "name": "thelounge",
-            "platform": "linux",
-            "ports": [
-                "9000:9000/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "TheLounge",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/TheLounge",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "TiddlyWiki - SelfhostedPro",
+            "title": "TiddlyWiki",
             "name": "tiddlywiki",
             "description": "A unique, non-linear notebook wiki.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tiddlywiki.png",
@@ -5570,7 +5497,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5585,39 +5513,16 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "A unique, non-linear notebook wiki.",
-            "image": "mazzolino/tiddlywiki:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/tiddlywiki.png",
-            "name": "tiddlywiki",
-            "platform": "linux",
-            "ports": [
-                "8080:8080/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "TiddlyWiki",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/TiddlyWiki",
-                    "container": "/var/lib/tiddlywiki"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Tiny Tiny RSS - SelfhostedPro",
+            "title": "Tiny Tiny RSS",
             "name": "tt-rss",
             "description": "Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader and aggregator, designed to allow you to read news from any location, while feeling as close to a real desktop application as possible.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tt-rss-icon.png",
             "image": "lunik1/tt-rss:latest",
             "categories": [
                 "Other",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5644,50 +5549,16 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Qballjos"
-            ],
-            "description": "Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader and aggregator, designed to allow you to read news from any location, while feeling as close to a real desktop application as possible.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "lunik1/tt-rss:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/tt-rss-icon.png",
-            "name": "tt-rss",
-            "platform": "linux",
-            "ports": [
-                "80/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Tiny Tiny RSS",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/tt-rss",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Transmission - SelfhostedPro",
+            "title": "Transmission",
             "name": "transmission",
             "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
             "image": "linuxserver/transmission:latest",
             "categories": [
                 "Downloaders",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5722,51 +5593,8 @@
             ]
         },
         {
-            "categories": [
-                "Downloaders",
-                "Qballjos"
-            ],
-            "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/transmission:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/transmission-icon.png",
-            "name": "transmission",
-            "platform": "linux",
-            "ports": [
-                "9091:9091/tcp",
-                "51413:51413/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Transmission",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Transmission",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Files/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "container": "/watch"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Transmission-OpenVPN - SelfhostedPro",
+            "title": "Transmission-OpenVPN",
             "name": "transmission-openvpn",
             "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
@@ -5776,7 +5604,8 @@
                 "Other",
                 "VPN",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -5828,69 +5657,6 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "VPN",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "default": "MULLVAD",
-                    "description": "https://haugene.github.io/docker-transmission-openvpn/supported-providers/",
-                    "label": "OPENVPN_PROVIDER",
-                    "name": "OPENVPN_PROVIDER"
-                },
-                {
-                    "default": "",
-                    "label": "OPENVPN_USERNAME",
-                    "name": "OPENVPN_USERNAME"
-                },
-                {
-                    "default": "",
-                    "label": "OPENVPN_PASSWORD",
-                    "name": "OPENVPN_PASSWORD"
-                },
-                {
-                    "default": "192.168.0.0/24",
-                    "label": "LOCAL_NETWORK",
-                    "name": "LOCAL_NETWORK"
-                }
-            ],
-            "image": "haugene/transmission-openvpn:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/transmission-icon.png",
-            "name": "transmission-openvpn",
-            "note": "List of supported providers available <a href='https://haugene.github.io/docker-transmission-openvpn/supported-providers'/>here</a>.",
-            "platform": "linux",
-            "ports": [
-                "9091:9091/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Transmission-OpenVPN",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/data"
-                },
-                {
-                    "bind": "/etc/localtime",
-                    "container": "/etc/localtime"
-                }
-            ]
-        },
-        {
             "type": 1,
             "title": "Tvheadend",
             "name": "tvheadend",
@@ -5930,47 +5696,8 @@
             ]
         },
         {
-            "categories": [
-                "Video",
-                "Other"
-            ],
-            "description": "Tvheadend is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT&gt;IP and HDHomeRun as input sources.\r\nTvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT&gt;IP streaming.\r\nMultiple EPG sources are supported (over-the-air DVB and ATSC including OpenTV DVB extensions, XMLTV, PyXML).",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/tvheadend:latest",
-            "logo": "http://i.imgur.com/zGSUAT4.png",
-            "name": "tvheadend",
-            "platform": "linux",
-            "ports": [
-                "9981:9981/tcp",
-                "9982:9982/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Tvheadend",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/TVHeadend",
-                    "container": "/config"
-                },
-                {
-                    "container": "/recordings"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Ubooquity - SelfhostedPro",
+            "title": "Ubooquity",
             "name": "ubooquity",
             "description": "Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ubooquity-icon.png",
@@ -5978,7 +5705,8 @@
             "categories": [
                 "Cloud",
                 "Books",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6016,55 +5744,8 @@
             ]
         },
         {
-            "categories": [
-                "Cloud",
-                "Books",
-                "Qballjos"
-            ],
-            "description": "Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.",
-            "env": [
-                {
-                    "label": "MAXMEM",
-                    "name": "MAXMEM",
-                    "set": "512"
-                },
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/ubooquity:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/ubooquity-icon.png",
-            "name": "ubooquity",
-            "platform": "linux",
-            "ports": [
-                "2202:2202/tcp",
-                "2203:2203/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Ubooquity",
             "type": 1,
-            "volumes": [
-                {
-                    "container": "/books"
-                },
-                {
-                    "container": "/comics"
-                },
-                {
-                    "container": "/config"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "UniFi Controller - SelfhostedPro",
+            "title": "UniFi Controller",
             "name": "unifi-controller",
             "description": null,
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/unifi-icon.png",
@@ -6072,7 +5753,8 @@
             "categories": [
                 "Management",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6106,51 +5788,8 @@
             ]
         },
         {
-            "categories": [
-                "Management",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": null,
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/unifi-controller:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/unifi-icon.png",
-            "name": "unifi-controller",
-            "platform": "linux",
-            "ports": [
-                "3478:3478/udp",
-                "10001:10001/udp",
-                "8080:8080/tcp",
-                "8081:8081/tcp",
-                "8443:8443/tcp",
-                "8843:8843/tcp",
-                "8880:8880/tcp",
-                "6789:6789/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "UniFi Controller",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Unifi",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "UniFi Video - SelfhostedPro",
+            "title": "UniFi Video",
             "name": "UniFi Video",
             "description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti’s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature‑packed user interface with advanced features such as motion detection, auto‑discovery, user‑level security, storage management, reporting, and mobile device support.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/UniFiVideo-logo.png",
@@ -6231,7 +5870,7 @@
         },
         {
             "type": 1,
-            "title": "Watchtower - SelfhostedPro",
+            "title": "Watchtower",
             "name": "watchtower",
             "description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/watchtower.png",
@@ -6241,7 +5880,8 @@
                 "Other",
                 "Tools",
                 "Maintenance",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6253,38 +5893,16 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Tools",
-                "Maintenance",
-                "Qballjos"
-            ],
-            "description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
-            "image": "containrrr/watchtower:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/watchtower.png",
-            "name": "watchtower",
-            "note": "It is recommended to manually update your containers but we're including this for those of you that don't care",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "title": "Watchtower",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/var/run/docker.sock",
-                    "container": "/var/run/docker.sock"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "WebGrab+Plus - SelfhostedPro",
+            "title": "WebGrab+Plus",
             "name": "webgrabplus",
             "description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.[br]\r\n\t\tOptional postprocessors to add IMDb data or to customize your xmltv listing.[br]\r\n\t\thttp://www.webgrabplus.com/[br]\r\n\t\t[b][span style='color: #E80000;']Directions:[/span][/b][br]\r\n\t\t[b]/config[/b] : This is where WebGrab+Plus will store it's configuration.[br][br]\r\n\t\t[b]/data[/b] : This is where tv_grab_wg script in the Tvheadend container looks for the guide.xml file.[br][br]",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/webgrabplus.png",
             "image": "linuxserver/webgrabplus:latest",
             "categories": [
                 "Downloaders",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6312,44 +5930,8 @@
             ]
         },
         {
-            "categories": [
-                "Downloaders",
-                "Qballjos"
-            ],
-            "description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.[br]\r\n\t\tOptional postprocessors to add IMDb data or to customize your xmltv listing.[br]\r\n\t\thttp://www.webgrabplus.com/[br]\r\n\t\t[b][span style='color: #E80000;']Directions:[/span][/b][br]\r\n\t\t[b]/config[/b] : This is where WebGrab+Plus will store it's configuration.[br][br]\r\n\t\t[b]/data[/b] : This is where tv_grab_wg script in the Tvheadend container looks for the guide.xml file.[br][br]",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/webgrabplus:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/webgrabplus.png",
-            "name": "webgrabplus",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "title": "WebGrab+Plus",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/WebGrabPlus",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/WebGrabPlus",
-                    "container": "/data"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Whoogle - SelfhostedPro",
+            "title": "Whoogle",
             "name": "whoogle",
             "description": "Self-hosted, ad-free, privacy-respecting Google metasearch engine.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/whoogle.png",
@@ -6357,7 +5939,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6372,32 +5955,8 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Self-hosted, ad-free, privacy-respecting Google metasearch engine.",
-            "image": "benbusby/whoogle-search:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/whoogle.png",
-            "name": "whoogle",
-            "platform": "linux",
-            "ports": [
-                "5001:5000/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Whoogle",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Whoogle",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Wikijs - SelfhostedPro",
+            "title": "Wikijs",
             "name": "wikijs",
             "description": "Wikijs A modern, lightweight and powerful wiki app built on NodeJS.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/wikijs.png",
@@ -6405,7 +5964,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6420,34 +5980,6 @@
                 {
                     "container": "/data",
                     "bind": "/portainer/Files/AppData/Config/Wikijs/data"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Wikijs A modern, lightweight and powerful wiki app built on NodeJS.",
-            "image": "linuxserver/wikijs:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/wikijs.png",
-            "name": "Wikijs",
-            "platform": "linux",
-            "ports": [
-                "3100:3000/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Wikijs",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Wikijs",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Config/Wikijs/data",
-                    "container": "/data"
                 }
             ]
         },
@@ -6540,7 +6072,7 @@
         },
         {
             "type": 1,
-            "title": "Yacht - SelfhostedPro",
+            "title": "Yacht",
             "name": "yacht",
             "description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png",
@@ -6568,7 +6100,7 @@
         },
         {
             "type": 1,
-            "title": "YouTubeDL-Material - SelfhostedPro",
+            "title": "YouTubeDL-Material",
             "name": "youtubedl-material",
             "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png",
@@ -6576,7 +6108,8 @@
             "categories": [
                 "Other",
                 "Downloaders",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6607,55 +6140,16 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Downloaders",
-                "Qballjos"
-            ],
-            "description": "YoutubeDL-Material is a Material Design frontend for youtube-dl. It's coded using Angular 9 for the frontend, and Node.js on the backend.",
-            "image": "tzahi12345/youtubedl-material:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/ytdlm.png",
-            "name": "youtubedl-material",
-            "platform": "linux",
-            "ports": [
-                "17442:17442/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "YouTubeDL-Material",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/YTDLM",
-                    "container": "/app/appdata"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Youtube/Video",
-                    "container": "/app/video"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Youtube/Subscriptions",
-                    "container": "/app/subscriptions"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Youtube/Users",
-                    "container": "/app/users"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Youtube/Audio",
-                    "container": "/app/audio"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "ZNC - SelfhostedPro",
+            "title": "ZNC",
             "name": "znc",
             "description": "ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/znc-icon.png",
             "image": "linuxserver/znc:latest",
             "categories": [
                 "Messenger",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -6678,41 +6172,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Messenger",
-                "Qballjos"
-            ],
-            "description": "ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/znc:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/znc-icon.png",
-            "name": "znc",
-            "platform": "linux",
-            "ports": [
-                "6501:6501/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "ZNC",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/ZNC",
-                    "container": "/config"
                 }
             ]
         },
@@ -7773,7 +7232,7 @@
         },
         {
             "type": 1,
-            "title": "lidarr - SelfhostedPro",
+            "title": "lidarr",
             "name": "lidarr",
             "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lidarr.png",
@@ -7781,7 +7240,8 @@
             "categories": [
                 "Downloaders",
                 "Music",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -7812,50 +7272,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Downloaders",
-                "Music",
-                "Qballjos"
-            ],
-            "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/lidarr:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/lidarr.png",
-            "name": "lidarr",
-            "platform": "linux",
-            "ports": [
-                "8686:8686/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "lidarr",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Lidarr",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/Music",
-                    "container": "/music"
                 }
             ]
         },
@@ -8693,14 +8109,15 @@
         },
         {
             "type": 1,
-            "title": "qBittorrent - SelfhostedPro",
+            "title": "qBittorrent",
             "name": "qbittorrent",
             "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
             "image": "linuxserver/qbittorrent:latest",
             "categories": [
                 "Downloaders",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -8729,46 +8146,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Downloaders"
-            ],
-            "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/qbittorrent:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/qbittorrent-icon.png",
-            "name": "qbittorrent",
-            "platform": "linux",
-            "ports": [
-                "6881:6881/tcp",
-                "6881:6881/udp",
-                "8080:8080/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "qBittorrent",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/qBittorrent",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
                 }
             ]
         },
@@ -8979,46 +8356,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Downloaders"
-            ],
-            "description": "Popular torrent client with a webui for ease of use.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/rutorrent:latest",
-            "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/rutorrent-icon.png",
-            "name": "rutorrent",
-            "platform": "linux",
-            "ports": [
-                "80/tcp",
-                "51413:51413/tcp",
-                "6881:6881/udp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "ruTorrent",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/ruTorrent",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
                 }
             ]
         },
