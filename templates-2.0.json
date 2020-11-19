@@ -1301,6 +1301,7 @@
                     "label": "CERT_HOSTNAME",
                     "default": "remote-api.example.com"
                 },
+            ],
             "volumes": [
                 {
                     "container": "/var/run/docker.sock",
