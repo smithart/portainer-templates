@@ -1277,6 +1277,7 @@
             ]
         },
         {
+            "type": 1,
             "title": "Docker Remote API with TLS",
             "description": "Docker Remote API with TLS client authentication via container",
             "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
