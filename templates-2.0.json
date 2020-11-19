@@ -364,7 +364,7 @@
         },
         {
             "type": 1,
-            "title": "COPS - SelfhostedPro",
+            "title": "COPS",
             "name": "cops",
             "description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/cops-icon.png",
@@ -372,7 +372,8 @@
             "categories": [
                 "Cloud",
                 "Books",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -399,46 +400,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Cloud",
-                "Books",
-                "Qballjos"
-            ],
-            "description": "COPS links to your Calibre library database and allows downloading and emailing of books directly from a web browser and provides a OPDS feed to connect to your devices.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/cops:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/cops-icon.png",
-            "name": "cops",
-            "platform": "linux",
-            "ports": [
-                "80/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "COPS - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Books",
-                    "container": "/books"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Config/Cops",
-                    "container": "/config"
                 }
             ]
         },
@@ -500,7 +461,7 @@
         },
         {
             "type": 1,
-            "title": "Calibre Web - SelfhostedPro",
+            "title": "Calibre Web",
             "name": "calibre-web",
             "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/calibre-web-icon.png",
@@ -508,7 +469,8 @@
             "categories": [
                 "Cloud",
                 "Books",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -535,46 +497,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Cloud",
-                "Books",
-                "Qballjos"
-            ],
-            "description": "Calibre Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.\n\n  [br][br]\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\n  [b]/config[/b] Where Calibre-web should store it's database[br]\n  [b]/books[/b] Path to your calibre library metadata.db file[br]",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/calibre-web:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/calibre-web-icon.png",
-            "name": "calibre-web",
-            "platform": "linux",
-            "ports": [
-                "8083:8083/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Calibre Web - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Books",
-                    "container": "/books"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Config/Calibre-web",
-                    "container": "/config"
                 }
             ]
         },
@@ -679,7 +601,7 @@
         },
         {
             "type": 1,
-            "title": "Chevereto - SelfhostedPro",
+            "title": "Chevereto",
             "name": "Chevereto",
             "description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version..",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/Chevereto.png",
@@ -688,7 +610,8 @@
                 "Other",
                 "Tools",
                 "Photo",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -735,67 +658,6 @@
                     "name": "CHEVERETO_DB_PREFIX",
                     "label": "CHEVERETO_DB_PREFIX",
                     "set": ""
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools",
-                "Photo",
-                "Qballjos"
-            ],
-            "description": "Chevereto is a powerful and fast image hosting script that allows you to create your very own full featured image hosting website in just minutes. Please note that this offers only the free Chevereto version..",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "label": "CHEVERETO_DB_HOST",
-                    "name": "CHEVERETO_DB_HOST",
-                    "set": ""
-                },
-                {
-                    "label": "CHEVERETO_DB_USERNAME",
-                    "name": "CHEVERETO_DB_USERNAME",
-                    "set": ""
-                },
-                {
-                    "label": "CHEVERETO_DB_PASSWORD",
-                    "name": "CHEVERETO_DB_PASSWORD",
-                    "set": ""
-                },
-                {
-                    "label": "CHEVERETO_DB_NAME",
-                    "name": "CHEVERETO_DB_NAME",
-                    "set": ""
-                },
-                {
-                    "label": "CHEVERETO_DB_PREFIX",
-                    "name": "CHEVERETO_DB_PREFIX",
-                    "set": ""
-                }
-            ],
-            "image": "nmtan/chevereto:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/Chevereto.png",
-            "name": "Chevereto",
-            "platform": "linux",
-            "ports": [
-                "80/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Chevereto - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "container": "/var/www/html/images"
                 }
             ]
         },
@@ -873,7 +735,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -884,30 +747,6 @@
                 {
                     "container": "/config",
                     "bind": "/portainer/Files/AppData/Config/Chowdown"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "ave recipes in seconds with plain text formatting and create beatiful recipe pages with automated ease.",
-            "image": "gregyankovoy/chowdown:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/chowdown.png",
-            "name": "Chowdown",
-            "platform": "linux",
-            "ports": [
-                "4000:4000/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Chowdown - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Chowdown",
-                    "container": "/config"
                 }
             ]
         },
@@ -958,7 +797,7 @@
         },
         {
             "type": 1,
-            "title": "Code Server - SelfhostedPro",
+            "title": "Code Server",
             "name": "code-server",
             "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/code-server.png",
@@ -966,7 +805,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1010,68 +850,16 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Code-server is VS Code running on a remote server, accessible through the browser.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "GUID"
-                },
-                {
-                    "label": "TZ",
-                    "name": "TZ"
-                },
-                {
-                    "label": "PASSWORD",
-                    "name": "PASSWORD"
-                },
-                {
-                    "label": "SUDO_PASSWORD",
-                    "name": "SUDO_PASSWORD"
-                },
-                {
-                    "default": "example.my.domain",
-                    "label": "PROXY_DOMAIN",
-                    "name": "PROXY_DOMAIN"
-                }
-            ],
-            "image": "linuxserver/code-server:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/code-server.png",
-            "name": "code-server",
-            "platform": "linux",
-            "ports": [
-                "8443:8443/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Code Server - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Code-Server",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Codiad - SelfhostedPro",
+            "title": "Codiad",
             "name": "codiad",
             "description": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.\n  ",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/codiad-icon.png",
             "image": "linuxserver/codiad:latest",
             "categories": [
                 "Productivity",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1094,41 +882,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Productivity",
-                "Qballjos"
-            ],
-            "description": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.\n  ",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/codiad:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/codiad-icon.png",
-            "name": "codiad",
-            "platform": "linux",
-            "ports": [
-                "80/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Codiad - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Codiad",
-                    "container": "/config"
                 }
             ]
         },
@@ -1194,7 +947,7 @@
         },
         {
             "type": 1,
-            "title": "CouchPotato - SelfhostedPro",
+            "title": "CouchPotato",
             "name": "couchpotato",
             "description": "CouchPotato (CP) is an automatic NZB and torrent downloader. You can keep a \"movies I want\"-list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/couchpotato-icon.png",
@@ -1202,7 +955,8 @@
             "categories": [
                 "Downloaders",
                 "Video",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1233,50 +987,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Downloaders",
-                "Video",
-                "Qballjos"
-            ],
-            "description": "CouchPotato (CP) is an automatic NZB and torrent downloader. You can keep a \"movies I want\"-list and it will search for NZBs/torrents of these movies every X hours. Once a movie is found, it will send it to SABnzbd or download the torrent to a specified directory.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/couchpotato:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/couchpotato-icon.png",
-            "name": "couchpotato",
-            "platform": "linux",
-            "ports": [
-                "5050:5050/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "CouchPotato - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Couchpotato",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                },
-                {
-                    "bind": "/portainer/Movies",
-                    "container": "/movies"
                 }
             ]
         },
@@ -1373,7 +1083,7 @@
         },
         {
             "type": 1,
-            "title": "DashMachine - SelfhostedPro",
+            "title": "DashMachine",
             "name": "dashmachine",
             "description": "Another application bookmark dashboard, with fun features.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/dashmachine_logo.png",
@@ -1381,7 +1091,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1392,30 +1103,6 @@
                 {
                     "container": "/dashmachine/dashmachine/user_data",
                     "bind": "/portainer/Files/AppData/Config/Dashmachine"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Another application bookmark dashboard, with fun features.",
-            "image": "rmountjoy/dashmachine:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/dashmachine_logo.png",
-            "name": "dashmachine",
-            "platform": "linux",
-            "ports": [
-                "5000:5000/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "DashMachine",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Dashmachine",
-                    "container": "/dashmachine/dashmachine/user_data"
                 }
             ]
         },
@@ -1486,7 +1173,8 @@
                 "FTP",
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1517,49 +1205,8 @@
             ]
         },
         {
-            "categories": [
-                "FTP",
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "davos is an FTP automation tool that periodically scans given host locations for new files. It can be configured for various purposes, including listening for specific files to appear in the host location, ready for it to download and then move, if required. It also supports completion notifications as well as downstream API calls, to further the workflow.\r\n\r\n/config : AppData Location\r\n/download : File Download Location",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/davos:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/davos.png",
-            "name": "davos",
-            "platform": "linux",
-            "ports": [
-                "8080/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Davos - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Davos",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "DeeMix - SelfhostedPro",
+            "title": "DeeMix",
             "name": "deemix",
             "description": "Deemix is a deezer downloader built from the ashes of Deezloader Remix.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deemix.png",
@@ -1567,7 +1214,8 @@
             "categories": [
                 "Other",
                 "Music",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1587,44 +1235,16 @@
             "note": "Deemix may take a few minutes to install. Be sure to check the logs for details. Refer to <a href='https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'>this page</a> for userToken details."
         },
         {
-            "categories": [
-                "Other",
-                "Music",
-                "Qballjos"
-            ],
-            "description": "Deemix is a deezer downloader built from the ashes of Deezloader Remix.",
-            "image": "registry.gitlab.com/bockiii/deemix-docker",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/deemix.png",
-            "name": "deemix",
-            "note": "Deemix may take a few minutes to install. Be sure to check the logs for details. Refer to <a href='https://notabug.org/RemixDevs/DeezloaderRemix/wiki/Login+via+userToken'>this page</a> for userToken details.",
-            "platform": "linux",
-            "ports": [
-                "9666:9666/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "DeeMix - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/DeeMix",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "Deluge - SelfhostedPro",
+            "title": "Deluge",
             "namme": "deluge",
             "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/deluge-icon.png",
             "image": "linuxserver/deluge:latest",
             "categories": [
                 "Downloaders",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1657,47 +1277,6 @@
             ]
         },
         {
-            "categories": [
-                "Downloaders",
-                "Qballjos"
-            ],
-            "description": "Deluge is a lightweight, Free Software, cross-platform BitTorrent client providing: Full Encryption, WebUI, Plugin System, Much more...",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "label": "UMASK_SET",
-                    "name": "UMASK_SET",
-                    "set": "000"
-                }
-            ],
-            "image": "linuxserver/deluge:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/deluge-icon.png",
-            "namme": "deluge",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "title": "Deluge - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Deluge",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Downloads",
-                    "container": "/downloads"
-                }
-            ]
-        },
-        {
             "type": 3,
             "title": "DomainMOD",
             "description": "DomainMOD is an open source application used to manage your domains and other internet assets in a central location",
@@ -1706,7 +1285,7 @@
                 "Other",
                 "ViviCode"
             ],
-            "note": "The compose file builds ",
+            "note": "This stack is currently untested.",
             "platform": "linux",
             "repository": {
                 "url": "https://github.com/smithart/portainer-templates",
@@ -1907,7 +1486,7 @@
         },
         {
             "type": 1,
-            "title": "Duck DNS - SelfhostedPro",
+            "title": "Duck DNS",
             "name": "duckdns",
             "description": "Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.\r\n\r\nFirst, go to duckdns site, register your subdomain and retrieve your token\r\nThen run the docker create command above with your subdomain(s) and token\r\nIt will update your IP with the DuckDNS service every 5 minutes\r\n\r\n",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/duckdns.png",
@@ -1915,7 +1494,8 @@
             "categories": [
                 "DNS",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -1943,43 +1523,6 @@
             ]
         },
         {
-            "categories": [
-                "DNS",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Duck DNS is a free service which will point a DNS (sub domains of duckdns.org) to an IP of your choice. The service is completely free, and doesn't require reactivation or forum posts to maintain its existence.\r\n\r\nFirst, go to duckdns site, register your subdomain and retrieve your token\r\nThen run the docker create command above with your subdomain(s) and token\r\nIt will update your IP with the DuckDNS service every 5 minutes\r\n\r\n",
-            "env": [
-                {
-                    "label": "SUBDOMAINS",
-                    "name": "SUBDOMAINS",
-                    "set": ""
-                },
-                {
-                    "label": "TOKEN",
-                    "name": "TOKEN",
-                    "set": ""
-                },
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/duckdns:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/duckdns.png",
-            "name": "duckdns",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "title": "Duck DNS - Qballjos",
-            "type": 1
-        },
-        {
             "type": 1,
             "title": "Duplicati",
             "name": "duplicati",
@@ -1992,7 +1535,8 @@
                 "Other",
                 "Productivity",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -2028,54 +1572,6 @@
             ]
         },
         {
-            "categories": [
-                "Backup",
-                "Cloud",
-                "Other",
-                "Productivity",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/duplicati:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/duplicati-icon.png",
-            "name": "duplicati",
-            "platform": "linux",
-            "ports": [
-                "8200:8200/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Duplicati - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Duplicati",
-                    "container": "/config"
-                },
-                {
-                    "container": "/tmp"
-                },
-                {
-                    "container": "/backups"
-                },
-                {
-                    "container": "/source"
-                }
-            ]
-        },
-        {
             "type": 1,
             "title": "Elasticsearch",
             "description": "Open-source search and analytics engine",
@@ -2107,7 +1603,8 @@
                 "Video",
                 "Music",
                 "Photos",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -2147,58 +1644,8 @@
             ]
         },
         {
-            "categories": [
-                "Video",
-                "Music",
-                "Photos",
-                "Qballjos"
-            ],
-            "description": "Emby organizes video, music, live TV, and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone emby Media Server.",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                },
-                {
-                    "label": "TZ",
-                    "name": "TZ"
-                }
-            ],
-            "image": "linuxserver/emby:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/emby.png",
-            "name": "Emby",
-            "platform": "linux",
-            "ports": [
-                "8096:8096/tcp",
-                "8920:8920/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "Emby - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Emby",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/TV",
-                    "container": "/data/tvshows"
-                },
-                {
-                    "bind": "/portainer/Movies",
-                    "container": "/data/movies"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "EmbyStat - SelfhostedPro",
+            "title": "EmbyStat",
             "name": "embystat",
             "description": "Embystat is a personal web server that can calculate all kinds of statistics from your (local) Emby server. Just install this on your server and let him calculate all kinds of fun stuff.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/embystat.png",
@@ -2206,7 +1653,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -2220,31 +1668,6 @@
                 }
             ],
             "note": "Access the ui at your-ip:6555. Follow the setup wizard on initial install. Then configure the required services."
-        },
-        {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Embystat is a personal web server that can calculate all kinds of statistics from your (local) Emby server. Just install this on your server and let him calculate all kinds of fun stuff.",
-            "image": "linuxserver/embystat:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/embystat.png",
-            "name": "EmbyStat",
-            "note": "Access the ui at your-ip:6555. Follow the setup wizard on initial install. Then configure the required services.",
-            "platform": "linux",
-            "ports": [
-                "6555:6555/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "EmbyStat - Qballjos",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/EmbyStat",
-                    "container": "/config"
-                }
-            ]
         },
         {
             "type": 1,
@@ -2300,7 +1723,8 @@
             "categories": [
                 "Other",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -2319,44 +1743,16 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "Web File Browser which can be used as a middleware or standalone app.",
-            "image": "80x86/filebrowser:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/filebrowser.png",
-            "name": "filebrowser",
-            "note": "The default user and password is admin/admin.",
-            "platform": "linux",
-            "ports": [
-                "8082:8082/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "FileBrowser - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/FileBrowser",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Config",
-                    "container": "/myfiles"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "FreshRSS - SelfhostedPro",
+            "title": "FreshRSS",
             "name": "freshrss",
             "description": "A free, self-hostable rss aggregator…",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/freshrss-icon.png",
             "image": "linuxserver/freshrss:latest",
             "categories": [
                 "Other",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -2383,43 +1779,8 @@
             ]
         },
         {
-            "categories": [
-                "Other",
-                "Qballjos"
-            ],
-            "description": "A free, self-hostable rss aggregator…",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/freshrss:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/freshrss-icon.png",
-            "name": "freshrss",
-            "platform": "linux",
-            "ports": [
-                "80/tcp"
-            ],
-            "restart_policy": "unless-stopped",
-            "title": "FreshRSS - Qballjos",
             "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/freshrss",
-                    "container": "/config"
-                }
-            ]
-        },
-        {
-            "type": 1,
-            "title": "GOPHISH - SelfhostedPro",
+            "title": "GOPHISH",
             "name": "gophish",
             "description": "NOTE: Once you deploy your GoPhish instance, please navigate to the logs section in Portainer and acquire your 'admin' credentials for login. Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.",
             "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/gophish.png",
@@ -2458,7 +1819,8 @@
                 "Web",
                 "Books",
                 "Tools",
-                "SelfhostedPro"
+                "SelfhostedPro",
+                "Qballjos"
             ],
             "platform": "linux",
             "restart_policy": "unless-stopped",
@@ -2486,48 +1848,6 @@
                     "name": "PGID",
                     "label": "PGID",
                     "default": "100"
-                }
-            ]
-        },
-        {
-            "categories": [
-                "Web",
-                "Books",
-                "Tools",
-                "Qballjos"
-            ],
-            "description": "A WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser",
-            "env": [
-                {
-                    "default": "1000",
-                    "label": "PUID",
-                    "name": "PUID"
-                },
-                {
-                    "default": "100",
-                    "label": "PGID",
-                    "name": "PGID"
-                }
-            ],
-            "image": "linuxserver/gazee:latest",
-            "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/gazee-logo.png",
-            "name": "gazee",
-            "platform": "linux",
-            "restart_policy": "unless-stopped",
-            "title": "Gazee",
-            "type": 1,
-            "volumes": [
-                {
-                    "bind": "/portainer/Files/AppData/Config/Gazee",
-                    "container": "/config"
-                },
-                {
-                    "bind": "/portainer/Comics",
-                    "container": "/comics"
-                },
-                {
-                    "bind": "/portainer/Files/AppData/Gazee",
-                    "container": "/mylar"
                 }
             ]
         },
