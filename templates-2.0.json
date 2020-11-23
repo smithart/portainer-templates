@@ -1608,6 +1608,56 @@
                 }
             ]
         },
+      {
+        "type": 1,
+        "name": "duplicacy",
+        "title": "Duplicacy",
+        "description": "Duplicacy backs up your files to many cloud storages with client-side encryption and the highest level of deduplication",
+        "logo": "https://mediadepot.github.io/templates/img/duplicacy-icon.png",
+        "image": "mediadepot/duplicacy:latest",
+        "categories": [
+          "Utility:Backup",
+          "MediaDepot"
+        ],
+        "ports": [
+          "3875/tcp"
+        ],
+        "volumes": [
+          {
+            "container": "/config",
+            "bind": "/portainer/Files/AppData/Config/duplicacy/config"
+          },
+          {
+            "container": "/logs",
+            "bind": "/portainer/Files/AppData/Config/duplicacy/logs"
+          },
+          {
+            "container": "/cache",
+            "bind": "/portainer/Files/AppData/Config/duplicacy/cache"
+          },
+          {
+            "container": "/source/apps",
+            "bind": "/opt/portainer/apps/"
+          },
+          {
+            "container": "/source/storage",
+            "bind": "/media/storage/"
+          }
+        ],
+        "env": [
+          {
+            "name": "TZ",
+            "label": "TZ",
+            "default": "America/Chicago"
+          }
+        ],
+        "labels": [
+          { "name": "traefik.enable", "value": "true" },
+          { "name": "traefik.http.services.duplicacy.loadbalancer.server.port", "value": "3875" },
+          { "name": "traefik.http.routers.duplicacy.entrypoints", "value": "websecure" },
+          { "name": "traefik.http.routers.duplicacy.tls.certresolver", "value": "mydnschallenge" }
+        ]
+      },
         {
             "type": 1,
             "title": "Duplicati",
@@ -4423,7 +4473,7 @@
             "title": "Pritunl",
             "name": "pritunl",
             "description": "Pritunl container built on Alpine Linux. Supports IPv6 and running behind a reverse proxy. This container requires an external Mongo DB and should be run via Docker Compose or other orchestration.",
-            "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/pritunl/Images/pritunl.png",
+            "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/pritunl.png",
             "categories": [
                 "VPN",
                 "Tools",
@@ -5934,6 +5984,97 @@
                 }
             ]
         },
+  {
+    "type": 1,
+    "title": "Wallbag",
+    "name": "wallabag",
+    "description": "wallabag is a self hostable application for saving web pages: Save and classify articles. Read them later. Freely.",
+    "logo": "https://raw.githubusercontent.com/jake-walker/selfhosted_templates/wallabag/Images/wallabag.png",
+    "image": "wallabag/wallabag:latest",
+    "categories": [
+      "Tools",
+      "Productivity",
+      "Web",
+      "Other",
+      "SelfhostedPro"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "volumes": [
+      {
+        "container": "/var/www/wallabag/data",
+        "bind": "/portainer/Files/AppData/Wallabag/data"
+      },
+      {
+        "container": "/var/www/wallabag/web/assets/images",
+        "bind": "/portainer/Files/AppData/Wallabag/images"
+      }
+    ],
+    "ports": [
+      "80:80/tcp"
+    ],
+    "env": [
+      {
+        "name": "SYMFONY__ENV__SECRET",
+        "label": "Secret",
+        "default": "ovmpmAWXRCabNlMgzlzFXDYmCFfzGv",
+        "description": "This should be set to a random string of characters."
+      },
+      {
+        "name": "SYMFONY__ENV__DOMAIN_NAME",
+        "label": "Domain Name",
+        "default": "https://wallabag.example.com"
+      },
+      {
+        "name": "SYMFONY__ENV__MAILER_HOST",
+        "label": "SMTP Host",
+        "default": "127.0.0.1"
+      },
+      {
+        "name": "SYMFONY__ENV__MAILER_USER",
+        "label": "SMTP Username",
+        "default": "~"
+      },
+      {
+        "name": "SYMFONY__ENV__MAILER_PASSWORD",
+        "label": "SMTP Password",
+        "default": "~"
+      },
+      {
+        "name": "SYMFONY__ENV__FROM_EMAIL",
+        "label": "SMTP From Email",
+        "default": "wallabag@example.com"
+      },
+      {
+        "name": "SYMFONY__ENV__FOSUSER_REGISTRATION",
+        "label": "Enable public user registration?",
+        "select": [
+          {
+            "text": "Yes",
+            "value": "true",
+            "default": true
+          },
+          {
+            "text": "No",
+            "value": "false"
+          }
+        ]
+      },
+      {
+        "name": "SYMFONY__ENV__FOSUSER_CONFIRMATION",
+        "label": "Require registration confirmation?",
+        "select": [
+          {
+            "text": "Yes",
+            "value": "true",
+            "default": true
+          },
+          {
+            "text": "No",
+            "value": "false"
+          }
+        ]
+      },
         {
             "type": 1,
             "title": "Watchtower",
