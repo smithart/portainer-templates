@@ -1550,6 +1550,95 @@
                 }
             ]
         },
+  {
+    "type": 1,
+    "name": "droppy",
+    "title": "Droppy",
+    "description": "Droppy is a self-hosted file storage server",
+    "logo": "https://mediadepot.github.io/templates/img/filebrowser-icon.png",
+    "image": "silverwind/droppy:latest",
+    "categories": [
+      "Tools:",
+      "Network:Web",
+      "Network:Other",
+      "Tools:",
+      "MediaDepot"
+    ],
+    "ports": [
+      "8989/tcp"
+    ],
+    "volumes": [
+      {
+        "container": "/files/tvshows",
+        "bind": "/media/storage/tvshows"
+      },
+      {
+        "container": "/files/movies",
+        "bind": "/media/storage/movies"
+      },
+      {
+        "container": "/files/music",
+        "bind": "/media/storage/music"
+      },
+      {
+        "container": "/files/photos",
+        "bind": "/media/storage/photos"
+      },
+      {
+        "container": "/files/ebooks",
+        "bind": "/media/storage/ebooks"
+      },
+      {
+        "container": "/files/documents",
+        "bind": "/media/storage/documents"
+      },
+      {
+        "container": "/files/software",
+        "bind": "/media/storage/software"
+      },
+      {
+        "container": "/files/downloads",
+        "bind": "/media/storage/downloads"
+      },
+      {
+        "container": "/files/blackhole",
+        "bind": "/media/temp/blackhole"
+      },
+      {
+        "container": "/files/processing",
+        "bind": "/media/temp/processing"
+      },
+      {
+        "container": "/config",
+        "bind": "/portainer/Files/AppData/Config/droppy"
+      }
+    ],
+    "env": [
+      {
+        "name": "GID",
+        "label": "GID",
+        "default": "15000",
+        "preset": true
+      },
+      {
+        "name": "UID",
+        "label": "UID",
+        "default": "15000",
+        "preset": true
+      },
+      {
+        "name": "TZ",
+        "label": "TZ",
+        "default": "America/Los_Angeles"
+      }
+    ],
+    "labels": [
+      { "name": "traefik.enable", "value": "true" },
+      { "name": "traefik.http.services.droppy.loadbalancer.server.port", "value": "8989" },
+      { "name": "traefik.http.routers.droppy.entrypoints", "value": "websecure" },
+      { "name": "traefik.http.routers.droppy.tls.certresolver", "value": "mydnschallenge" }
+    ]
+  },
         {
             "type": 1,
             "title": "Drupal",
@@ -5165,7 +5254,7 @@
             "title": "Shiori - robocopAlpha",
             "name": "shiori",
             "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
-            "logo": "https://raw.githubusercontent.com/robocopAlpha/selfhosted_templates/master/Images/shiori-icon.png",
+            "logo": "https://raw.githubusercontent.com/smithart/portainer-templates/master/img/shiori-logo.png",
             "image": "radhifadlillah/shiori:latest",
             "categories": [
                 "Other",
@@ -5190,7 +5279,7 @@
             ],
             "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
             "image": "radhifadlillah/shiori:latest",
-            "logo": "https://raw.githubusercontent.com/robocopAlpha/selfhosted_templates/master/Images/shiori-icon.png",
+            "logo": "https://raw.githubusercontent.com/smithart/portainer-templates/master/img/shiori-logo.png",
             "name": "shiori",
             "platform": "linux",
             "ports": [
@@ -5908,7 +5997,7 @@
             "title": "UniFi Video",
             "name": "UniFi Video",
             "description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti’s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature‑packed user interface with advanced features such as motion detection, auto‑discovery, user‑level security, storage management, reporting, and mobile device support.",
-            "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/UniFiVideo-logo.png",
+            "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/unifi-banner.png",
             "image": "pducharme/unifi-video-controller:latest",
             "categories": [
                 "CCTV",
