@@ -13,3 +13,6 @@ jobs:
 
       - name: Super-Linter
         uses: github/super-linter@v3.13.5
+        env:
+          VALIDATE_JSON: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
