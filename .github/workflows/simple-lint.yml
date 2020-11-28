@@ -2,7 +2,7 @@ name: Simple Lint
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push or pull request events
   push:
 #    branches: [ master ]
   pull_request:
@@ -47,3 +47,10 @@ jobs:
           # TODO: Enable your linters here
           eslint: true
           prettier: true
+#          eslint_args: "--max-warnings 0"
+          eslint_extensions: js,json
+          auto_fix: false
+          git_name: "smithart"
+          git_email: "brad@smithart.net"
+#          commit_message: "Fix code style issues with ${linter}"
+#          check_name: "${linter}"
