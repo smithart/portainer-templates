@@ -1,0 +1,56 @@
+name: Simple Lint
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+#    branches: [ master ]
+  pull_request:
+#    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+        
+      # TODO: Install your linters here
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      # Install linters
+      - name: Install ESLint
+        run: |
+          npm install -g eslint
+          eslint --init
+
+      - name: Install Prettier
+        run: |
+          npm install -g prettier
+          echo {}> .prettierrc.json
+
+      # Runs a set of commands using the runners shell
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # TODO: Enable your linters here
+          eslint: true
+          prettier: true
+#          eslint_args: "--max-warnings 0"
+          eslint_extensions: js,json
+          auto_fix: false
+          git_name: "smithart"
+          git_email: "brad@smithart.net"
+#          commit_message: "Fix code style issues with ${linter}"
+#          check_name: "${linter}"

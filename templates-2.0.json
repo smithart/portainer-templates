@@ -6192,6 +6192,887 @@
     },
     {
       "type": 1,
+      "title": "Sematext Docker Agent",
+      "description": "Collect logs, metrics and docker events",
+      "categories": [
+        "Log Management",
+        "Monitoring",
+        "Portainer"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
+      "image": "sematext/sematext-agent-docker:latest",
+      "name": "sematext-agent",
+      "privileged": true,
+      "env": [
+        {
+          "name": "LOGSENE_TOKEN",
+          "label": "Logs token"
+        },
+        {
+          "name": "SPM_TOKEN",
+          "label": "SPM monitoring token"
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "title": "Sematext Docker Agent",
+      "type": 2,
+      "categories": [
+        "Log Management",
+        "Monitoring",
+        "Portainer"
+      ],
+      "description": "Collect logs, metrics and docker events",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
+      "platform": "linux",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
+      },
+      "env": [
+        {
+          "name": "LOGSENE_TOKEN",
+          "label": "Logs token"
+        },
+        {
+          "name": "SPM_TOKEN",
+          "label": "SPM monitoring token"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Shiori - robocopAlpha",
+      "name": "shiori",
+      "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
+      "logo": "https://raw.githubusercontent.com/robocopAlpha/selfhosted_templates/master/Images/shiori-icon.png",
+      "image": "radhifadlillah/shiori:latest",
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8080/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/srv/shiori",
+          "bind": "/portainer/Files/AppData/Config/Shiori"
+        }
+      ]
+    },
+    {
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
+      "image": "radhifadlillah/shiori:latest",
+      "logo": "https://raw.githubusercontent.com/robocopAlpha/selfhosted_templates/master/Images/shiori-icon.png",
+      "name": "shiori",
+      "platform": "linux",
+      "ports": [
+        "8080/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Shiori- robocopAlpha",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Shiori",
+          "container": "/srv/shiori"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "SickChill",
+      "name": "sickchill",
+      "description": "Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickchill-icon.png",
+      "image": "linuxserver/sickchill:latest",
+      "categories": [
+        "Downloaders",
+        "Video",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8081:8081/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/SickChill"
+        },
+        {
+          "container": "/downloads",
+          "bind": "/portainer/Downloads"
+        },
+        {
+          "container": "/tv",
+          "bind": "/portainer/TV"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "SickGear",
+      "name": "sickgear",
+      "description": "SickGear provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickgear-icon.png",
+      "image": "linuxserver/sickgear:latest",
+      "categories": [
+        "Downloaders",
+        "Video",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8081:8081/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/SickGear"
+        },
+        {
+          "container": "/tv",
+          "bind": "/portainer/TV"
+        },
+        {
+          "container": "/downloads",
+          "bind": "/portainer/Downloads"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "SmokePing",
+      "name": "smokeping",
+      "description": null,
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/smokeping-icon.png",
+      "image": "linuxserver/smokeping:latest",
+      "categories": [
+        "Management",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "80/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Smokeping"
+        },
+        {
+          "container": "/data",
+          "bind": "/portainer/Files/AppData/Smokeping"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Snibox",
+      "name": "snibox",
+      "description": "Self-hosted snippet manager.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
+      "image": "snowmean/snibox-sqlite:latest",
+      "categories": [
+        "Other",
+        "Tools",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "3010:3000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/app/db/database",
+          "bind": "/portainer/Files/AppData/Config/Snibox"
+        }
+      ],
+      "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text."
+    },
+    {
+      "type": 1,
+      "title": "Solr",
+      "description": "Open-source enterprise search platform",
+      "categories": [
+        "search-engine",
+        "Portainer"
+      ],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
+      "image": "solr:latest",
+      "ports": [
+        "8983/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/opt/solr/mydata"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Sonarr",
+      "name": "sonarr",
+      "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sonarr-icon.png",
+      "image": "linuxserver/sonarr:latest",
+      "categories": [
+        "Downloaders",
+        "Video",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8989:8989/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Sonarr"
+        },
+        {
+          "container": "/dev/rtc",
+          "bind": "/dev/rtc"
+        },
+        {
+          "container": "/tv",
+          "bind": "/portainer/TV"
+        },
+        {
+          "container": "/downloads",
+          "bind": "/portainer/Downloads"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "SyncThing",
+      "name": "syncthing",
+      "description": null,
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/syncthing-icon.png",
+      "image": "linuxserver/syncthing:latest",
+      "categories": [
+        "Backup",
+        "Cloud",
+        "Other",
+        "Tools",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8384:8384/tcp",
+        "21027:21027/udp",
+        "22000:22000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Syncthing"
+        },
+        {
+          "container": "/sync"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "description": "Web Frond-end manager for Plex Media Server",
+      "image": "tautulli/tautulli:latest",
+      "logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
+      "name": "tautulli",
+      "network": "bridge",
+      "platform": "linux",
+      "ports": [
+        "8181/tcp"
+      ],
+      "restart": "always",
+      "title": "Tautulli",
+      "type": "container",
+      "volumes": [
+        "/config",
+        "/logs",
+        "/ssl"
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Tautulli",
+      "name": "tautulli",
+      "description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.[br][br]\r\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\n  [b]8181[/b] The webui for Tautulli's webui [br]\r\n  [b]/config[/b] Storing Configuration and the Tautulli database[br]\r\n[b]/logs[/b] Map to you plex logs (required for IP logging)[br]\r\n\r\n",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tautulli-icon.png",
+      "image": "linuxserver/tautulli:latest",
+      "categories": [
+        "Other",
+        "Tools",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8181:8181/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/logs",
+          "bind": "/portainer/Logs"
+        },
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Tautulli"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Teamspeak - ebrithiljonas",
+      "description": "Teamspeak Server",
+      "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/ts.png",
+      "restart_policy": "unless-stopped",
+      "image": "teamspeak:latest",
+      "categories": [
+        "ebrithiljonas"
+      ],
+      "ports": [
+        "30033:30033/tcp",
+        "9987:9987/udp"
+      ],
+      "volumes": [
+        {
+          "container": "/var/ts3server",
+          "bind": "${CONFIG_PATH}teamspeak/"
+        }
+      ],
+      "env": [
+        {
+          "name": "CONFIG_PATH",
+          "label": "Change the Path under 'Advanced Options' (end with /)",
+          "default": "This field is only for Info. Change the Path under Advanced Options",
+          "description": "Path where all the config files will be stored."
+        },
+        {
+          "name": "TS3SERVER_LICENSE",
+          "default": "accept",
+          "preset": true
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "TheLounge",
+      "name": "thelounge",
+      "description": "A self-hosted web IRC client",
+      "logo": "https://raw.githubusercontent.com/linuxserver/community-templates/master/lsiocommunity/img/shout-icon.png",
+      "image": "linuxserver/thelounge:latest",
+      "categories": [
+        "Messenger"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "9000:9000/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/TheLounge"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "TiddlyWiki",
+      "name": "tiddlywiki",
+      "description": "A unique, non-linear notebook wiki.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tiddlywiki.png",
+      "image": "mazzolino/tiddlywiki:latest",
+      "categories": [
+        "Other",
+        "Tools",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8080:8080/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/var/lib/tiddlywiki",
+          "bind": "/portainer/Files/AppData/Config/TiddlyWiki"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Tiny Tiny RSS",
+      "name": "tt-rss",
+      "description": "Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader and aggregator, designed to allow you to read news from any location, while feeling as close to a real desktop application as possible.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tt-rss-icon.png",
+      "image": "lunik1/tt-rss:latest",
+      "categories": [
+        "Other",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "80/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/tt-rss"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Transmission",
+      "name": "transmission",
+      "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
+      "image": "linuxserver/transmission:latest",
+      "categories": [
+        "Downloaders",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "9091:9091/tcp",
+        "51413:51413/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Transmission"
+        },
+        {
+          "container": "/downloads",
+          "bind": "/portainer/Files/Downloads"
+        },
+        {
+          "container": "/watch"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Transmission-OpenVPN",
+      "name": "transmission-openvpn",
+      "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
+      "image": "haugene/transmission-openvpn:latest",
+      "note": "List of supported providers available <a href='https://haugene.github.io/docker-transmission-openvpn/supported-providers'/>here</a>.",
+      "categories": [
+        "Other",
+        "VPN",
+        "Tools",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "9091:9091/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/data",
+          "bind": "/portainer/Downloads"
+        },
+        {
+          "container": "/etc/localtime",
+          "bind": "/etc/localtime"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        },
+        {
+          "name": "OPENVPN_PROVIDER",
+          "label": "OPENVPN_PROVIDER",
+          "description": "https://haugene.github.io/docker-transmission-openvpn/supported-providers/",
+          "default": "MULLVAD"
+        },
+        {
+          "name": "OPENVPN_USERNAME",
+          "label": "OPENVPN_USERNAME",
+          "default": ""
+        },
+        {
+          "name": "OPENVPN_PASSWORD",
+          "label": "OPENVPN_PASSWORD",
+          "default": ""
+        },
+        {
+          "name": "LOCAL_NETWORK",
+          "label": "LOCAL_NETWORK",
+          "default": "192.168.0.0/24"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Tvheadend",
+      "name": "tvheadend",
+      "description": "Tvheadend is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT&gt;IP and HDHomeRun as input sources.\r\nTvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT&gt;IP streaming.\r\nMultiple EPG sources are supported (over-the-air DVB and ATSC including OpenTV DVB extensions, XMLTV, PyXML).",
+      "logo": "http://i.imgur.com/zGSUAT4.png",
+      "image": "linuxserver/tvheadend:latest",
+      "categories": [
+        "Video",
+        "Other"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "9981:9981/tcp",
+        "9982:9982/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/TVHeadend"
+        },
+        {
+          "container": "/recordings"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Ubooquity",
+      "name": "ubooquity",
+      "description": "Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ubooquity-icon.png",
+      "image": "linuxserver/ubooquity:latest",
+      "categories": [
+        "Cloud",
+        "Books",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "2202:2202/tcp",
+        "2203:2203/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/books"
+        },
+        {
+          "container": "/comics"
+        },
+        {
+          "container": "/config"
+        }
+      ],
+      "env": [
+        {
+          "name": "MAXMEM",
+          "label": "MAXMEM",
+          "set": "512"
+        },
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "UniFi Controller",
+      "name": "unifi-controller",
+      "description": null,
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/unifi-icon.png",
+      "image": "linuxserver/unifi-controller:latest",
+      "categories": [
+        "Management",
+        "Tools",
+        "SelfhostedPro",
+        "Qballjos"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "3478:3478/udp",
+        "10001:10001/udp",
+        "8080:8080/tcp",
+        "8081:8081/tcp",
+        "8443:8443/tcp",
+        "8843:8843/tcp",
+        "8880:8880/tcp",
+        "6789:6789/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Unifi"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "UniFi Video",
+      "name": "UniFi Video",
+      "description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti’s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature‑packed user interface with advanced features such as motion detection, auto‑discovery, user‑level security, storage management, reporting, and mobile device support.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/UniFiVideo-logo.png",
+      "image": "pducharme/unifi-video-controller:latest",
+      "categories": [
+        "CCTV",
+        "SelfhostedPro"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "1935:1935/tcp",
+        "7444:7444/tcp",
+        "7447:7447/tcp",
+        "6666:6666/tcp",
+        "7442:7442/tcp",
+        "7080:7080/tcp",
+        "7443:7443/tcp",
+        "7445:7445/tcp",
+        "7446:7446/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/recordings",
+          "bind": "/portainer/Files/AppData/Config/UnifFiVideo/Recordings/"
+        },
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/UniFiVideo/"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "99"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        },
+        {
+          "name": "UMASK",
+          "label": "UMASK",
+          "default": "002"
+        },
+        {
+          "name": "CONTEXT_PATH",
+          "label": "CONTEXT_PATH",
+          "set": "UniFi Video"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Urbackup",
+      "description": "Open-source network backup",
+      "categories": [
+        "Backup",
+        "Portainer"
+      ],
+      "platform": "linux",
+      "note": "This application web interface is exposed on the port 55414 inside the container.",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/urbackup.png",
+      "image": "cfstras/urbackup",
+      "ports": [
+        "55413/tcp",
+        "55414/tcp",
+        "55415/tcp",
+        "35622/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/var/urbackup"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "Watchtower",
       "name": "watchtower",
       "description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
@@ -6471,7 +7352,8 @@
       "categories": [
         "Messenger",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
