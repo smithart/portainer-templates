@@ -3042,13 +3042,14 @@
     },
     {
       "type": 1,
-      "title": "Minetest - linuxserver",
+      "title": "Minetest",
       "name": "minetest",
       "description": "Server version of minetest, a free, open source alternative to minecraft.",
       "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/minetest-icon.png",
       "image": "linuxserver/minetest:latest",
       "categories": [
-        "Other"
+        "Other",
+        "linuxserver"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -3070,39 +3071,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Other"
-      ],
-      "description": "Server version of minetest, a free, open source alternative to minecraft.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        }
-      ],
-      "image": "linuxserver/minetest:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/minetest-icon.png",
-      "name": "minetest",
-      "platform": "linux",
-      "ports": [
-        "30000:30000/udp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Minetest - linuxserver",
-      "type": 1,
-      "volumes": [
-        {
-          "container": "/config/.minetest"
         }
       ]
     },
@@ -3473,7 +3441,8 @@
       "categories": [
         "Downloaders",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -3500,46 +3469,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "NZBGet",
-      "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/nzbget-icon.png",
-      "image": "linuxserver/nzbget:latest",
-      "category": [
-        "Downloaders",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "6789/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        },
-        {
-          "container": "/downloads"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
@@ -3586,29 +3515,8 @@
       ]
     },
     {
-      "description": "A safe home for all your data",
-      "image": "nextcloud:latest",
-      "logo": "https://nextcloud.com/wp-content/themes/next/assets/img/common/nextcloud-square-logo.png",
-      "name": "nextcloud",
-      "network": "bridge",
-      "platform": "linux",
-      "ports": [
-        "80/tcp",
-        "443/tcp"
-      ],
-      "title": "NextCloud",
-      "type": "container",
-      "volumes": [
-        "/var/www/nextcloud",
-        "/var/www/nextcloud/custom_apps",
-        "/var/www/nextcloud/config",
-        "/var/www/nextcloud/data",
-        "/ssl"
-      ]
-    },
-    {
       "type": 3,
-      "title": "Nextcloud",
+      "title": "Nextcloud (stack)",
       "name": "nextcloud",
       "description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nextcloud-icon.png",
@@ -3784,7 +3692,8 @@
         "Web",
         "Proxy",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -3808,45 +3717,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Nginx",
-      "description": "Nginx is a web server with a strong focus on high concurrency, performance and low memory usage. It can also act as a reverse proxy server for HTTP, HTTPS, SMTP, POP3, and IMAP protocols, as well as a load balancer and an HTTP cache.",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/nginx-icon.png",
-      "image": "linuxserver/nginx:latest",
-      "category": [
-        "Web",
-        "Proxy",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "80/tcp",
-        "443/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
@@ -3904,41 +3774,6 @@
         {
           "container": "/config",
           "bind": "/portainer/Files/AppData/Config/Nginx-Proxy"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "OScam",
-      "name": "oscam",
-      "description": "OScam is a softcam, software to be used to decrypt digital television channels on a settopbox (receiver), as an alternative for a conditional access module\n  (CAM). OScam is, compared with other softcams (CCcam, mgcamd, etc.), open source. Hence, the name Open Source Conditional Access Module (OScam). OScam is based on the\n  not so well known softcam MpCS. The main features of OSCam are next to its softcam capabilities, that it is able to function as a cardserver.",
-      "logo": "http://i.imgur.com/8LadrLg.png",
-      "image": "linuxserver/oscam:latest",
-      "categories": [
-        "Other"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "8888:8888/tcp",
-        "10000:10000/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/OScam"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
         }
       ]
     },
@@ -4031,7 +3866,8 @@
         "Video",
         "Tools",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -4054,46 +3890,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Ombi",
-      "description": "Ombi allows you to host your own Plex Request and user management system. ",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/ombi.png",
-      "image": "linuxserver/ombi:latest",
-      "category": [
-        "Downloaders",
-        "Other",
-        "Video",
-        "Tools",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "3579/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
@@ -4124,7 +3920,8 @@
       "categories": [
         "Other",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -4154,50 +3951,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "OpenVPN Access Server",
-      "description": "OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments.",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/openvpn-as-icon.png",
-      "image": "linuxserver/openvpn-as:latest",
-      "category": [
-        "Other",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "943/tcp",
-        "9443/tcp",
-        "1194/udp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "INTERFACE",
-          "label": "INTERFACE",
-          "set": "eth0"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
