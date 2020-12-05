@@ -2141,7 +2141,7 @@
       "type": 1,
       "title": "Headphones",
       "name": "headphones",
-      "description": null,
+      "description": "An automated music downloader for NZB and Torrent, written in Python. It supports SABnzbd, NZBget, Transmission, µTorrent and Blackhole.",
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/headphones-icon.png",
       "image": "linuxserver/headphones:latest",
       "categories": [
