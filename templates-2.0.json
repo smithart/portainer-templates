@@ -3755,6 +3755,33 @@
       "title": "Nginx Proxy Manager",
       "name": "nginx-proxy-manager",
       "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
+      "note": "This template uses the jc21 image (from the original author)",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/proxy_mgr.png",
+      "image": "jc21/nginx-proxy-manager:latest",
+      "categories": [
+        "Proxy",
+        "Tools"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "80:8080/tcp",
+        "81:8181/tcp",
+        "443:4443/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Nginx-Proxy"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Nginx Proxy Manager",
+      "name": "nginx-proxy-manager",
+      "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
+      "note": "This template uses the jlesage image",
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/proxy_mgr.png",
       "image": "jlesage/nginx-proxy-manager",
       "categories": [
@@ -4855,6 +4882,49 @@
     },
     {
       "type": 1,
+      "title": "qBittorrent",
+      "name": "qbittorrent",
+      "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
+      "image": "linuxserver/qbittorrent:latest",
+      "categories": [
+        "Downloaders",
+        "SelfhostedPro",
+        "Qballjos",
+        "thesugarat"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "6881:6881/tcp",
+        "6881:6881/udp",
+        "8080:8080/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/qBittorrent"
+        },
+        {
+          "container": "/downloads",
+          "bind": "/portainer/Downloads"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "RabbitMQ",
       "description": "Highly reliable enterprise messaging system",
       "categories": [
@@ -5408,75 +5478,6 @@
         {
           "container": "/srv/shiori",
           "bind": "/portainer/Files/AppData/Config/Shiori"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Shiori - robocopAlpha",
-      "name": "shiori",
-      "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
-      "logo": "https://raw.githubusercontent.com/robocopAlpha/selfhosted_templates/master/Images/shiori-icon.png",
-      "image": "radhifadlillah/shiori:latest",
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "8080/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/srv/shiori",
-          "bind": "/portainer/Files/AppData/Config/Shiori"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
-      "image": "radhifadlillah/shiori:latest",
-      "logo": "https://raw.githubusercontent.com/smithart/portainer-templates/master/img/shiori-logo.png",
-      "name": "shiori",
-      "platform": "linux",
-      "ports": [
-        "8080/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Shiori- robocopAlpha",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/Shiori",
-          "container": "/srv/shiori"
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
-      "image": "radhifadlillah/shiori:latest",
-      "logo": "https://raw.githubusercontent.com/robocopAlpha/selfhosted_templates/master/Images/shiori-icon.png",
-      "name": "shiori",
-      "platform": "linux",
-      "ports": [
-        "8080/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Shiori- robocopAlpha",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/Shiori",
-          "container": "/srv/shiori"
         }
       ]
     },
@@ -7156,85 +7157,7 @@
     },
     {
       "type": 1,
-      "title": "daapd",
-      "description": "DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD and internet radio.",
-      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/daapd-icon.png",
-      "image": "linuxserver/daapd:latest",
-      "category": [
-        "Music"
-      ],
-      "platform": "linux",
-      "volumes": [
-        {
-          "container": "/config"
-        },
-        {
-          "container": "/music"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "hydra2",
-      "description": "NZBHydra is a meta search for NZB indexers and the \"spiritual successor\" to NZBmegasearcH. It provides easy access to a number of raw and newznab based indexers.",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/hydra-icon.png",
-      "image": "linuxserver/hydra2:latest",
-      "category": [
-        "Downloaders",
-        "Other",
-        "Tools",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "5076/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        },
-        {
-          "container": "/downloads"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "libresonic",
+      "title": "Libresonic",
       "description": "Libresonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room. /music = Location of music. /media = Location of other media. /podcasts = Location of podcasts. /playlists = Location for playlists storage. CONTEXT_PATH is for setting url-base in reverse proxy setups - (optional) Default user/pass is admin/admin",
       "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/libresonic.png",
       "image": "linuxserver/libresonic:latest",
@@ -7365,49 +7288,6 @@
           "name": "TZ",
           "label": "TZ",
           "set": "America/Chicago"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "qBittorrent",
-      "name": "qbittorrent",
-      "description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
-      "image": "linuxserver/qbittorrent:latest",
-      "categories": [
-        "Downloaders",
-        "SelfhostedPro",
-        "Qballjos",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "6881:6881/tcp",
-        "6881:6881/udp",
-        "8080:8080/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/qBittorrent"
-        },
-        {
-          "container": "/downloads",
-          "bind": "/portainer/Downloads"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
         }
       ]
     },
