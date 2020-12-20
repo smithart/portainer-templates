@@ -3983,6 +3983,9 @@
     },
     {
       "description": "HTPC/Homelab Services Organizer - Written in PHP",
+      "categories": [
+        "lsiocommunity"
+      ],
       "env": [
         {
           "label": "Docker UserID",
@@ -4014,7 +4017,8 @@
       "categories": [
         "Other",
         "Tools",
-        "Qballjos"
+        "Qballjos",
+        "organizr"
       ],
       "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
       "env": [
@@ -4055,7 +4059,8 @@
       "category": [
         "Other",
         "Tools",
-        "thesugarat"
+        "thesugarat",
+        "organizrtools"
       ],
       "platform": "linux",
       "ports": [
@@ -4146,7 +4151,8 @@
       "categories": [
         "Photos",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -4177,49 +4183,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Photoshow",
-      "description": "A simple, easy way to turn a photo album into a webgallery",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/photoshow-icon.png",
-      "image": "linuxserver/photoshow:latest",
-      "category": [
-        "Photos",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/Pictures"
-        },
-        {
-          "container": "/Thumbs"
-        },
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
@@ -4267,7 +4230,8 @@
       "categories": [
         "Photos",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -4290,43 +4254,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Piwigo",
-      "description": "Piwigo is photo gallery software for the web, built by an active community of users and developers.",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/piwigo-icon.png",
-      "image": "linuxserver/piwigo:latest",
-      "category": [
-        "Photos",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
@@ -4363,7 +4290,8 @@
         "Music",
         "Photos",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -4397,47 +4325,6 @@
           "name": "VERSION",
           "label": "VERSION",
           "set": "latest"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Plex",
-      "description": "Plex organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices. This container is packaged as a standalone Plex Media Server. has always been a top priority. Straightforward design and bulk actions mean getting things done faster.",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/plex-icon.png",
-      "image": "linuxserver/plex:latest",
-      "category": [
-        "Video",
-        "Music",
-        "Photos",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "volumes": [
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "VERSION",
-          "label": "VERSION",
-          "set": "latest"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
@@ -4507,48 +4394,6 @@
           "name": "URL_BASE",
           "label": "URL_BASE",
           "set": ""
-        }
-      ]
-    },
-    {
-      "categories": [
-        "Downloaders",
-        "Other",
-        "Video",
-        "Tools"
-      ],
-      "description": "Simple automated way for users to request new content for Plex.",
-      "env": [
-        {
-          "default": "1000",
-          "label": "PUID",
-          "name": "PUID"
-        },
-        {
-          "default": "100",
-          "label": "PGID",
-          "name": "PGID"
-        },
-        {
-          "label": "URL_BASE",
-          "name": "URL_BASE",
-          "set": ""
-        }
-      ],
-      "image": "linuxserver/plexrequests:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/plexrequests-icon.png",
-      "name": "plexrequests",
-      "platform": "linux",
-      "ports": [
-        "3000:3000/tcp"
-      ],
-      "restart_policy": "unless-stopped",
-      "title": "Plex Requests",
-      "type": 1,
-      "volumes": [
-        {
-          "bind": "/portainer/Files/AppData/Config/PlexRequests",
-          "container": "/config"
         }
       ]
     },
@@ -4672,7 +4517,8 @@
         "Tools",
         "Other",
         "SelfhostedPro",
-        "Qballjos"
+        "Qballjos",
+        "thesugarat"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -4699,49 +4545,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "ProjectSend",
-      "description": "ProjectSend is a self-hosted application that lets you upload files and assign them to specific clients that you create yourself! Secure, private and easy. No more depending on external services or e-mail to send those files!\n  ",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/projectsend-logo.png",
-      "image": "linuxserver/projectsend:latest",
-      "category": [
-        "Cloud",
-        "Productivity",
-        "Tools",
-        "Other",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        },
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     },
@@ -5121,6 +4924,47 @@
     },
     {
       "type": 1,
+      "title": "rutorrent",
+      "description": "Popular torrent client with a webui for ease of use.",
+      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/rutorrent-icon.png",
+      "image": "linuxserver/rutorrent:latest",
+      "category": [
+        "Downloaders"
+      ],
+      "platform": "linux",
+      "ports": [
+        "80/tcp",
+        "51413/tcp",
+        "6881/udp"
+      ],
+      "volumes": [
+        {
+          "container": "/config"
+        },
+        {
+          "container": "/downloads"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "set": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "set": "1000"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "set": "America/Chicago"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "SABnzbd",
       "name": "sabnzbd",
       "description": "SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.",
@@ -5433,7 +5277,7 @@
       ]
     },
     {
-      "title": "Sematext Docker Agent",
+      "title": "Sematext Docker Agent (swarm)",
       "type": 2,
       "categories": [
         "Log Management",
@@ -5574,51 +5418,6 @@
     },
     {
       "type": 1,
-      "title": "SickGear",
-      "name": "sickgear",
-      "description": "SickGear provides management of TV shows and/or Anime, it detects new episodes, links downloader apps, and more.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sickgear-icon.png",
-      "image": "linuxserver/sickgear:latest",
-      "categories": [
-        "Downloaders",
-        "Video",
-        "SelfhostedPro",
-        "Qballjos"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "8081:8081/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/SickGear"
-        },
-        {
-          "container": "/tv",
-          "bind": "/portainer/TV"
-        },
-        {
-          "container": "/downloads",
-          "bind": "/portainer/Downloads"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
       "title": "SmokePing",
       "name": "smokeping",
       "description": "Smokeping keeps track of your network latency.",
@@ -5683,52 +5482,6 @@
         }
       ],
       "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text."
-    },
-    {
-      "type": 1,
-      "title": "Snibox",
-      "name": "snibox",
-      "description": "Self-hosted snippet manager.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
-      "image": "snowmean/snibox-sqlite:latest",
-      "categories": [
-        "Other",
-        "Tools",
-        "SelfhostedPro",
-        "Qballjos"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "3010:3000/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/app/db/database",
-          "bind": "/portainer/Files/AppData/Config/Snibox"
-        }
-      ],
-      "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text."
-    },
-    {
-      "type": 1,
-      "title": "Solr",
-      "description": "Open-source enterprise search platform",
-      "categories": [
-        "search-engine",
-        "Portainer"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
-      "image": "solr:latest",
-      "ports": [
-        "8983/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/opt/solr/mydata"
-        }
-      ]
     },
     {
       "type": 1,
@@ -5907,102 +5660,8 @@
       ]
     },
     {
-      "description": "Web Front-end manager for Plex Media Server",
-      "image": "tautulli/tautulli:latest",
-      "logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
-      "name": "tautulli",
-      "network": "bridge",
-      "platform": "linux",
-      "ports": [
-        "8181/tcp"
-      ],
-      "restart": "always",
-      "title": "Tautulli",
-      "type": "container",
-      "volumes": [
-        "/config",
-        "/logs",
-        "/ssl"
-      ]
-    },
-    {
       "type": 1,
-      "title": "Tautulli",
-      "name": "tautulli",
-      "description": "Tautulli is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.[br][br]\r\n  [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]\r\n  [b]8181[/b] The webui for Tautulli's webui [br]\r\n  [b]/config[/b] Storing Configuration and the Tautulli database[br]\r\n[b]/logs[/b] Map to you plex logs (required for IP logging)[br]\r\n\r\n",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tautulli-icon.png",
-      "image": "linuxserver/tautulli:latest",
-      "categories": [
-        "Other",
-        "Tools",
-        "SelfhostedPro",
-        "Qballjos"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "8181:8181/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/logs",
-          "bind": "/portainer/Logs"
-        },
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/Tautulli"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Teamspeak - ebrithiljonas",
-      "description": "Teamspeak Server",
-      "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/ts.png",
-      "restart_policy": "unless-stopped",
-      "image": "teamspeak:latest",
-      "categories": [
-        "ebrithiljonas"
-      ],
-      "ports": [
-        "30033:30033/tcp",
-        "9987:9987/udp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/ts3server",
-          "bind": "${CONFIG_PATH}teamspeak/"
-        }
-      ],
-      "env": [
-        {
-          "name": "CONFIG_PATH",
-          "label": "Change the Path under 'Advanced Options' (end with /)",
-          "default": "This field is only for Info. Change the Path under Advanced Options",
-          "description": "Path where all the config files will be stored."
-        },
-        {
-          "name": "TS3SERVER_LICENSE",
-          "default": "accept",
-          "preset": true
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Teamspeak - ebrithiljonas",
+      "title": "Teamspeak",
       "description": "Teamspeak Server",
       "logo": "https://raw.githubusercontent.com/ebrithiljonas/PortainerTemplates/master/icons/ts.png",
       "restart_policy": "unless-stopped",
@@ -6132,42 +5791,6 @@
     },
     {
       "type": 1,
-      "title": "Tiny Tiny RSS",
-      "name": "tt-rss",
-      "description": "Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader and aggregator, designed to allow you to read news from any location, while feeling as close to a real desktop application as possible.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/tt-rss-icon.png",
-      "image": "lunik1/tt-rss:latest",
-      "categories": [
-        "Other",
-        "SelfhostedPro",
-        "Qballjos"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/tt-rss"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
       "title": "Transmission",
       "name": "transmission",
       "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
@@ -6208,114 +5831,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Transmission",
-      "name": "transmission",
-      "description": "Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
-      "image": "linuxserver/transmission:latest",
-      "categories": [
-        "Downloaders",
-        "SelfhostedPro",
-        "Qballjos"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "9091:9091/tcp",
-        "51413:51413/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/Transmission"
-        },
-        {
-          "container": "/downloads",
-          "bind": "/portainer/Files/Downloads"
-        },
-        {
-          "container": "/watch"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Transmission-OpenVPN",
-      "name": "transmission-openvpn",
-      "description": "This container contains OpenVPN and Transmission with a configuration\nwhere Transmission is running only when OpenVPN has an active tunnel.\nIt bundles configuration files for many popular VPN providers to make the setup easier.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/transmission-icon.png",
-      "image": "haugene/transmission-openvpn:latest",
-      "note": "List of supported providers available <a href='https://haugene.github.io/docker-transmission-openvpn/supported-providers'/>here</a>.",
-      "categories": [
-        "Other",
-        "VPN",
-        "Tools",
-        "SelfhostedPro",
-        "Qballjos"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "9091:9091/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/data",
-          "bind": "/portainer/Downloads"
-        },
-        {
-          "container": "/etc/localtime",
-          "bind": "/etc/localtime"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        },
-        {
-          "name": "OPENVPN_PROVIDER",
-          "label": "OPENVPN_PROVIDER",
-          "description": "https://haugene.github.io/docker-transmission-openvpn/supported-providers/",
-          "default": "MULLVAD"
-        },
-        {
-          "name": "OPENVPN_USERNAME",
-          "label": "OPENVPN_USERNAME",
-          "default": ""
-        },
-        {
-          "name": "OPENVPN_PASSWORD",
-          "label": "OPENVPN_PASSWORD",
-          "default": ""
-        },
-        {
-          "name": "LOCAL_NETWORK",
-          "label": "LOCAL_NETWORK",
-          "default": "192.168.0.0/24"
         }
       ]
     },
@@ -6425,45 +5940,6 @@
     },
     {
       "type": 1,
-      "title": "Tvheadend",
-      "name": "tvheadend",
-      "description": "Tvheadend is a TV streaming server and recorder for Linux, FreeBSD and Android supporting DVB-S, DVB-S2, DVB-C, DVB-T, ATSC, ISDB-T, IPTV, SAT&gt;IP and HDHomeRun as input sources.\r\nTvheadend offers the HTTP (VLC, MPlayer), HTSP (Kodi, Movian) and SAT&gt;IP streaming.\r\nMultiple EPG sources are supported (over-the-air DVB and ATSC including OpenTV DVB extensions, XMLTV, PyXML).",
-      "logo": "http://i.imgur.com/zGSUAT4.png",
-      "image": "linuxserver/tvheadend:latest",
-      "categories": [
-        "Video",
-        "Other"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "9981:9981/tcp",
-        "9982:9982/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/TVHeadend"
-        },
-        {
-          "container": "/recordings"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
       "title": "Ubooquity",
       "name": "ubooquity",
       "description": "Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.",
@@ -6475,54 +5951,6 @@
         "SelfhostedPro",
         "Qballjos",
         "thesugarat"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "2202:2202/tcp",
-        "2203:2203/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/books"
-        },
-        {
-          "container": "/comics"
-        },
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "MAXMEM",
-          "label": "MAXMEM",
-          "set": "512"
-        },
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Ubooquity",
-      "name": "ubooquity",
-      "description": "Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ubooquity-icon.png",
-      "image": "linuxserver/ubooquity:latest",
-      "categories": [
-        "Cloud",
-        "Books",
-        "SelfhostedPro",
-        "Qballjos"
       ],
       "platform": "linux",
       "restart_policy": "unless-stopped",
@@ -6702,30 +6130,6 @@
           "name": "CONTEXT_PATH",
           "label": "CONTEXT_PATH",
           "set": "UniFi Video"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Urbackup",
-      "description": "Open-source network backup",
-      "categories": [
-        "Backup",
-        "Portainer"
-      ],
-      "platform": "linux",
-      "note": "This application web interface is exposed on the port 55414 inside the container.",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/urbackup.png",
-      "image": "cfstras/urbackup",
-      "ports": [
-        "55413/tcp",
-        "55414/tcp",
-        "55415/tcp",
-        "35622/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/urbackup"
         }
       ]
     },
@@ -7252,83 +6656,6 @@
           "name": "PGID",
           "label": "PGID",
           "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "minetest",
-      "description": "Server version of minetest, a free, open source alternative to minecraft.",
-      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/minetest-icon.png",
-      "image": "linuxserver/minetest:latest",
-      "category": [
-        "Other"
-      ],
-      "platform": "linux",
-      "ports": [
-        "30000/udp"
-      ],
-      "volumes": [
-        {
-          "container": "/config/.minetest"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "rutorrent",
-      "description": "Popular torrent client with a webui for ease of use.",
-      "logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/rutorrent-icon.png",
-      "image": "linuxserver/rutorrent:latest",
-      "category": [
-        "Downloaders"
-      ],
-      "platform": "linux",
-      "ports": [
-        "80/tcp",
-        "51413/tcp",
-        "6881/udp"
-      ],
-      "volumes": [
-        {
-          "container": "/config"
-        },
-        {
-          "container": "/downloads"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
         }
       ]
     }
