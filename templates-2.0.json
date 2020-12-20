@@ -2717,6 +2717,60 @@
     },
     {
       "type": 1,
+      "title": "Libresonic",
+      "description": "Libresonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room. /music = Location of music. /media = Location of other media. /podcasts = Location of podcasts. /playlists = Location for playlists storage. CONTEXT_PATH is for setting url-base in reverse proxy setups - (optional) Default user/pass is admin/admin",
+      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/libresonic.png",
+      "image": "linuxserver/libresonic:latest",
+      "category": [
+        "Music",
+        "thesugarat"
+      ],
+      "platform": "linux",
+      "ports": [
+        "4040/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/music"
+        },
+        {
+          "container": "/playlists"
+        },
+        {
+          "container": "/podcasts"
+        },
+        {
+          "container": "/media"
+        },
+        {
+          "container": "/config"
+        }
+      ],
+      "env": [
+        {
+          "name": "CONTEXT_PATH",
+          "label": "CONTEXT_PATH",
+          "set": ""
+        },
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "set": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "set": "1000"
+        },
+        {
+          "name": "TZ",
+          "label": "TZ",
+          "set": "America/Chicago"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "LibreSpeed",
       "name": "librespeed",
       "description": "A Free and Open Source Speedtest for HTML5 and more.",
@@ -2737,6 +2791,52 @@
         {
           "container": "/config",
           "bind": "/portainer/Files/AppData/Config/LibreSpeed"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Lidarr",
+      "name": "lidarr",
+      "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lidarr.png",
+      "image": "linuxserver/lidarr:latest",
+      "categories": [
+        "Downloaders",
+        "Music",
+        "SelfhostedPro",
+        "Qballjos",
+        "thesugarat"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8686:8686/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Lidarr"
+        },
+        {
+          "container": "/downloads",
+          "bind": "/portainer/Downloads"
+        },
+        {
+          "container": "/music",
+          "bind": "/portainer/Music"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
         }
       ]
     },
@@ -3982,38 +4082,6 @@
       ]
     },
     {
-      "description": "HTPC/Homelab Services Organizer - Written in PHP",
-      "categories": [
-        "lsiocommunity"
-      ],
-      "env": [
-        {
-          "label": "Docker UserID",
-          "name": "PUID"
-        },
-        {
-          "label": "Docker GroupID",
-          "name": "PGID"
-        }
-      ],
-      "image": "lsiocommunity/organizr:latest",
-      "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/organizr-icon.png",
-      "name": "organizr",
-      "network": "bridge",
-      "platform": "linux",
-      "ports": [
-        "80/tcp",
-        "443/tcp"
-      ],
-      "restart": "always",
-      "title": "Organizr",
-      "type": "container",
-      "volumes": [
-        "/config",
-        "/ssl"
-      ]
-    },
-    {
       "categories": [
         "Other",
         "Tools",
@@ -4052,7 +4120,7 @@
     },
     {
       "type": 1,
-      "title": "Organizr",
+      "title": "Organizr (b)",
       "description": "Organizr allows you to setup Tabs that will be loaded all in one webpage. You can then work on your server with ease.",
       "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/organizr-icon.png",
       "image": "organizrtools/organizr:latest",
@@ -6034,50 +6102,6 @@
     },
     {
       "type": 1,
-      "title": "UniFi Controller",
-      "name": "unifi-controller",
-      "description": null,
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/unifi-icon.png",
-      "image": "linuxserver/unifi-controller:latest",
-      "categories": [
-        "Management",
-        "Tools",
-        "SelfhostedPro",
-        "Qballjos"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "3478:3478/udp",
-        "10001:10001/udp",
-        "8080:8080/tcp",
-        "8081:8081/tcp",
-        "8443:8443/tcp",
-        "8843:8843/tcp",
-        "8880:8880/tcp",
-        "6789:6789/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/Unifi"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
       "title": "UniFi Video",
       "name": "UniFi Video",
       "description": "UniFi Video is a powerful and flexible, integrated IP video management surveillance system designed to work with Ubiquiti’s UniFi Video Camera product line. UniFi Video has an intuitive, configurable, and feature‑packed user interface with advanced features such as motion detection, auto‑discovery, user‑level security, storage management, reporting, and mobile device support.",
@@ -6544,106 +6568,6 @@
         {
           "container": "/config",
           "bind": "/portainer/Files/AppData/Config/ZNC"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "Libresonic",
-      "description": "Libresonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room. /music = Location of music. /media = Location of other media. /podcasts = Location of podcasts. /playlists = Location for playlists storage. CONTEXT_PATH is for setting url-base in reverse proxy setups - (optional) Default user/pass is admin/admin",
-      "logo": "https://raw.githubusercontent.com/thesugarat/portainer_templates-1/master/Images/libresonic.png",
-      "image": "linuxserver/libresonic:latest",
-      "category": [
-        "Music",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "ports": [
-        "4040/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/music"
-        },
-        {
-          "container": "/playlists"
-        },
-        {
-          "container": "/podcasts"
-        },
-        {
-          "container": "/media"
-        },
-        {
-          "container": "/config"
-        }
-      ],
-      "env": [
-        {
-          "name": "CONTEXT_PATH",
-          "label": "CONTEXT_PATH",
-          "set": ""
-        },
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "set": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "set": "1000"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "set": "America/Chicago"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "lidarr",
-      "name": "lidarr",
-      "description": "Lidarr is a music collection manager for Usenet and BitTorrent users.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lidarr.png",
-      "image": "linuxserver/lidarr:latest",
-      "categories": [
-        "Downloaders",
-        "Music",
-        "SelfhostedPro",
-        "Qballjos",
-        "thesugarat"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "8686:8686/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/portainer/Files/AppData/Config/Lidarr"
-        },
-        {
-          "container": "/downloads",
-          "bind": "/portainer/Downloads"
-        },
-        {
-          "container": "/music",
-          "bind": "/portainer/Music"
         }
       ],
       "env": [
