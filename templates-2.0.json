@@ -1832,7 +1832,7 @@
         "5452/tcp"
       ],
       "title": "FileBot",
-      "type": "container",
+      "type": 1,
       "volumes": [
         "/downloads",
         "/media"
@@ -2930,32 +2930,6 @@
         {
           "container": "/var/lib/mysql"
         }
-      ]
-    },
-    {
-      "categories": [
-        "database"
-      ],
-      "description": "Performance beyond MySQL",
-      "env": [
-        {
-          "label": "MYSQL_ROOT_PASSWORD",
-          "name": "MYSQL_ROOT_PASSWORD"
-        }
-      ],
-      "image": "mariadb:latest",
-      "logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
-      "name": "mariadb",
-      "network": "host",
-      "platform": "linux",
-      "ports": [
-        "3306/tcp"
-      ],
-      "restart": "always",
-      "title": "MariaDB",
-      "type": "container",
-      "volumes": [
-        "/var/lib/mysql"
       ]
     },
     {
@@ -4204,7 +4178,7 @@
         "38008/tcp"
       ],
       "title": "PS3Netsrv",
-      "type": "container",
+      "type": 1,
       "volumes": [
         "/games"
       ]
@@ -4394,33 +4368,6 @@
           "label": "VERSION",
           "set": "latest"
         }
-      ]
-    },
-    {
-      "description": "Official Plex Media Server Docker Repo",
-      "env": [
-        {
-          "label": "ENV : HOME",
-          "name": "HOME",
-          "value": "/config"
-        }
-      ],
-      "image": "plexinc/pms-docker:plexpass",
-      "logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
-      "name": "plexmediaserver-plexpass",
-      "network": "bridge",
-      "platform": "linux",
-      "ports": [
-        "32400/tcp"
-      ],
-      "restart": "always",
-      "title": "Plex Media Server - Plex Pass",
-      "type": "container",
-      "volumes": [
-        "/data",
-        "/config",
-        "/transcode",
-        "/config/Library/Application Support/Plex Media Server/Logs"
       ]
     },
     {
@@ -4665,7 +4612,7 @@
       ],
       "restart": "always",
       "title": "PyLoad",
-      "type": "container",
+      "type": 1,
       "volumes": [
         "/config",
         "/downloads",
@@ -5664,25 +5611,6 @@
           "label": "PGID",
           "default": "100"
         }
-      ]
-    },
-    {
-      "description": "Web Frond-end manager for Plex Media Server",
-      "image": "tautulli/tautulli:latest",
-      "logo": "https://github.com/plexinc/pms-docker/raw/master/img/plex-server.png",
-      "name": "tautulli",
-      "network": "bridge",
-      "platform": "linux",
-      "ports": [
-        "8181/tcp"
-      ],
-      "restart": "always",
-      "title": "Tautulli",
-      "type": "container",
-      "volumes": [
-        "/config",
-        "/logs",
-        "/ssl"
       ]
     },
     {
