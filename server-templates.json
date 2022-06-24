@@ -9,9 +9,7 @@
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/authelia.png",
       "image": "authelia/authelia:latest",
       "note": "Requires a configuration.yml file in order to work. Documentation is Available <a href='https://docs.authelia.com/deployment/deployment-ha'>here</a>.",
-      "categories": [
-        "Security"
-      ],
+      "categories": ["Security"],
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "ports": [
@@ -37,9 +35,7 @@
       "description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/duplicati-icon.png",
       "image": "linuxserver/duplicati:latest",
-      "categories": [
-        "Backup"
-      ],
+      "categories": ["Backup"],
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "ports": [
@@ -81,9 +77,7 @@
       "note": "This template uses the jc21 image (from the original author)",
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/proxy_mgr.png",
       "image": "jc21/nginx-proxy-manager:latest",
-      "categories": [
-        "Proxy"
-      ],
+      "categories": ["Proxy"],
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "ports": [
@@ -106,9 +100,7 @@
       "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/watchtower.png",
       "image": "containrrr/watchtower:latest",
       "note": "It is recommended to manually update your containers but we're including this for those of you that don't care",
-      "categories": [
-        "Other"
-      ],
+      "categories": ["Other"],
       "platform": "linux",
       "restart_policy": "unless-stopped",
       "volumes": [
@@ -117,6 +109,20 @@
           "bind": "/var/run/docker.sock"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Teleport",
+      "name": "teleport",
+      "description": "Teleport allows engineers and security professionals to unify access for SSH servers, Kubernetes clusters, web applications, and databases across all environments.",
+      "logo": "https://bookface-images.s3.amazonaws.com/logos/386100350818400a035ac8e0caa84111de3316eb.png",
+      "categories": ["Tools"],
+      "repository": {
+	      "stackfile": "Template/Stack/teleport.yml",
+	      "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "platform": "linux",
+      "restart_policy": "always",
     },
   ]
 }
