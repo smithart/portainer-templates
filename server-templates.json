@@ -1,5 +1,34 @@
 {
   "version": "2",
   "templates": [
+    {
+      "type": 1,
+      "title": "Authelia",
+      "name": "authelia",
+      "description": "An open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/authelia.png",
+      "image": "authelia/authelia:latest",
+      "note": "Requires a configuration.yml file in order to work. Documentation is Available <a href='https://docs.authelia.com/deployment/deployment-ha'>here</a>.",
+      "categories": [
+        "Security"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "9091:9091/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/etc/authelia/",
+          "bind": "/portainer/Files/AppData/Config/Authelia"
+        }
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ"
+        }
+      ]
+    },
   ]
 }
