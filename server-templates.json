@@ -1,0 +1,214 @@
+{
+  "version": "2",
+  "templates": [
+    {
+      "type": 1,
+      "title": "Authelia",
+      "name": "authelia",
+      "description": "An open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/authelia.png",
+      "image": "authelia/authelia:latest",
+      "note": "Requires a configuration.yml file in order to work. Documentation is Available <a href='https://docs.authelia.com/deployment/deployment-ha'>here</a>.",
+      "categories": ["Security"],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "9091:9091/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/etc/authelia/",
+          "bind": "/portainer/Files/AppData/Config/Authelia"
+        }
+      ],
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Duplicati",
+      "name": "duplicati",
+      "description": "Free backup software to store encrypted backups online, Duplicati works with standard protocols like FTP, SSH, WebDAV as well as popular services like Microsoft OneDrive, Amazon Cloud Drive and S3, Google Drive, box.com, Mega, hubiC and many others.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/duplicati-icon.png",
+      "image": "linuxserver/duplicati:latest",
+      "categories": ["Backup"],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8200:8200/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Duplicati"
+        },
+        {
+          "container": "/tmp"
+        },
+        {
+          "container": "/backups"
+        },
+        {
+          "container": "/source"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "100"
+        }
+      ]
+    },
+      {
+      "type": 1,
+      "title": "Nginx Proxy Manager",
+      "name": "nginx-proxy-manager",
+      "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
+      "note": "This template uses the jc21 image (from the original author)",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/proxy_mgr.png",
+      "image": "jc21/nginx-proxy-manager:latest",
+      "categories": ["Proxy"],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "80:8080/tcp",
+        "81:8181/tcp",
+        "443:4443/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "bind": "/portainer/Files/AppData/Config/Nginx-Proxy"
+        }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "Watchtower",
+      "name": "watchtower",
+      "description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/watchtower.png",
+      "image": "containrrr/watchtower:latest",
+      "note": "It is recommended to manually update your containers but we're including this for those of you that don't care",
+      "categories": ["Other"],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "volumes": [
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock"
+        }
+      ]
+    },
+    {
+      "type": 3,
+      "title": "Teleport",
+      "name": "teleport",
+      "description": "Teleport allows engineers and security professionals to unify access for SSH servers, Kubernetes clusters, web applications, and databases across all environments.",
+      "logo": "https://bookface-images.s3.amazonaws.com/logos/386100350818400a035ac8e0caa84111de3316eb.png",
+      "categories": ["Tools"],
+      "repository": {
+	      "stackfile": "Template/Stack/teleport.yml",
+	      "url": "https://github.com/xneo1/portainer_templates"
+      },
+      "platform": "linux",
+      "restart_policy": "always",
+	},
+	{
+		"type": 1,
+		"title": "Wireguard",
+		"name": "Wireguard",
+		"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/wireguard/config<br></p>",
+		"description": "[WireGuard®](https://www.wireguard.com/) is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry.",
+		"platform": "linux",
+		"logo": "https://www.wireguard.com/img/wireguard.svg",
+		"image": "linuxserver/wireguard:latest",
+		"env": [
+			{
+				"name": "PUID",
+				"label": "PUID",
+				"default": "1024",
+				"description": "for UserID"
+			},
+			{
+				"name": "PGID",
+				"label": "PGID",
+				"default": "100",
+				"description": "for GroupID"
+			},
+			{
+				"name": "TZ",
+				"label": "TZ",
+				"default": "Europe/Amsterdam",
+				"description": "Specify a timezone to use for example Europe/Amsterdam"
+			},
+			{
+				"name": "SERVERURL",
+				"label": "SERVERURL",
+				"default": "wireguard.domain.com",
+				"description": "External IP or domain name for docker host. Used in server mode. If set to `auto`, the container will try to determine and set the external IP automatically"
+			},
+			{
+				"name": "SERVERPORT",
+				"label": "SERVERPORT",
+				"default": "51820",
+				"description": "External port for docker host. Used in server mode."
+			},
+			{
+				"name": "PEERS",
+				"label": "PEERS",
+				"default": "1",
+				"description": "Number of peers to create confs for. Required for server mode. Can also be a list of names: `myPC,myPhone,myTablet` (alphanumeric only)"
+			},
+			{
+				"name": "PEERDNS",
+				"label": "PEERDNS",
+				"default": "auto",
+				"description": "DNS server set in peer/client configs (can be set as `8.8.8.8`). Used in server mode. Defaults to `auto`, which uses wireguard docker host's DNS via included CoreDNS forward."
+			},
+			{
+				"name": "INTERNAL_SUBNET",
+				"label": "INTERNAL_SUBNET",
+				"default": "10.13.13.0",
+				"description": "Internal subnet for the wireguard and server and peers (only change if it clashes). Used in server mode."
+			},
+			{
+				"name": "ALLOWEDIPS",
+				"label": "ALLOWEDIPS",
+				"default": "0.0.0.0/0",
+				"description": "The IPs/Ranges that the peers will be able to reach using the VPN connection. If not specified the default value is: '0.0.0.0/0, ::0/0' This will cause ALL traffic to route through the VPN, if you want split tunneling, set this to only the IPs you would like to use the tunnel AND the ip of the server's WG ip, such as 10.13.13.1."
+			},
+			{
+				"name": "LOG_CONFS",
+				"label": "LOG_CONFS",
+				"default": "true",
+				"description": "Generated QR codes will be displayed in the docker log. Set to `false` to skip log output."
+			}
+		],
+		"ports": [
+			"51820:51820/udp"
+		],
+		"volumes": [
+		{
+			"container": "/config",
+			"bind": "/volume1/docker/wireguard/config"
+		},
+		{
+			"container": "/lib/modules",
+			"bind": "/lib/modules"
+		}
+		],
+		"restart_policy": "unless-stopped"
+	},
+  ]
+}
