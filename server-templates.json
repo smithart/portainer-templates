@@ -98,5 +98,25 @@
         }
       ]
     },
+    {
+      "type": 1,
+      "title": "Watchtower",
+      "name": "watchtower",
+      "description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/watchtower.png",
+      "image": "containrrr/watchtower:latest",
+      "note": "It is recommended to manually update your containers but we're including this for those of you that don't care",
+      "categories": [
+        "Other"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "volumes": [
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock"
+        }
+      ]
+    },
   ]
 }
